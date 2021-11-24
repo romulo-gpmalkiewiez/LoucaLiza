@@ -33,19 +33,19 @@ namespace LoucaLiza
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnVeiculos = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnAddLocacao = new System.Windows.Forms.Button();
+            this.btnExcluirLocacao = new System.Windows.Forms.Button();
+            this.textBoxCliente = new System.Windows.Forms.TextBox();
+            this.textBoxDocumento = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBoxModelo = new System.Windows.Forms.TextBox();
+            this.textBoxPlaca = new System.Windows.Forms.TextBox();
+            this.btnBuscaLocacao = new System.Windows.Forms.Button();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.dataGridLocacao = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -97,71 +97,71 @@ namespace LoucaLiza
             this.label3.TabIndex = 1;
             this.label3.Text = "Locações";
             // 
-            // button1
+            // btnVeiculos
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(672, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 32);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Veículos";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnVeiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnVeiculos.FlatAppearance.BorderSize = 0;
+            this.btnVeiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVeiculos.Location = new System.Drawing.Point(672, 81);
+            this.btnVeiculos.Name = "btnVeiculos";
+            this.btnVeiculos.Size = new System.Drawing.Size(100, 32);
+            this.btnVeiculos.TabIndex = 2;
+            this.btnVeiculos.Text = "Veículos";
+            this.btnVeiculos.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnClientes
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(566, 81);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 32);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Clientes";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Location = new System.Drawing.Point(566, 81);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(100, 32);
+            this.btnClientes.TabIndex = 3;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnAddLocacao
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(460, 81);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 32);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "+ Nova Locação";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAddLocacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnAddLocacao.FlatAppearance.BorderSize = 0;
+            this.btnAddLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddLocacao.Location = new System.Drawing.Point(460, 81);
+            this.btnAddLocacao.Name = "btnAddLocacao";
+            this.btnAddLocacao.Size = new System.Drawing.Size(100, 32);
+            this.btnAddLocacao.TabIndex = 4;
+            this.btnAddLocacao.Text = "+ Nova Locação";
+            this.btnAddLocacao.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnExcluirLocacao
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(104)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(354, 81);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 32);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Excluir";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnExcluirLocacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(104)))));
+            this.btnExcluirLocacao.FlatAppearance.BorderSize = 0;
+            this.btnExcluirLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirLocacao.Location = new System.Drawing.Point(354, 81);
+            this.btnExcluirLocacao.Name = "btnExcluirLocacao";
+            this.btnExcluirLocacao.Size = new System.Drawing.Size(100, 32);
+            this.btnExcluirLocacao.TabIndex = 5;
+            this.btnExcluirLocacao.Text = "Excluir";
+            this.btnExcluirLocacao.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // textBoxCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 136);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(335, 32);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "Cliente";
+            this.textBoxCliente.Location = new System.Drawing.Point(14, 136);
+            this.textBoxCliente.Multiline = true;
+            this.textBoxCliente.Name = "textBoxCliente";
+            this.textBoxCliente.Size = new System.Drawing.Size(335, 32);
+            this.textBoxCliente.TabIndex = 6;
+            this.textBoxCliente.Text = "Cliente";
             // 
-            // textBox2
+            // textBoxDocumento
             // 
-            this.textBox2.Location = new System.Drawing.Point(354, 135);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 32);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.Text = "Documento";
+            this.textBoxDocumento.Location = new System.Drawing.Point(354, 135);
+            this.textBoxDocumento.Multiline = true;
+            this.textBoxDocumento.Name = "textBoxDocumento";
+            this.textBoxDocumento.Size = new System.Drawing.Size(166, 32);
+            this.textBoxDocumento.TabIndex = 7;
+            this.textBoxDocumento.Text = "Documento";
             // 
             // textBox3
             // 
@@ -181,58 +181,58 @@ namespace LoucaLiza
             this.textBox4.TabIndex = 9;
             this.textBox4.Text = "Até";
             // 
-            // textBox5
+            // textBoxModelo
             // 
-            this.textBox5.Location = new System.Drawing.Point(13, 180);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(177, 32);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Text = "Modelo";
+            this.textBoxModelo.Location = new System.Drawing.Point(13, 180);
+            this.textBoxModelo.Multiline = true;
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(177, 32);
+            this.textBoxModelo.TabIndex = 10;
+            this.textBoxModelo.Text = "Modelo";
             // 
-            // textBox6
+            // textBoxPlaca
             // 
-            this.textBox6.Location = new System.Drawing.Point(396, 180);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(124, 32);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.Text = "Placa";
+            this.textBoxPlaca.Location = new System.Drawing.Point(396, 180);
+            this.textBoxPlaca.Multiline = true;
+            this.textBoxPlaca.Name = "textBoxPlaca";
+            this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
+            this.textBoxPlaca.TabIndex = 11;
+            this.textBoxPlaca.Text = "Placa";
             // 
-            // button5
+            // btnBuscaLocacao
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(672, 180);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 32);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Buscar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnBuscaLocacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnBuscaLocacao.FlatAppearance.BorderSize = 0;
+            this.btnBuscaLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaLocacao.Location = new System.Drawing.Point(672, 180);
+            this.btnBuscaLocacao.Name = "btnBuscaLocacao";
+            this.btnBuscaLocacao.Size = new System.Drawing.Size(100, 32);
+            this.btnBuscaLocacao.TabIndex = 12;
+            this.btnBuscaLocacao.Text = "Buscar";
+            this.btnBuscaLocacao.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // comboBoxStatus
             // 
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 26;
-            this.comboBox1.Location = new System.Drawing.Point(526, 180);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 32);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.Text = "Disponível";
+            this.comboBoxStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.ItemHeight = 26;
+            this.comboBoxStatus.Location = new System.Drawing.Point(526, 180);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(140, 32);
+            this.comboBoxStatus.TabIndex = 13;
+            this.comboBoxStatus.Text = "Disponível";
             // 
-            // comboBox2
+            // comboBoxMarca
             // 
-            this.comboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 26;
-            this.comboBox2.Location = new System.Drawing.Point(196, 180);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(194, 32);
-            this.comboBox2.Sorted = true;
-            this.comboBox2.TabIndex = 14;
-            this.comboBox2.Text = "Marca";
+            this.comboBoxMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxMarca.FormattingEnabled = true;
+            this.comboBoxMarca.ItemHeight = 26;
+            this.comboBoxMarca.Location = new System.Drawing.Point(196, 180);
+            this.comboBoxMarca.Name = "comboBoxMarca";
+            this.comboBoxMarca.Size = new System.Drawing.Size(194, 32);
+            this.comboBoxMarca.Sorted = true;
+            this.comboBoxMarca.TabIndex = 14;
+            this.comboBoxMarca.Text = "Marca";
             // 
             // dataGridLocacao
             // 
@@ -274,19 +274,19 @@ namespace LoucaLiza
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridLocacao);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.comboBoxMarca);
+            this.Controls.Add(this.comboBoxStatus);
+            this.Controls.Add(this.btnBuscaLocacao);
+            this.Controls.Add(this.textBoxPlaca);
+            this.Controls.Add(this.textBoxModelo);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxDocumento);
+            this.Controls.Add(this.textBoxCliente);
+            this.Controls.Add(this.btnExcluirLocacao);
+            this.Controls.Add(this.btnAddLocacao);
+            this.Controls.Add(this.btnClientes);
+            this.Controls.Add(this.btnVeiculos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Name = "ListaLocacao";
@@ -307,18 +307,18 @@ namespace LoucaLiza
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnVeiculos;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnAddLocacao;
+        private System.Windows.Forms.Button btnExcluirLocacao;
+        private System.Windows.Forms.TextBox textBoxCliente;
+        private System.Windows.Forms.TextBox textBoxDocumento;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBoxModelo;
+        private System.Windows.Forms.TextBox textBoxPlaca;
+        private System.Windows.Forms.Button btnBuscaLocacao;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.ComboBox comboBoxMarca;
         private System.Windows.Forms.DataGridView dataGridLocacao;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
