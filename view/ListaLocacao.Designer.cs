@@ -46,11 +46,11 @@ namespace LoucaLiza
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridLocacao = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLocacao)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -234,16 +234,16 @@ namespace LoucaLiza
             this.comboBox2.TabIndex = 14;
             this.comboBox2.Text = "Marca";
             // 
-            // dataGridView1
+            // dataGridLocacao
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.dataGridView1.Location = new System.Drawing.Point(13, 222);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(759, 292);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridLocacao.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.dataGridLocacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridLocacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLocacao.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.dataGridLocacao.Location = new System.Drawing.Point(13, 222);
+            this.dataGridLocacao.Name = "dataGridLocacao";
+            this.dataGridLocacao.Size = new System.Drawing.Size(759, 292);
+            this.dataGridLocacao.TabIndex = 15;
             // 
             // panel2
             // 
@@ -273,7 +273,7 @@ namespace LoucaLiza
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridLocacao);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button5);
@@ -293,7 +293,7 @@ namespace LoucaLiza
             this.Text = "LoucaLiza - Locadora de Veículos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLocacao)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -319,7 +319,7 @@ namespace LoucaLiza
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridLocacao;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
