@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LoucaLiza.view
 {
-    public partial class Form1 : Form
+    public partial class CadastroVeiculo : Form
     {
-        public Form1()
+        public CadastroVeiculo()
         {
             InitializeComponent();
         }
