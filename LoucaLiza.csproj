@@ -54,6 +54,12 @@
     <Compile Include="model\cliente\Cliente.cs" />
     <Compile Include="repository\ClienteRepository.cs" />
     <Compile Include="utils\Connection.cs" />
+    <Compile Include="view\ListaVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ListaVeiculo.Designer.cs">
+      <DependentUpon>ListaVeiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\ListaLocacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <EmbeddedResource Include="view\ListaLocacao.resx">
       <DependentUpon>ListaLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ListaVeiculo.resx">
+      <DependentUpon>ListaVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
