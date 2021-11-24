@@ -30,15 +30,15 @@ namespace LoucaLiza.view
         private void InitializeComponent()
         {
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
-            this.textBoxNascimento = new System.Windows.Forms.TextBox();
+            this.textBoxKm = new System.Windows.Forms.TextBox();
             this.textBoxChassi = new System.Windows.Forms.TextBox();
             this.textBoxModelo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSalvarCliente = new System.Windows.Forms.Button();
+            this.btnSalvarVeiculo = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBoxDiaria = new System.Windows.Forms.ComboBox();
             this.comboBoxCor = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAno = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxPlaca
@@ -50,14 +50,14 @@ namespace LoucaLiza.view
             this.textBoxPlaca.TabIndex = 54;
             this.textBoxPlaca.Text = "Placa";
             // 
-            // textBoxNascimento
+            // textBoxKm
             // 
-            this.textBoxNascimento.Location = new System.Drawing.Point(314, 218);
-            this.textBoxNascimento.Multiline = true;
-            this.textBoxNascimento.Name = "textBoxNascimento";
-            this.textBoxNascimento.Size = new System.Drawing.Size(92, 32);
-            this.textBoxNascimento.TabIndex = 53;
-            this.textBoxNascimento.Text = "Km";
+            this.textBoxKm.Location = new System.Drawing.Point(314, 218);
+            this.textBoxKm.Multiline = true;
+            this.textBoxKm.Name = "textBoxKm";
+            this.textBoxKm.Size = new System.Drawing.Size(92, 32);
+            this.textBoxKm.TabIndex = 53;
+            this.textBoxKm.Text = "Km";
             // 
             // textBoxChassi
             // 
@@ -87,17 +87,17 @@ namespace LoucaLiza.view
             this.label1.TabIndex = 50;
             this.label1.Text = "Editar / Novo Veículo";
             // 
-            // btnSalvarCliente
+            // btnSalvarVeiculo
             // 
-            this.btnSalvarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnSalvarCliente.FlatAppearance.BorderSize = 0;
-            this.btnSalvarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvarCliente.Location = new System.Drawing.Point(306, 329);
-            this.btnSalvarCliente.Name = "btnSalvarCliente";
-            this.btnSalvarCliente.Size = new System.Drawing.Size(100, 32);
-            this.btnSalvarCliente.TabIndex = 49;
-            this.btnSalvarCliente.Text = "Salvar";
-            this.btnSalvarCliente.UseVisualStyleBackColor = false;
+            this.btnSalvarVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnSalvarVeiculo.FlatAppearance.BorderSize = 0;
+            this.btnSalvarVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarVeiculo.Location = new System.Drawing.Point(306, 329);
+            this.btnSalvarVeiculo.Name = "btnSalvarVeiculo";
+            this.btnSalvarVeiculo.Size = new System.Drawing.Size(100, 32);
+            this.btnSalvarVeiculo.TabIndex = 49;
+            this.btnSalvarVeiculo.Text = "Salvar";
+            this.btnSalvarVeiculo.UseVisualStyleBackColor = false;
             // 
             // comboBox2
             // 
@@ -134,30 +134,30 @@ namespace LoucaLiza.view
             this.comboBoxCor.TabIndex = 59;
             this.comboBoxCor.Text = "Cor";
             // 
-            // textBox1
+            // textBoxAno
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 218);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(83, 32);
-            this.textBox1.TabIndex = 60;
-            this.textBox1.Text = "Ano";
+            this.textBoxAno.Location = new System.Drawing.Point(215, 218);
+            this.textBoxAno.Multiline = true;
+            this.textBoxAno.Name = "textBoxAno";
+            this.textBoxAno.Size = new System.Drawing.Size(83, 32);
+            this.textBoxAno.TabIndex = 60;
+            this.textBoxAno.Text = "Ano";
             // 
             // CadastroVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 379);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxAno);
             this.Controls.Add(this.comboBoxCor);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBoxDiaria);
             this.Controls.Add(this.textBoxPlaca);
-            this.Controls.Add(this.textBoxNascimento);
+            this.Controls.Add(this.textBoxKm);
             this.Controls.Add(this.textBoxChassi);
             this.Controls.Add(this.textBoxModelo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSalvarCliente);
+            this.Controls.Add(this.btnSalvarVeiculo);
             this.Name = "CadastroVeiculo";
             this.Text = "LoucaLiza - Cadastro de Veículo";
             this.ResumeLayout(false);
@@ -167,14 +167,14 @@ namespace LoucaLiza.view
 
         #endregion
         private System.Windows.Forms.TextBox textBoxPlaca;
-        private System.Windows.Forms.TextBox textBoxNascimento;
+        private System.Windows.Forms.TextBox textBoxKm;
         private System.Windows.Forms.TextBox textBoxChassi;
         private System.Windows.Forms.TextBox textBoxModelo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSalvarCliente;
+        private System.Windows.Forms.Button btnSalvarVeiculo;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBoxDiaria;
         private System.Windows.Forms.ComboBox comboBoxCor;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAno;
     }
 }
