@@ -33,13 +33,13 @@ namespace LoucaLiza.view
             this.btnExcluirVeiculo = new System.Windows.Forms.Button();
             this.btnEditarVeiculo = new System.Windows.Forms.Button();
             this.btnAddVeiculo = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridVeiculo = new System.Windows.Forms.DataGridView();
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.btnBuscarVeiculo = new System.Windows.Forms.Button();
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
             this.textBoxModelo = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,16 +88,16 @@ namespace LoucaLiza.view
             this.btnAddVeiculo.Text = "+ Novo Veículo";
             this.btnAddVeiculo.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dataGridVeiculo
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(759, 353);
-            this.dataGridView1.TabIndex = 22;
+            this.dataGridVeiculo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.dataGridVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridVeiculo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.dataGridVeiculo.Location = new System.Drawing.Point(12, 120);
+            this.dataGridVeiculo.Name = "dataGridVeiculo";
+            this.dataGridVeiculo.Size = new System.Drawing.Size(759, 353);
+            this.dataGridVeiculo.TabIndex = 22;
             // 
             // comboBoxMarca
             // 
@@ -157,7 +157,7 @@ namespace LoucaLiza.view
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridVeiculo);
             this.Controls.Add(this.comboBoxMarca);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.btnBuscarVeiculo);
@@ -169,7 +169,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.label1);
             this.Name = "ListaVeiculo";
             this.Text = "LoucaLiza - Lista de Veículos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +181,7 @@ namespace LoucaLiza.view
         private System.Windows.Forms.Button btnExcluirVeiculo;
         private System.Windows.Forms.Button btnEditarVeiculo;
         private System.Windows.Forms.Button btnAddVeiculo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridVeiculo;
         private System.Windows.Forms.ComboBox comboBoxMarca;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Button btnBuscarVeiculo;
