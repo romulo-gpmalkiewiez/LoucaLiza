@@ -6,6 +6,6 @@
 
 ### Participantes
 
-##### [*@NGomes1990*]
-##### [*@romulo-gpmalkiewiez*]
-##### *Fran*
+- [Nayron Gomes](https://github.com/NGomes1990)
+- [Rômulo Göelzer Portolann](https://github.com/romulo-gpmalkiewiez)
+- [Francine Fernandez](https://github.com/missmissing84)
