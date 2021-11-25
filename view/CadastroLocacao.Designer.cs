@@ -171,6 +171,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.label1);
             this.Name = "CadastroLocacao";
             this.Text = "LoucaLiza - Cadastro Locação";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastroLocacao_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

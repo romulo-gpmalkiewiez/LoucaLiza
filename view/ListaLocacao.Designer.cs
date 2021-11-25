@@ -133,6 +133,7 @@ namespace LoucaLiza
             this.btnAddLocacao.TabIndex = 4;
             this.btnAddLocacao.Text = "+ Nova Locação";
             this.btnAddLocacao.UseVisualStyleBackColor = false;
+            this.btnAddLocacao.Click += new System.EventHandler(this.btnAddLocacao_Click);
             // 
             // btnExcluirLocacao
             // 

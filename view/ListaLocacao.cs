@@ -22,6 +22,11 @@ namespace LoucaLiza
             OpenNewWindow(new ListaVeiculo(this));
         }
 
+        private void btnAddLocacao_Click(object sender, EventArgs e)
+        {
+            OpenNewWindow(new CadastroLocacao(this));
+        }
+
         private void OpenNewWindow(Form formToOpen)
         {
             FormUtils.Disable(this);
