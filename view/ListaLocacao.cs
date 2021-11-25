@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LoucaLiza.utils;
+using LoucaLiza.view;
+using System;
 using System.Windows.Forms;
 
 namespace LoucaLiza
@@ -11,14 +12,20 @@ namespace LoucaLiza
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnClientes_Click(object sender, EventArgs e)
         {
-
+            OpenNewWindow(new ListaCliente(this));
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnVeiculos_Click(object sender, EventArgs e)
         {
+            OpenNewWindow(new ListaVeiculo(this));
+        }
 
+        private void OpenNewWindow(Form formToOpen)
+        {
+            FormUtils.Disable(this);
+            formToOpen.Show();
         }
     }
 }

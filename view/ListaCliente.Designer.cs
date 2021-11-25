@@ -35,7 +35,7 @@ namespace LoucaLiza.view
             this.btnExcluirCliente = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
             this.btnAddCliente = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxCPF = new System.Windows.Forms.TextBox();
             this.textBoxCNH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCliente)).BeginInit();
@@ -109,15 +109,15 @@ namespace LoucaLiza.view
             this.btnAddCliente.Text = "+ Novo Cliente";
             this.btnAddCliente.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 24);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Clientes";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(13, 30);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(77, 24);
+            this.labelTitle.TabIndex = 23;
+            this.labelTitle.Text = "Clientes";
             // 
             // textBoxCPF
             // 
@@ -150,9 +150,10 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnExcluirCliente);
             this.Controls.Add(this.btnEditarCliente);
             this.Controls.Add(this.btnAddCliente);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitle);
             this.Name = "ListaCliente";
             this.Text = "LoucaLiza - Lista de Clientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListaCliente_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,7 +168,7 @@ namespace LoucaLiza.view
         private System.Windows.Forms.Button btnExcluirCliente;
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button btnAddCliente;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox textBoxCPF;
         private System.Windows.Forms.TextBox textBoxCNH;
     }

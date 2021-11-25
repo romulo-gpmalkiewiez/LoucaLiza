@@ -86,7 +86,6 @@ namespace LoucaLiza
             this.label1.Size = new System.Drawing.Size(167, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "LoucaLiza";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -108,6 +107,7 @@ namespace LoucaLiza
             this.btnVeiculos.TabIndex = 2;
             this.btnVeiculos.Text = "Veículos";
             this.btnVeiculos.UseVisualStyleBackColor = false;
+            this.btnVeiculos.Click += new System.EventHandler(this.btnVeiculos_Click);
             // 
             // btnClientes
             // 
@@ -120,6 +120,7 @@ namespace LoucaLiza
             this.btnClientes.TabIndex = 3;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnAddLocacao
             // 
@@ -264,7 +265,6 @@ namespace LoucaLiza
             this.label4.Size = new System.Drawing.Size(203, 13);
             this.label4.TabIndex = 17;
             this.label4.Text = "LoucaLiza - Mais louca que você imagina";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // ListaLocacao
             // 

@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LoucaLiza.utils;
 using System.Windows.Forms;
 
 namespace LoucaLiza.view
 {
     public partial class ListaVeiculo : Form
     {
-        public ListaVeiculo()
+        private Form _sourceForm;
+
+        public ListaVeiculo(Form sourceForm)
         {
             InitializeComponent();
+
+            _sourceForm = sourceForm;
+        }
+
+        private void ListaVeiculo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormUtils.Enable(_sourceForm);
         }
     }
 }

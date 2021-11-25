@@ -53,7 +53,38 @@
     <Compile Include="model\cliente\Telefone.cs" />
     <Compile Include="model\cliente\Cliente.cs" />
     <Compile Include="repository\ClienteRepository.cs" />
+    <Compile Include="utils\FormUtils.cs" />
     <Compile Include="utils\Connection.cs" />
+    <Compile Include="view\CadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroCliente.Designer.cs">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CadastroVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroVeiculo.Designer.cs">
+      <DependentUpon>CadastroVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\LocalizadorVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LocalizadorVeiculo.Designer.cs">
+      <DependentUpon>LocalizadorVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\LocalizadorCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LocalizadorCliente.Designer.cs">
+      <DependentUpon>LocalizadorCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ListaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ListaCliente.Designer.cs">
+      <DependentUpon>ListaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\ListaVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +113,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\CadastroVeiculo.resx">
+      <DependentUpon>CadastroVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ListaCliente.resx">
+      <DependentUpon>ListaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\ListaLocacao.resx">
       <DependentUpon>ListaLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\ListaVeiculo.resx">
       <DependentUpon>ListaVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CadastroCliente.resx">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LocalizadorCliente.resx">
+      <DependentUpon>LocalizadorCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LocalizadorVeiculo.resx">
+      <DependentUpon>LocalizadorVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
