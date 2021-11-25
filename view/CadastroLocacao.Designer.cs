@@ -39,7 +39,7 @@ namespace LoucaLiza.view
             this.label3 = new System.Windows.Forms.Label();
             this.btnAddLocacao = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnSalvarCliente = new System.Windows.Forms.Button();
+            this.btnSalvarLocacao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -141,24 +141,24 @@ namespace LoucaLiza.view
             this.button1.Text = "O";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // btnSalvarCliente
+            // btnSalvarLocacao
             // 
-            this.btnSalvarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnSalvarCliente.FlatAppearance.BorderSize = 0;
-            this.btnSalvarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvarCliente.Location = new System.Drawing.Point(404, 349);
-            this.btnSalvarCliente.Name = "btnSalvarCliente";
-            this.btnSalvarCliente.Size = new System.Drawing.Size(100, 32);
-            this.btnSalvarCliente.TabIndex = 48;
-            this.btnSalvarCliente.Text = "Alugar Veículo";
-            this.btnSalvarCliente.UseVisualStyleBackColor = false;
+            this.btnSalvarLocacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnSalvarLocacao.FlatAppearance.BorderSize = 0;
+            this.btnSalvarLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarLocacao.Location = new System.Drawing.Point(404, 349);
+            this.btnSalvarLocacao.Name = "btnSalvarLocacao";
+            this.btnSalvarLocacao.Size = new System.Drawing.Size(100, 32);
+            this.btnSalvarLocacao.TabIndex = 48;
+            this.btnSalvarLocacao.Text = "Alugar Veículo";
+            this.btnSalvarLocacao.UseVisualStyleBackColor = false;
             // 
             // CadastroLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 402);
-            this.Controls.Add(this.btnSalvarCliente);
+            this.Controls.Add(this.btnSalvarLocacao);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddLocacao);
             this.Controls.Add(this.label3);
@@ -188,6 +188,6 @@ namespace LoucaLiza.view
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAddLocacao;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnSalvarCliente;
+        private System.Windows.Forms.Button btnSalvarLocacao;
     }
 }
