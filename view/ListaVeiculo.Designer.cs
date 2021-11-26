@@ -87,6 +87,7 @@ namespace LoucaLiza.view
             this.btnAddVeiculo.TabIndex = 14;
             this.btnAddVeiculo.Text = "+ Novo Veículo";
             this.btnAddVeiculo.UseVisualStyleBackColor = false;
+            this.btnAddVeiculo.Click += new System.EventHandler(this.btnAddVeiculo_Click);
             // 
             // dataGridVeiculo
             // 

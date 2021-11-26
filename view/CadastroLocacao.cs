@@ -5,17 +5,14 @@ namespace LoucaLiza.view
 {
     public partial class CadastroLocacao : Form
     {
-        private Form _sourceForm;
-
-        public CadastroLocacao(Form sourceForm)
+        public CadastroLocacao()
         {
             InitializeComponent();
-            _sourceForm = sourceForm;
         }
 
         private void btnLocalizaCliente_Click(object sender, System.EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new LocalizadorCliente(this));
+            FormUtils.OpenNewWindow(this, new LocalizadorCliente());
         }
     }
 }

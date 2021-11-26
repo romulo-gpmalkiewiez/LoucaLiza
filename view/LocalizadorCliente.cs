@@ -4,13 +4,9 @@ namespace LoucaLiza.view
 {
     public partial class LocalizadorCliente : Form
     {
-        private Form _sourceForm;
-
-        public LocalizadorCliente(Form sourceForm)
+        public LocalizadorCliente()
         {
             InitializeComponent();
-
-            _sourceForm = sourceForm;
         }
     }
 }

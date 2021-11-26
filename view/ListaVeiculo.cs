@@ -5,11 +5,14 @@ namespace LoucaLiza.view
 {
     public partial class ListaVeiculo : Form
     {
-        private Form _sourceForm;
-        public ListaVeiculo(Form sourceForm)
+        public ListaVeiculo()
         {
             InitializeComponent();
-            _sourceForm = sourceForm;
+        }
+
+        private void btnAddVeiculo_Click(object sender, System.EventArgs e)
+        {
+            FormUtils.OpenNewWindow(this, new CadastroVeiculo());
         }
     }
 }

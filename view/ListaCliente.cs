@@ -5,11 +5,9 @@ namespace LoucaLiza.view
 {
     public partial class ListaCliente : Form
     {
-        private Form _sourceForm;
-        public ListaCliente(Form sourceForm)
+        public ListaCliente()
         {
             InitializeComponent();
-            _sourceForm = sourceForm;
         }
     }
 }

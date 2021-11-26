@@ -14,17 +14,17 @@ namespace LoucaLiza
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new ListaCliente(this));
+            FormUtils.OpenNewWindow(this, new ListaCliente());
         }
 
         private void btnVeiculos_Click(object sender, EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new ListaVeiculo(this));
+            FormUtils.OpenNewWindow(this, new ListaVeiculo());
         }
 
         private void btnAddLocacao_Click(object sender, EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new CadastroLocacao(this));
+            FormUtils.OpenNewWindow(this, new CadastroLocacao());
         }
     }
 }
