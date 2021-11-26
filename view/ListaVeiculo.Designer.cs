@@ -169,7 +169,6 @@ namespace LoucaLiza.view
             this.Controls.Add(this.label1);
             this.Name = "ListaVeiculo";
             this.Text = "LoucaLiza - Lista de Veículos";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListaVeiculo_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

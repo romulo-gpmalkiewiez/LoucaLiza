@@ -37,8 +37,8 @@ namespace LoucaLiza.view
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAddLocacao = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLocalizaCliente = new System.Windows.Forms.Button();
+            this.btnLocalizaVeiculo = new System.Windows.Forms.Button();
             this.btnSalvarLocacao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -117,29 +117,30 @@ namespace LoucaLiza.view
             this.label3.TabIndex = 45;
             this.label3.Text = "R$ valor";
             // 
-            // btnAddLocacao
+            // btnLocalizaCliente
             // 
-            this.btnAddLocacao.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAddLocacao.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnAddLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddLocacao.Location = new System.Drawing.Point(472, 123);
-            this.btnAddLocacao.Name = "btnAddLocacao";
-            this.btnAddLocacao.Size = new System.Drawing.Size(32, 32);
-            this.btnAddLocacao.TabIndex = 46;
-            this.btnAddLocacao.Text = "O";
-            this.btnAddLocacao.UseVisualStyleBackColor = false;
+            this.btnLocalizaCliente.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLocalizaCliente.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnLocalizaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLocalizaCliente.Location = new System.Drawing.Point(472, 123);
+            this.btnLocalizaCliente.Name = "btnLocalizaCliente";
+            this.btnLocalizaCliente.Size = new System.Drawing.Size(32, 32);
+            this.btnLocalizaCliente.TabIndex = 46;
+            this.btnLocalizaCliente.Text = "O";
+            this.btnLocalizaCliente.UseVisualStyleBackColor = false;
+            this.btnLocalizaCliente.Click += new System.EventHandler(this.btnLocalizaCliente_Click);
             // 
-            // button1
+            // btnLocalizaVeiculo
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(472, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 32);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "O";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLocalizaVeiculo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLocalizaVeiculo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnLocalizaVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLocalizaVeiculo.Location = new System.Drawing.Point(472, 176);
+            this.btnLocalizaVeiculo.Name = "btnLocalizaVeiculo";
+            this.btnLocalizaVeiculo.Size = new System.Drawing.Size(32, 32);
+            this.btnLocalizaVeiculo.TabIndex = 47;
+            this.btnLocalizaVeiculo.Text = "O";
+            this.btnLocalizaVeiculo.UseVisualStyleBackColor = false;
             // 
             // btnSalvarLocacao
             // 
@@ -159,8 +160,8 @@ namespace LoucaLiza.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 402);
             this.Controls.Add(this.btnSalvarLocacao);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAddLocacao);
+            this.Controls.Add(this.btnLocalizaVeiculo);
+            this.Controls.Add(this.btnLocalizaCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox3);
@@ -171,7 +172,6 @@ namespace LoucaLiza.view
             this.Controls.Add(this.label1);
             this.Name = "CadastroLocacao";
             this.Text = "LoucaLiza - Cadastro Locação";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastroLocacao_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,8 +187,8 @@ namespace LoucaLiza.view
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAddLocacao;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLocalizaCliente;
+        private System.Windows.Forms.Button btnLocalizaVeiculo;
         private System.Windows.Forms.Button btnSalvarLocacao;
     }
 }

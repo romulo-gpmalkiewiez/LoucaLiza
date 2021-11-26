@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace LoucaLiza.view
 {
     public partial class LocalizadorCliente : Form
     {
-        public LocalizadorCliente()
+        private Form _sourceForm;
+
+        public LocalizadorCliente(Form sourceForm)
         {
             InitializeComponent();
+
+            _sourceForm = sourceForm;
         }
     }
 }

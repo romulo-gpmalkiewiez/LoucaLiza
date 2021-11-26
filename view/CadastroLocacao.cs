@@ -10,13 +10,12 @@ namespace LoucaLiza.view
         public CadastroLocacao(Form sourceForm)
         {
             InitializeComponent();
-
             _sourceForm = sourceForm;
         }
 
-        private void CadastroLocacao_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnLocalizaCliente_Click(object sender, System.EventArgs e)
         {
-            FormUtils.Enable(_sourceForm);
+            FormUtils.OpenNewWindow(this, new LocalizadorCliente(this));
         }
     }
 }

@@ -153,7 +153,6 @@ namespace LoucaLiza.view
             this.Controls.Add(this.labelTitle);
             this.Name = "ListaCliente";
             this.Text = "LoucaLiza - Lista de Clientes";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListaCliente_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
