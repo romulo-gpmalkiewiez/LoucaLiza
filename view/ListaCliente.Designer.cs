@@ -153,7 +153,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnAddCliente);
             this.Controls.Add(this.labelTitle);
             this.Name = "ListaCliente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoucaLiza - Lista de Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCliente)).EndInit();
             this.ResumeLayout(false);

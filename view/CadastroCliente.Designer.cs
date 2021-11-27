@@ -30,12 +30,12 @@ namespace LoucaLiza.view
         private void InitializeComponent()
         {
             this.btnSalvarCliente = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxCNH = new System.Windows.Forms.TextBox();
             this.textBoxCPF = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
-            this.textBoxNascimento = new System.Windows.Forms.TextBox();
+            this.textBoxDataNascimento = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,16 +59,17 @@ namespace LoucaLiza.view
             this.btnSalvarCliente.TabIndex = 25;
             this.btnSalvarCliente.Text = "Salvar";
             this.btnSalvarCliente.UseVisualStyleBackColor = false;
+            this.btnSalvarCliente.Click += new System.EventHandler(this.btnSalvarCliente_Click);
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 24);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Editar / Novo Cliente";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(12, 22);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(181, 24);
+            this.labelTitle.TabIndex = 26;
+            this.labelTitle.Text = "Editar / Novo Cliente";
             // 
             // textBoxCNH
             // 
@@ -106,14 +107,14 @@ namespace LoucaLiza.view
             this.textBoxTelefone.TabIndex = 39;
             this.textBoxTelefone.Text = "Telefone";
             // 
-            // textBoxNascimento
+            // textBoxDataNascimento
             // 
-            this.textBoxNascimento.Location = new System.Drawing.Point(354, 150);
-            this.textBoxNascimento.Multiline = true;
-            this.textBoxNascimento.Name = "textBoxNascimento";
-            this.textBoxNascimento.Size = new System.Drawing.Size(120, 32);
-            this.textBoxNascimento.TabIndex = 38;
-            this.textBoxNascimento.Text = "Nascimento";
+            this.textBoxDataNascimento.Location = new System.Drawing.Point(354, 150);
+            this.textBoxDataNascimento.Multiline = true;
+            this.textBoxDataNascimento.Name = "textBoxDataNascimento";
+            this.textBoxDataNascimento.Size = new System.Drawing.Size(120, 32);
+            this.textBoxDataNascimento.TabIndex = 38;
+            this.textBoxDataNascimento.Text = "Nascimento";
             // 
             // textBoxEmail
             // 
@@ -220,15 +221,15 @@ namespace LoucaLiza.view
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxTelefone);
-            this.Controls.Add(this.textBoxNascimento);
+            this.Controls.Add(this.textBoxDataNascimento);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBoxCNH);
             this.Controls.Add(this.textBoxCPF);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.btnSalvarCliente);
             this.Name = "CadastroCliente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoucaLiza - Cadastro de Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,12 +239,12 @@ namespace LoucaLiza.view
         #endregion
 
         private System.Windows.Forms.Button btnSalvarCliente;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox textBoxCNH;
         private System.Windows.Forms.TextBox textBoxCPF;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxTelefone;
-        private System.Windows.Forms.TextBox textBoxNascimento;
+        private System.Windows.Forms.TextBox textBoxDataNascimento;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

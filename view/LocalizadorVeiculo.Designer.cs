@@ -184,7 +184,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnAddVeiculo);
             this.Controls.Add(this.label1);
             this.Name = "LocalizadorVeiculo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoucaLiza - Localizar Veículo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).EndInit();
             this.ResumeLayout(false);

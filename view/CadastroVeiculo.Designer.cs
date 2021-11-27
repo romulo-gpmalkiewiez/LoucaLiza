@@ -161,7 +161,7 @@ namespace LoucaLiza.view
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CadastroVeiculo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoucaLiza - Cadastro de Veículo";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,4 +1,5 @@
-﻿using LoucaLiza.utils;
+﻿using LoucaLiza.model.cliente;
+using LoucaLiza.utils;
 using System.Windows.Forms;
 
 namespace LoucaLiza.view
@@ -12,13 +13,18 @@ namespace LoucaLiza.view
 
         private void btnAddCliente_Click(object sender, System.EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new CadastroCliente());
+            FormUtils.OpenNewWindow(this, new CadastroCliente(null, HandleAfterSaveCliente));
         }
 
         private void btnSelecionarCliente_Click(object sender, System.EventArgs e)
         {
             // onSelectCliente
             Close();
+        }
+
+        private void HandleAfterSaveCliente(Cliente cliente)
+        {
+            MessageBox.Show("CLIENTE SELECIONADO" + cliente.Nome);
         }
     }
 }
