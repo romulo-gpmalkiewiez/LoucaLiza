@@ -108,6 +108,7 @@ namespace LoucaLiza.view
             this.btnAddCliente.TabIndex = 24;
             this.btnAddCliente.Text = "+ Novo Cliente";
             this.btnAddCliente.UseVisualStyleBackColor = false;
+            this.btnAddCliente.Click += new System.EventHandler(this.btnAddCliente_Click);
             // 
             // labelTitle
             // 
@@ -152,6 +153,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnAddCliente);
             this.Controls.Add(this.labelTitle);
             this.Name = "ListaCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoucaLiza - Lista de Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCliente)).EndInit();
             this.ResumeLayout(false);

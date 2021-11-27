@@ -228,6 +228,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvarCliente);
             this.Name = "CadastroCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoucaLiza - Cadastro de Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -127,6 +127,7 @@ namespace LoucaLiza.view
             this.btnAddCliente.TabIndex = 35;
             this.btnAddCliente.Text = "+ Novo Cliente";
             this.btnAddCliente.UseVisualStyleBackColor = false;
+            this.btnAddCliente.Click += new System.EventHandler(this.btnAddCliente_Click);
             // 
             // label1
             // 
@@ -149,6 +150,7 @@ namespace LoucaLiza.view
             this.btnSelecionarCliente.TabIndex = 43;
             this.btnSelecionarCliente.Text = "Selecionar";
             this.btnSelecionarCliente.UseVisualStyleBackColor = false;
+            this.btnSelecionarCliente.Click += new System.EventHandler(this.btnSelecionarCliente_Click);
             // 
             // LocalizadorCliente
             // 
@@ -166,6 +168,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnAddCliente);
             this.Controls.Add(this.label1);
             this.Name = "LocalizadorCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoucaLiza - Localizar Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCliente)).EndInit();
             this.ResumeLayout(false);

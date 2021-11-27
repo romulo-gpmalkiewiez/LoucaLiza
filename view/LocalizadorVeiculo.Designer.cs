@@ -142,6 +142,7 @@ namespace LoucaLiza.view
             this.btnAddVeiculo.TabIndex = 24;
             this.btnAddVeiculo.Text = "+ Novo Veículo";
             this.btnAddVeiculo.UseVisualStyleBackColor = false;
+            this.btnAddVeiculo.Click += new System.EventHandler(this.btnAddVeiculo_Click);
             // 
             // label1
             // 
@@ -164,6 +165,7 @@ namespace LoucaLiza.view
             this.btnSelecionarVeiculo.TabIndex = 44;
             this.btnSelecionarVeiculo.Text = "Selecionar";
             this.btnSelecionarVeiculo.UseVisualStyleBackColor = false;
+            this.btnSelecionarVeiculo.Click += new System.EventHandler(this.btnSelecionarVeiculo_Click);
             // 
             // LocalizadorVeiculo
             // 
@@ -182,6 +184,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnAddVeiculo);
             this.Controls.Add(this.label1);
             this.Name = "LocalizadorVeiculo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoucaLiza - Localizar Veículo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).EndInit();
             this.ResumeLayout(false);

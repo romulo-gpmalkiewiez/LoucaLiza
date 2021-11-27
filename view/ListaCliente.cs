@@ -9,5 +9,10 @@ namespace LoucaLiza.view
         {
             InitializeComponent();
         }
+
+        private void btnAddCliente_Click(object sender, System.EventArgs e)
+        {
+            FormUtils.OpenNewWindow(this, new CadastroCliente());
+        }
     }
 }

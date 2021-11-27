@@ -291,6 +291,7 @@ namespace LoucaLiza
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Name = "ListaLocacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoucaLiza - Locadora de Veículos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

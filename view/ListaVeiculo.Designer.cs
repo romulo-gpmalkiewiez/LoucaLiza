@@ -169,6 +169,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnAddVeiculo);
             this.Controls.Add(this.label1);
             this.Name = "ListaVeiculo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoucaLiza - Lista de Veículos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).EndInit();
             this.ResumeLayout(false);

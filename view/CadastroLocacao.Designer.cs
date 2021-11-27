@@ -141,6 +141,7 @@ namespace LoucaLiza.view
             this.btnLocalizaVeiculo.TabIndex = 47;
             this.btnLocalizaVeiculo.Text = "O";
             this.btnLocalizaVeiculo.UseVisualStyleBackColor = false;
+            this.btnLocalizaVeiculo.Click += new System.EventHandler(this.btnLocalizaVeiculo_Click);
             // 
             // btnSalvarLocacao
             // 
@@ -171,6 +172,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.textBoxNascimento);
             this.Controls.Add(this.label1);
             this.Name = "CadastroLocacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoucaLiza - Cadastro Locação";
             this.ResumeLayout(false);
             this.PerformLayout();

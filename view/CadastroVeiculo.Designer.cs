@@ -158,7 +158,10 @@ namespace LoucaLiza.view
             this.Controls.Add(this.textBoxModelo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvarVeiculo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CadastroVeiculo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LoucaLiza - Cadastro de Veículo";
             this.ResumeLayout(false);
             this.PerformLayout();
