@@ -1,15 +1,7 @@
 ﻿using LoucaLiza.controller;
 using LoucaLiza.model.cliente;
-using LoucaLiza.repository;
 using LoucaLiza.utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LoucaLiza.view
@@ -24,11 +16,16 @@ namespace LoucaLiza.view
         {
             InitializeComponent();
 
-            _cliente = cliente != null ? cliente : new Cliente();
+            _cliente = cliente ?? new Cliente();
             _onSaveCallback = onSaveCallback;
 
             InitFormTitle();
             InitScreenFields();
+        }
+
+        private void InitFormTitle()
+        {
+            labelTitle.Text = _cliente != null && _cliente.Id != null ? "Editar Cliente" : "Novo Cliente";
         }
 
         private void InitScreenFields()
@@ -51,11 +48,6 @@ namespace LoucaLiza.view
 
             // telefone
             textBoxTelefone.Text = _cliente?.Telefone?.Numero ?? textBoxTelefone.Text;
-        }
-
-        private void InitFormTitle()
-        {
-            labelTitle.Text = _cliente != null && _cliente.Id != null ? "Editar Cliente" : "Novo Cliente";
         }
 
         private Cliente ConvertScreenDataToCliente()

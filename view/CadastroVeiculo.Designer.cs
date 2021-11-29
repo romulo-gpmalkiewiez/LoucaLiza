@@ -98,6 +98,7 @@ namespace LoucaLiza.view
             this.btnSalvarVeiculo.TabIndex = 8;
             this.btnSalvarVeiculo.Text = "Salvar";
             this.btnSalvarVeiculo.UseVisualStyleBackColor = false;
+            this.btnSalvarVeiculo.Click += new System.EventHandler(this.btnSalvarVeiculo_Click);
             // 
             // comboBoxMarca
             // 

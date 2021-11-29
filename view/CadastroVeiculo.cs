@@ -1,13 +1,7 @@
 ﻿using Loucaliza.model.veiculo;
 using LoucaLiza.controller;
+using LoucaLiza.utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LoucaLiza.view
@@ -22,7 +16,7 @@ namespace LoucaLiza.view
         {
             InitializeComponent();
 
-            _veiculo = veiculo != null ? veiculo : new Veiculo();
+            _veiculo = veiculo ?? new Veiculo();
             _onSaveCallback = onSaveCallback;
 
             InitFormTitle();
@@ -36,7 +30,6 @@ namespace LoucaLiza.view
 
         private void InitScreenFields()
         {
-            // dados gerais
             comboBoxMarca.Text = _veiculo?.Marca ?? comboBoxMarca.Text;
             textBoxModelo.Text = _veiculo?.Modelo?? textBoxModelo.Text;
             textBoxChassi.Text = _veiculo?.Chassi ?? textBoxChassi.Text;
@@ -45,6 +38,40 @@ namespace LoucaLiza.view
             textBoxAno.Text = _veiculo?.Ano.ToString();
             // textBoxKm.Text = _veiculo?.Quilometragem ?? textBoxKm.Text;
             textBoxDiaria.Text = _veiculo?.ValorDiario.ToString() ?? textBoxDiaria.Text;
+        }
+
+        private Veiculo ConvertScreenDataToVeiculo()
+        {
+            _veiculo.Marca = comboBoxMarca.Text;
+            _veiculo.Modelo = textBoxModelo.Text;
+            _veiculo.Placa = textBoxPlaca.Text;
+            _veiculo.Ano = int.Parse(textBoxAno.Text);
+            _veiculo.Cor = (Cor)Enum.Parse(typeof(Cor), comboBoxMarca.Text);
+            _veiculo.Quilometragem = int.Parse(textBoxKm.Text);
+            _veiculo.ValorDiario = double.Parse(textBoxDiaria.Text);
+            _veiculo.Chassi = textBoxChassi.Text;
+
+            return _veiculo;
+        }
+
+        private void btnSalvarVeiculo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _veiculo = ModelUtils.Mustang();
+
+                // ConvertScreenDataToVeiculo();
+                veiculoController.Save(_veiculo);
+
+                MessageBox.Show("Veículo salvo com sucesso!");
+                Close();
+
+                _onSaveCallback(_veiculo);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Campos não preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
