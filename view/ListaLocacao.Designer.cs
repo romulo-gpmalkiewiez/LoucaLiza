@@ -29,72 +29,73 @@ namespace LoucaLiza
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaLocacao));
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.labelLocadoraDeVeiculos = new System.Windows.Forms.Label();
+            this.labelLoucaLiza = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.btnVeiculos = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnAddLocacao = new System.Windows.Forms.Button();
             this.btnExcluirLocacao = new System.Windows.Forms.Button();
-            this.textBoxCliente = new System.Windows.Forms.TextBox();
-            this.textBoxDocumento = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBoxModelo = new System.Windows.Forms.TextBox();
-            this.textBoxPlaca = new System.Windows.Forms.TextBox();
+            this.textBoxDataInicial = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxDataFinal = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxDocumento = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxCliente = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxModelo = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxPlaca = new LoucaLiza.View.Components.PlaceHolderTextBox();
             this.btnBuscaLocacao = new System.Windows.Forms.Button();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.dataGridLocacao = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelFooter = new System.Windows.Forms.Panel();
+            this.labelFooter = new System.Windows.Forms.Label();
+            this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocacao)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelFooter.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 64);
-            this.panel1.TabIndex = 0;
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.panelHeader.Controls.Add(this.labelLocadoraDeVeiculos);
+            this.panelHeader.Controls.Add(this.labelLoucaLiza);
+            this.panelHeader.Location = new System.Drawing.Point(1, 1);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(782, 64);
+            this.panelHeader.TabIndex = 0;
             // 
-            // label2
+            // labelLocadoraDeVeiculos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(66)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(167, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(247, 34);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Locadora de Veículos";
+            this.labelLocadoraDeVeiculos.AutoSize = true;
+            this.labelLocadoraDeVeiculos.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelLocadoraDeVeiculos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(66)))), ((int)(((byte)(214)))));
+            this.labelLocadoraDeVeiculos.Location = new System.Drawing.Point(167, 18);
+            this.labelLocadoraDeVeiculos.Name = "labelLocadoraDeVeiculos";
+            this.labelLocadoraDeVeiculos.Size = new System.Drawing.Size(247, 34);
+            this.labelLocadoraDeVeiculos.TabIndex = 1;
+            this.labelLocadoraDeVeiculos.Text = "Locadora de Veículos";
             // 
-            // label1
+            // labelLoucaLiza
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LoucaLiza";
+            this.labelLoucaLiza.AutoSize = true;
+            this.labelLoucaLiza.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelLoucaLiza.ForeColor = System.Drawing.Color.White;
+            this.labelLoucaLiza.Location = new System.Drawing.Point(4, 10);
+            this.labelLoucaLiza.Name = "labelLoucaLiza";
+            this.labelLoucaLiza.Size = new System.Drawing.Size(167, 45);
+            this.labelLoucaLiza.TabIndex = 0;
+            this.labelLoucaLiza.Text = "LoucaLiza";
             // 
-            // label3
+            // labelTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Locações";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(12, 81);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(54, 13);
+            this.labelTitle.TabIndex = 1;
+            this.labelTitle.Text = "Locações";
             // 
             // btnVeiculos
             // 
@@ -147,70 +148,86 @@ namespace LoucaLiza
             this.btnExcluirLocacao.Text = "Excluir";
             this.btnExcluirLocacao.UseVisualStyleBackColor = false;
             // 
-            // textBoxCliente
+            // textBoxDataInicial
             // 
-            this.textBoxCliente.Location = new System.Drawing.Point(14, 136);
-            this.textBoxCliente.Multiline = true;
-            this.textBoxCliente.Name = "textBoxCliente";
-            this.textBoxCliente.Size = new System.Drawing.Size(335, 32);
-            this.textBoxCliente.TabIndex = 6;
-            this.textBoxCliente.Text = "Cliente";
+            this.textBoxDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDataInicial.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDataInicial.Location = new System.Drawing.Point(526, 135);
+            this.textBoxDataInicial.Multiline = true;
+            this.textBoxDataInicial.Name = "textBoxDataInicial";
+            this.textBoxDataInicial.PlaceHolderText = "Data Inicial";
+            this.textBoxDataInicial.Size = new System.Drawing.Size(120, 32);
+            this.textBoxDataInicial.TabIndex = 8;
+            this.textBoxDataInicial.TextChanged += new System.EventHandler(this.textBoxDataInicial_TextChanged);
+            // 
+            // textBoxDataFinal
+            // 
+            this.textBoxDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDataFinal.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDataFinal.Location = new System.Drawing.Point(652, 135);
+            this.textBoxDataFinal.Multiline = true;
+            this.textBoxDataFinal.Name = "textBoxDataFinal";
+            this.textBoxDataFinal.PlaceHolderText = "Data Final";
+            this.textBoxDataFinal.Size = new System.Drawing.Size(120, 32);
+            this.textBoxDataFinal.TabIndex = 9;
             // 
             // textBoxDocumento
             // 
+            this.textBoxDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDocumento.ForeColor = System.Drawing.Color.Gray;
             this.textBoxDocumento.Location = new System.Drawing.Point(354, 135);
             this.textBoxDocumento.Multiline = true;
             this.textBoxDocumento.Name = "textBoxDocumento";
+            this.textBoxDocumento.PlaceHolderText = "Documento";
             this.textBoxDocumento.Size = new System.Drawing.Size(166, 32);
             this.textBoxDocumento.TabIndex = 7;
-            this.textBoxDocumento.Text = "Documento";
             // 
-            // textBox3
+            // textBoxCliente
             // 
-            this.textBox3.Location = new System.Drawing.Point(526, 135);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 32);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Text = "De";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(652, 135);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 32);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.Text = "Até";
+            this.textBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxCliente.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxCliente.Location = new System.Drawing.Point(14, 136);
+            this.textBoxCliente.Multiline = true;
+            this.textBoxCliente.Name = "textBoxCliente";
+            this.textBoxCliente.PlaceHolderText = "Cliente";
+            this.textBoxCliente.Size = new System.Drawing.Size(335, 32);
+            this.textBoxCliente.TabIndex = 6;
             // 
             // textBoxModelo
             // 
+            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxModelo.ForeColor = System.Drawing.Color.Gray;
             this.textBoxModelo.Location = new System.Drawing.Point(13, 180);
             this.textBoxModelo.Multiline = true;
             this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.PlaceHolderText = "Modelo";
             this.textBoxModelo.Size = new System.Drawing.Size(177, 32);
             this.textBoxModelo.TabIndex = 10;
-            this.textBoxModelo.Text = "Modelo";
             // 
             // textBoxPlaca
             // 
+            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxPlaca.ForeColor = System.Drawing.Color.Gray;
             this.textBoxPlaca.Location = new System.Drawing.Point(396, 180);
             this.textBoxPlaca.Multiline = true;
             this.textBoxPlaca.Name = "textBoxPlaca";
+            this.textBoxPlaca.PlaceHolderText = "Placa";
             this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
             this.textBoxPlaca.TabIndex = 11;
-            this.textBoxPlaca.Text = "Placa";
             // 
             // btnBuscaLocacao
             // 
             this.btnBuscaLocacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
             this.btnBuscaLocacao.FlatAppearance.BorderSize = 0;
             this.btnBuscaLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaLocacao.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaLocacao.Image")));
             this.btnBuscaLocacao.Location = new System.Drawing.Point(672, 180);
             this.btnBuscaLocacao.Name = "btnBuscaLocacao";
             this.btnBuscaLocacao.Size = new System.Drawing.Size(100, 32);
             this.btnBuscaLocacao.TabIndex = 12;
             this.btnBuscaLocacao.Text = "Buscar";
+            this.btnBuscaLocacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscaLocacao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscaLocacao.UseVisualStyleBackColor = false;
             // 
             // comboBoxStatus
@@ -222,7 +239,7 @@ namespace LoucaLiza
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(140, 32);
             this.comboBoxStatus.TabIndex = 13;
-            this.comboBoxStatus.Text = "Disponível";
+            this.comboBoxStatus.Text = "Status";
             // 
             // comboBoxMarca
             // 
@@ -247,25 +264,25 @@ namespace LoucaLiza
             this.dataGridLocacao.Size = new System.Drawing.Size(759, 292);
             this.dataGridLocacao.TabIndex = 15;
             // 
-            // panel2
+            // panelFooter
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(1, 536);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(782, 24);
-            this.panel2.TabIndex = 16;
+            this.panelFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.panelFooter.Controls.Add(this.labelFooter);
+            this.panelFooter.Location = new System.Drawing.Point(1, 536);
+            this.panelFooter.Margin = new System.Windows.Forms.Padding(0);
+            this.panelFooter.Name = "panelFooter";
+            this.panelFooter.Size = new System.Drawing.Size(782, 24);
+            this.panelFooter.TabIndex = 16;
             // 
-            // label4
+            // labelFooter
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(11, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "LoucaLiza - Mais louca que você imagina";
+            this.labelFooter.AutoSize = true;
+            this.labelFooter.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelFooter.Location = new System.Drawing.Point(11, 5);
+            this.labelFooter.Name = "labelFooter";
+            this.labelFooter.Size = new System.Drawing.Size(203, 13);
+            this.labelFooter.TabIndex = 17;
+            this.labelFooter.Text = "LoucaLiza - Mais louca que você imagina";
             // 
             // ListaLocacao
             // 
@@ -273,31 +290,31 @@ namespace LoucaLiza
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.dataGridLocacao);
             this.Controls.Add(this.comboBoxMarca);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.btnBuscaLocacao);
             this.Controls.Add(this.textBoxPlaca);
             this.Controls.Add(this.textBoxModelo);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxDataFinal);
+            this.Controls.Add(this.textBoxDataInicial);
             this.Controls.Add(this.textBoxDocumento);
             this.Controls.Add(this.textBoxCliente);
             this.Controls.Add(this.btnExcluirLocacao);
             this.Controls.Add(this.btnAddLocacao);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnVeiculos);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.panelHeader);
             this.Name = "ListaLocacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoucaLiza - Locadora de Veículos";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocacao)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelFooter.ResumeLayout(false);
+            this.panelFooter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,26 +322,26 @@ namespace LoucaLiza
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Panel panelFooter;
+        private System.Windows.Forms.Label labelLoucaLiza;
+        private System.Windows.Forms.Label labelLocadoraDeVeiculos;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelFooter;
         private System.Windows.Forms.Button btnVeiculos;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnAddLocacao;
         private System.Windows.Forms.Button btnExcluirLocacao;
-        private System.Windows.Forms.TextBox textBoxCliente;
-        private System.Windows.Forms.TextBox textBoxDocumento;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBoxModelo;
-        private System.Windows.Forms.TextBox textBoxPlaca;
-        private System.Windows.Forms.Button btnBuscaLocacao;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDataInicial;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDataFinal;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxCliente;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDocumento;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxModelo;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxPlaca;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.ComboBox comboBoxMarca;
+        private System.Windows.Forms.Button btnBuscaLocacao;
         private System.Windows.Forms.DataGridView dataGridLocacao;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
     }
 }
 

@@ -13,5 +13,10 @@ namespace LoucaLiza.model.locacao
         public int Dias { get; set; }
         public Cliente Cliente { get; set; }
         public Veiculo Veiculo { get; set; }
+
+        public override string ToString()
+        {
+            return String.Format("{0} -> {1} - {2}", Id, Cliente.Nome, Veiculo.Modelo);
+        }
     }
 }

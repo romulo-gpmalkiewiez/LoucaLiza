@@ -12,12 +12,12 @@ namespace LoucaLiza.view
 
         private void btnLocalizaCliente_Click(object sender, System.EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new LocalizadorCliente());
+            FormUtils.OpenNewDialog(this, new LocalizadorCliente());
         }
 
         private void btnLocalizaVeiculo_Click(object sender, System.EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new LocalizadorVeiculo());
+            FormUtils.OpenNewDialog(this, new LocalizadorVeiculo());
         }
     }
 }

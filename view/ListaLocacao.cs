@@ -24,7 +24,12 @@ namespace LoucaLiza
 
         private void btnAddLocacao_Click(object sender, EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new CadastroLocacao());
+            FormUtils.OpenNewDialog(this, new CadastroLocacao());
+        }
+
+        private void textBoxDataInicial_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

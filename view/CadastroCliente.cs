@@ -1,4 +1,7 @@
-﻿using LoucaLiza.model.cliente;
+﻿using LoucaLiza.controller;
+using LoucaLiza.model.cliente;
+using LoucaLiza.repository;
+using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +16,7 @@ namespace LoucaLiza.view
 {
     public partial class CadastroCliente : Form
     {
+        private ClienteController clienteController = new ClienteController();
         private Cliente _cliente;
         private Action<Cliente> _onSaveCallback;
 
@@ -30,26 +34,23 @@ namespace LoucaLiza.view
         private void InitScreenFields()
         {
             // dados gerais
-            textBoxDataNascimento.Text = _cliente.DataNascimento == null ? "" : _cliente.DataNascimento.ToString("dd/mm/yyyy");
-            textBoxNome.Text = _cliente?.Nome ?? textBoxNome.Text;
+            textBoxDataNascimento.Text = _cliente.DataNascimento == null ? textBoxDataNascimento.Text : _cliente.DataNascimento.ToString("dd/mm/yyyy");
+            textBoxNome.Text = _cliente?.Nome ?? "";
             textBoxCPF.Text = _cliente?.Cpf ?? textBoxCPF.Text;
+            textBoxCNH.Text = _cliente?.Cnh ?? textBoxCNH.Text;
+            textBoxEmail.Text = _cliente?.Email ?? textBoxEmail.Text;
 
             // endereço
-            if (_cliente.Endereco != null)
-            {
-                textBoxLogradouro.Text = _cliente.Endereco.Logradouro;
-                textBoxBairro.Text = _cliente.Endereco.Bairro;
-                textBoxEstado.Text = _cliente.Endereco.Estado;
-                textBoxCidade.Text = _cliente.Endereco.Cidade;
-                textBoxNumero.Text = _cliente.Endereco.Numero;
-                textBoxCEP.Text = _cliente.Endereco.Cep;
-            }
+            textBoxLogradouro.Text = _cliente?.Endereco?.Logradouro ?? textBoxLogradouro.Text;
+            textBoxComplemento.Text = _cliente?.Endereco?.Complemento ?? textBoxComplemento.Text;
+            textBoxBairro.Text = _cliente?.Endereco?.Bairro ?? textBoxBairro.Text;
+            textBoxEstado.Text = _cliente?.Endereco?.Estado ?? textBoxEstado.Text;
+            textBoxCidade.Text = _cliente?.Endereco?.Cidade ?? textBoxCidade.Text;
+            textBoxNumero.Text = _cliente?.Endereco?.Numero ?? textBoxNumero.Text;
+            textBoxCEP.Text = _cliente?.Endereco?.Cep ?? textBoxCEP.Text;
 
             // telefone
-            if (_cliente.Endereco != null)
-            {
-                textBoxTelefone.Text = _cliente.Telefone.Numero;
-            }
+            textBoxTelefone.Text = _cliente?.Telefone?.Numero ?? textBoxTelefone.Text;
         }
 
         private void InitFormTitle()
@@ -59,33 +60,35 @@ namespace LoucaLiza.view
 
         private Cliente ConvertScreenDataToCliente()
         {
-            Endereco endereco = new Endereco();
-            endereco.Logradouro = textBoxLogradouro.Text;
-            endereco.Bairro = textBoxBairro.Text;
-            endereco.Estado = textBoxEstado.Text;
-            endereco.Cidade = textBoxCidade.Text;
-            endereco.Numero = textBoxNumero.Text;
-            endereco.Cep = textBoxCEP.Text;
+            _cliente.DataNascimento = DateTime.Parse(textBoxDataNascimento.Text);
+            _cliente.Email = textBoxEmail.Text;
+            _cliente.Nome = textBoxNome.Text;
+            _cliente.Cpf = textBoxCPF.Text;
+            _cliente.Cnh = textBoxCNH.Text;
 
-            Telefone telefone = new Telefone();
-            telefone.Numero = textBoxTelefone.Text;
+            _cliente.Telefone = new Telefone();
+            _cliente.Telefone.Numero = textBoxTelefone.Text;
 
-            Cliente cliente = new Cliente();
-            cliente.DataNascimento = DateTime.Parse(textBoxDataNascimento.Text);
-            cliente.Nome = textBoxNome.Text;
-            cliente.Cpf = textBoxCPF.Text;
-            cliente.Endereco = endereco;
-            cliente.Telefone = telefone;
+            _cliente.Endereco = new Endereco();
+            _cliente.Endereco.Logradouro = textBoxLogradouro.Text;
+            _cliente.Endereco.Complemento = textBoxComplemento.Text;
+            _cliente.Endereco.Bairro = textBoxBairro.Text;
+            _cliente.Endereco.Estado = textBoxEstado.Text;
+            _cliente.Endereco.Cidade = textBoxCidade.Text;
+            _cliente.Endereco.Numero = textBoxNumero.Text;
+            _cliente.Endereco.Cep = textBoxCEP.Text;
 
-            return cliente;
+            return _cliente;
         }
 
         private void btnSalvarCliente_Click(object sender, EventArgs e)
         {
             try
             {
-                ConvertScreenDataToCliente();
-                // _cliente.Save();  // -- Save() deve validar... try
+                _cliente = ModelUtils.ClienteRomulo();
+
+                // ConvertScreenDataToCliente();
+                clienteController.Save(_cliente);
 
                 MessageBox.Show("Cliente salvo com sucesso!");
                 Close();

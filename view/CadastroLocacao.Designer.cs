@@ -29,6 +29,7 @@ namespace LoucaLiza.view
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroLocacao));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNascimento = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
@@ -58,7 +59,7 @@ namespace LoucaLiza.view
             this.textBoxNascimento.Multiline = true;
             this.textBoxNascimento.Name = "textBoxNascimento";
             this.textBoxNascimento.Size = new System.Drawing.Size(120, 32);
-            this.textBoxNascimento.TabIndex = 39;
+            this.textBoxNascimento.TabIndex = 0;
             this.textBoxNascimento.Text = "Data de Locação";
             // 
             // textBoxNome
@@ -67,7 +68,7 @@ namespace LoucaLiza.view
             this.textBoxNome.Multiline = true;
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(459, 32);
-            this.textBoxNome.TabIndex = 40;
+            this.textBoxNome.TabIndex = 1;
             this.textBoxNome.Text = "Cliente";
             // 
             // textBox1
@@ -76,7 +77,7 @@ namespace LoucaLiza.view
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(459, 32);
-            this.textBox1.TabIndex = 41;
+            this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Veículo";
             // 
             // textBox2
@@ -85,7 +86,7 @@ namespace LoucaLiza.view
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(120, 32);
-            this.textBox2.TabIndex = 42;
+            this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Dias Locação";
             // 
             // textBox3
@@ -94,7 +95,7 @@ namespace LoucaLiza.view
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(120, 32);
-            this.textBox3.TabIndex = 43;
+            this.textBox3.TabIndex = 4;
             this.textBox3.Text = "Dias Locação";
             // 
             // label2
@@ -119,27 +120,29 @@ namespace LoucaLiza.view
             // 
             // btnLocalizaCliente
             // 
-            this.btnLocalizaCliente.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLocalizaCliente.BackColor = System.Drawing.Color.Transparent;
             this.btnLocalizaCliente.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnLocalizaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLocalizaCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnLocalizaCliente.Image")));
             this.btnLocalizaCliente.Location = new System.Drawing.Point(472, 123);
             this.btnLocalizaCliente.Name = "btnLocalizaCliente";
             this.btnLocalizaCliente.Size = new System.Drawing.Size(32, 32);
-            this.btnLocalizaCliente.TabIndex = 46;
-            this.btnLocalizaCliente.Text = "O";
+            this.btnLocalizaCliente.TabIndex = 1;
+            this.btnLocalizaCliente.TabStop = false;
             this.btnLocalizaCliente.UseVisualStyleBackColor = false;
             this.btnLocalizaCliente.Click += new System.EventHandler(this.btnLocalizaCliente_Click);
             // 
             // btnLocalizaVeiculo
             // 
-            this.btnLocalizaVeiculo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLocalizaVeiculo.BackColor = System.Drawing.Color.Transparent;
             this.btnLocalizaVeiculo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnLocalizaVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLocalizaVeiculo.Image = ((System.Drawing.Image)(resources.GetObject("btnLocalizaVeiculo.Image")));
             this.btnLocalizaVeiculo.Location = new System.Drawing.Point(472, 176);
             this.btnLocalizaVeiculo.Name = "btnLocalizaVeiculo";
             this.btnLocalizaVeiculo.Size = new System.Drawing.Size(32, 32);
-            this.btnLocalizaVeiculo.TabIndex = 47;
-            this.btnLocalizaVeiculo.Text = "O";
+            this.btnLocalizaVeiculo.TabIndex = 2;
+            this.btnLocalizaVeiculo.TabStop = false;
             this.btnLocalizaVeiculo.UseVisualStyleBackColor = false;
             this.btnLocalizaVeiculo.Click += new System.EventHandler(this.btnLocalizaVeiculo_Click);
             // 
@@ -151,7 +154,7 @@ namespace LoucaLiza.view
             this.btnSalvarLocacao.Location = new System.Drawing.Point(404, 349);
             this.btnSalvarLocacao.Name = "btnSalvarLocacao";
             this.btnSalvarLocacao.Size = new System.Drawing.Size(100, 32);
-            this.btnSalvarLocacao.TabIndex = 48;
+            this.btnSalvarLocacao.TabIndex = 5;
             this.btnSalvarLocacao.Text = "Alugar Veículo";
             this.btnSalvarLocacao.UseVisualStyleBackColor = false;
             // 

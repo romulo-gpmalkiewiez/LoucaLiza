@@ -1,15 +1,16 @@
 ﻿using Loucaliza.model.veiculo;
+using LoucaLiza.repository;
 using System.Collections.Generic;
 
 namespace LoucaLiza.controller
 {
-    class VeiculoController
+    public class VeiculoController : IController<Veiculo>
     {
-        public List<Veiculo> GetAll()
-        {
-            List<Veiculo> list = new List<Veiculo>();
+        private VeiculoRepository repository = new VeiculoRepository();
 
-            return list;
-        } 
+        public Veiculo Save(Veiculo veiculo)
+        {
+            return repository.Save(veiculo);
+        }
     }
 }

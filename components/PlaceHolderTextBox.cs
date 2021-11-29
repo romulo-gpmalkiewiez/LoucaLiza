@@ -31,6 +31,7 @@ namespace LoucaLiza.View.Components
 
         public PlaceHolderTextBox()
         {
+            setPlaceholder();
             GotFocus += removePlaceHolder;
             LostFocus += setPlaceholder;
         }

@@ -29,6 +29,7 @@ namespace LoucaLiza.view
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalizadorVeiculo));
             this.dataGridVeiculo = new System.Windows.Forms.DataGridView();
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
@@ -82,11 +83,14 @@ namespace LoucaLiza.view
             this.btnBuscarVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
             this.btnBuscarVeiculo.FlatAppearance.BorderSize = 0;
             this.btnBuscarVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarVeiculo.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarVeiculo.Image")));
             this.btnBuscarVeiculo.Location = new System.Drawing.Point(672, 77);
             this.btnBuscarVeiculo.Name = "btnBuscarVeiculo";
             this.btnBuscarVeiculo.Size = new System.Drawing.Size(100, 32);
             this.btnBuscarVeiculo.TabIndex = 29;
             this.btnBuscarVeiculo.Text = "Buscar";
+            this.btnBuscarVeiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarVeiculo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarVeiculo.UseVisualStyleBackColor = false;
             // 
             // textBoxPlaca

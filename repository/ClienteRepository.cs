@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace LoucaLiza.repository
 {
-    class ClienteRepository : IRepository<Cliente>
+    public class ClienteRepository : IRepository<Cliente>
     {
-        public void Delete(Cliente obj)
+        public void Delete(Cliente cliente)
         {
             throw new System.NotImplementedException();
         }
@@ -25,9 +25,24 @@ namespace LoucaLiza.repository
             throw new System.NotImplementedException();
         }
 
-        public Cliente Save(Cliente obj)
+        public Cliente Save(Cliente cliente)
         {
-            throw new System.NotImplementedException();
+            if (cliente == null)
+            {
+                return null;
+            }
+
+            if (cliente.Id == null)
+            {
+                cliente.Id = Application.Database.GenerateId();
+                Application.Database.Clientes.Add(cliente);
+            }
+            else
+            {
+                Application.Database.Clientes[Application.Database.Clientes.IndexOf(cliente)] = cliente;
+            }
+
+            return cliente;
         }
     }
 }

@@ -47,15 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\IController.cs" />
     <Compile Include="controller\LocacaoController.cs" />
     <Compile Include="controller\VeiculoController.cs" />
     <Compile Include="controller\ClienteController.cs" />
     <Compile Include="model\cliente\Endereco.cs" />
     <Compile Include="model\cliente\Telefone.cs" />
     <Compile Include="model\cliente\Cliente.cs" />
+    <Compile Include="repository\LocacaoRepository.cs" />
+    <Compile Include="repository\VeiculoRepository.cs" />
     <Compile Include="repository\ClienteRepository.cs" />
+    <Compile Include="utils\database\InMemoryDatabase.cs" />
+    <Compile Include="utils\ModelUtils.cs" />
+    <Compile Include="utils\DataTableUtils.cs" />
     <Compile Include="utils\FormUtils.cs" />
-    <Compile Include="utils\Connection.cs" />
+    <Compile Include="utils\database\Connection.cs" />
     <Compile Include="view\CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="view\CadastroLocacao.Designer.cs">
       <DependentUpon>CadastroLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\PlaceHolderTextBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="view\LocalizadorVeiculo.cs">
       <SubType>Form</SubType>
@@ -108,9 +117,12 @@
     <Compile Include="model\veiculo\Marca.cs" />
     <Compile Include="model\veiculo\Veiculo.cs" />
     <Compile Include="model\veiculo\Cor.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Application.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="repository\IRepository.cs" />
+    <EmbeddedResource Include="components\PlaceHolderTextBox.resx">
+      <DependentUpon>PlaceHolderTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

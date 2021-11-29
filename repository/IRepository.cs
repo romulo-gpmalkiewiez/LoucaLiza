@@ -8,10 +8,10 @@ namespace LoucaLiza.repository
 
         T GetById(int Id);
 
-        T Save(T obj);
+        T Save(T Entity);
 
         void DeleteById(int Id);
 
-        void Delete(T obj);
+        void Delete(T Entity);
     }
 }

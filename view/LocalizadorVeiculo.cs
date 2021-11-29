@@ -20,7 +20,7 @@ namespace LoucaLiza.view
 
         private void btnAddVeiculo_Click(object sender, EventArgs e)
         {
-            FormUtils.OpenNewWindow(this, new CadastroVeiculo());
+            FormUtils.OpenNewDialog(this, new CadastroVeiculo());
         }
 
         private void btnSelecionarVeiculo_Click(object sender, EventArgs e)

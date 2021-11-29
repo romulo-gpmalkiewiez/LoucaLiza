@@ -29,6 +29,7 @@ namespace LoucaLiza.view
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalizadorCliente));
             this.textBoxCNH = new System.Windows.Forms.TextBox();
             this.dataGridCliente = new System.Windows.Forms.DataGridView();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
@@ -67,11 +68,14 @@ namespace LoucaLiza.view
             this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
             this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
             this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCliente.Image")));
             this.btnBuscarCliente.Location = new System.Drawing.Point(672, 79);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(100, 32);
             this.btnBuscarCliente.TabIndex = 40;
             this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
             // 
             // textBoxCPF

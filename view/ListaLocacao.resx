@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnBuscaLocacao.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAF0AAABdAVVgLpQAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABKUlEQVQ4T43ToUtDURTH8VMUxorBKYgzCAYtGgzCUBQUDQMx2Zdkf8UGgmAaBttWVgxiELFqWRks
+        TBCxGsWpmwhrz+95XJ/nPa6P/eADu+ece1+4dxIEQYTkcYp7fOIJTRzaOevvh8gRXnGCHUxjGSV0cYu8
+        3Rzuc5vLeMRScsD1x3CMZ2QSPVnAGxZtw4dc4ixRkxqqtvgfMokhsqYmLWzZwTSkg3WzlgFydigNaaBs
+        1vKAVTuUhtyhaNZSR3RiGqK38YUZU5NtvGDCDvuQCm5iNdc4xxVid2wRfVwfmIvVXTOLC+hD2UV0EJmH
+        fqCPHtZ+e2E/thDZRxvf0P/BO/SresAUDqCPruA9ICqKjGMFs55eEXrIRrhODoyC7LlDNr0DoyDcnlz/
+        AHWyEVP9kxHfAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
