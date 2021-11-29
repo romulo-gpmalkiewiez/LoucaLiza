@@ -34,9 +34,9 @@ namespace LoucaLiza.view
             textBoxModelo.Text = _veiculo?.Modelo?? textBoxModelo.Text;
             textBoxChassi.Text = _veiculo?.Chassi ?? textBoxChassi.Text;
             textBoxPlaca.Text = _veiculo?.Placa?? textBoxPlaca.Text;
-            // TODO: verificar: comboBoxCor.Text = _veiculo?.Cor?.ToString() ?? "";
+            comboBoxCor.Text = _veiculo?.Cor.ToString();
             textBoxAno.Text = _veiculo?.Ano.ToString();
-            // textBoxKm.Text = _veiculo?.Quilometragem ?? textBoxKm.Text;
+            textBoxKm.Text = _veiculo?.Quilometragem.ToString() ?? textBoxKm.Text;
             textBoxDiaria.Text = _veiculo?.ValorDiario.ToString() ?? textBoxDiaria.Text;
         }
 

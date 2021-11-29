@@ -29,53 +29,17 @@ namespace LoucaLiza.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxPlaca = new System.Windows.Forms.TextBox();
-            this.textBoxKm = new System.Windows.Forms.TextBox();
-            this.textBoxChassi = new System.Windows.Forms.TextBox();
-            this.textBoxModelo = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.btnSalvarVeiculo = new System.Windows.Forms.Button();
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.comboBoxCor = new System.Windows.Forms.ComboBox();
-            this.textBoxAno = new System.Windows.Forms.TextBox();
-            this.textBoxDiaria = new System.Windows.Forms.TextBox();
+            this.btnSalvarVeiculo = new System.Windows.Forms.Button();
+            this.textBoxDiaria = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxAno = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxPlaca = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxKm = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxChassi = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxModelo = new LoucaLiza.View.Components.PlaceHolderTextBox();
             this.SuspendLayout();
-            // 
-            // textBoxPlaca
-            // 
-            this.textBoxPlaca.Location = new System.Drawing.Point(267, 170);
-            this.textBoxPlaca.Multiline = true;
-            this.textBoxPlaca.Name = "textBoxPlaca";
-            this.textBoxPlaca.Size = new System.Drawing.Size(139, 32);
-            this.textBoxPlaca.TabIndex = 3;
-            this.textBoxPlaca.Text = "Placa";
-            // 
-            // textBoxKm
-            // 
-            this.textBoxKm.Location = new System.Drawing.Point(314, 218);
-            this.textBoxKm.Multiline = true;
-            this.textBoxKm.Name = "textBoxKm";
-            this.textBoxKm.Size = new System.Drawing.Size(92, 32);
-            this.textBoxKm.TabIndex = 6;
-            this.textBoxKm.Text = "Km";
-            // 
-            // textBoxChassi
-            // 
-            this.textBoxChassi.Location = new System.Drawing.Point(16, 170);
-            this.textBoxChassi.Multiline = true;
-            this.textBoxChassi.Name = "textBoxChassi";
-            this.textBoxChassi.Size = new System.Drawing.Size(235, 32);
-            this.textBoxChassi.TabIndex = 2;
-            this.textBoxChassi.Text = "Chassi";
-            // 
-            // textBoxModelo
-            // 
-            this.textBoxModelo.Location = new System.Drawing.Point(16, 122);
-            this.textBoxModelo.Multiline = true;
-            this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(390, 32);
-            this.textBoxModelo.TabIndex = 1;
-            this.textBoxModelo.Text = "Modelo";
             // 
             // labelTitle
             // 
@@ -86,19 +50,6 @@ namespace LoucaLiza.view
             this.labelTitle.Size = new System.Drawing.Size(187, 24);
             this.labelTitle.TabIndex = 50;
             this.labelTitle.Text = "Editar / Novo Veículo";
-            // 
-            // btnSalvarVeiculo
-            // 
-            this.btnSalvarVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnSalvarVeiculo.FlatAppearance.BorderSize = 0;
-            this.btnSalvarVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvarVeiculo.Location = new System.Drawing.Point(306, 329);
-            this.btnSalvarVeiculo.Name = "btnSalvarVeiculo";
-            this.btnSalvarVeiculo.Size = new System.Drawing.Size(100, 32);
-            this.btnSalvarVeiculo.TabIndex = 8;
-            this.btnSalvarVeiculo.Text = "Salvar";
-            this.btnSalvarVeiculo.UseVisualStyleBackColor = false;
-            this.btnSalvarVeiculo.Click += new System.EventHandler(this.btnSalvarVeiculo_Click);
             // 
             // comboBoxMarca
             // 
@@ -124,23 +75,95 @@ namespace LoucaLiza.view
             this.comboBoxCor.TabIndex = 4;
             this.comboBoxCor.Text = "Cor";
             // 
+            // btnSalvarVeiculo
+            // 
+            this.btnSalvarVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnSalvarVeiculo.FlatAppearance.BorderSize = 0;
+            this.btnSalvarVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarVeiculo.Location = new System.Drawing.Point(306, 329);
+            this.btnSalvarVeiculo.Name = "btnSalvarVeiculo";
+            this.btnSalvarVeiculo.Size = new System.Drawing.Size(100, 32);
+            this.btnSalvarVeiculo.TabIndex = 8;
+            this.btnSalvarVeiculo.Text = "Salvar";
+            this.btnSalvarVeiculo.UseVisualStyleBackColor = false;
+            this.btnSalvarVeiculo.Click += new System.EventHandler(this.btnSalvarVeiculo_Click);
+            // 
+            // textBoxDiaria
+            // 
+            this.textBoxDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDiaria.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDiaria.Location = new System.Drawing.Point(16, 266);
+            this.textBoxDiaria.MaxLength = 10;
+            this.textBoxDiaria.Multiline = true;
+            this.textBoxDiaria.Name = "textBoxDiaria";
+            this.textBoxDiaria.PlaceHolderText = "Diária (R$)";
+            this.textBoxDiaria.Size = new System.Drawing.Size(83, 32);
+            this.textBoxDiaria.TabIndex = 7;
+            this.textBoxDiaria.Text = "Diária (R$)";
+            // 
             // textBoxAno
             // 
+            this.textBoxAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxAno.ForeColor = System.Drawing.Color.Gray;
             this.textBoxAno.Location = new System.Drawing.Point(215, 218);
+            this.textBoxAno.MaxLength = 4;
             this.textBoxAno.Multiline = true;
             this.textBoxAno.Name = "textBoxAno";
+            this.textBoxAno.PlaceHolderText = "Ano";
             this.textBoxAno.Size = new System.Drawing.Size(83, 32);
             this.textBoxAno.TabIndex = 5;
             this.textBoxAno.Text = "Ano";
             // 
-            // textBoxDiaria
+            // textBoxPlaca
             // 
-            this.textBoxDiaria.Location = new System.Drawing.Point(16, 266);
-            this.textBoxDiaria.Multiline = true;
-            this.textBoxDiaria.Name = "textBoxDiaria";
-            this.textBoxDiaria.Size = new System.Drawing.Size(83, 32);
-            this.textBoxDiaria.TabIndex = 51;
-            this.textBoxDiaria.Text = "Diária R$";
+            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxPlaca.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxPlaca.Location = new System.Drawing.Point(267, 170);
+            this.textBoxPlaca.MaxLength = 7;
+            this.textBoxPlaca.Multiline = true;
+            this.textBoxPlaca.Name = "textBoxPlaca";
+            this.textBoxPlaca.PlaceHolderText = "Placa";
+            this.textBoxPlaca.Size = new System.Drawing.Size(139, 32);
+            this.textBoxPlaca.TabIndex = 3;
+            this.textBoxPlaca.Text = "Placa";
+            // 
+            // textBoxKm
+            // 
+            this.textBoxKm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxKm.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxKm.Location = new System.Drawing.Point(314, 218);
+            this.textBoxKm.Multiline = true;
+            this.textBoxKm.Name = "textBoxKm";
+            this.textBoxKm.PlaceHolderText = "Km";
+            this.textBoxKm.Size = new System.Drawing.Size(92, 32);
+            this.textBoxKm.TabIndex = 6;
+            this.textBoxKm.Text = "Km";
+            // 
+            // textBoxChassi
+            // 
+            this.textBoxChassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxChassi.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxChassi.Location = new System.Drawing.Point(16, 170);
+            this.textBoxChassi.MaxLength = 17;
+            this.textBoxChassi.Multiline = true;
+            this.textBoxChassi.Name = "textBoxChassi";
+            this.textBoxChassi.PlaceHolderText = "Chassi";
+            this.textBoxChassi.Size = new System.Drawing.Size(235, 32);
+            this.textBoxChassi.TabIndex = 2;
+            this.textBoxChassi.Text = "Chassi";
+            // 
+            // textBoxModelo
+            // 
+            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxModelo.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxModelo.Location = new System.Drawing.Point(16, 122);
+            this.textBoxModelo.MaxLength = 255;
+            this.textBoxModelo.Multiline = true;
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.PlaceHolderText = "Modelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(390, 32);
+            this.textBoxModelo.TabIndex = 1;
+            this.textBoxModelo.Text = "Modelo";
             // 
             // CadastroVeiculo
             // 
@@ -168,15 +191,15 @@ namespace LoucaLiza.view
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxPlaca;
-        private System.Windows.Forms.TextBox textBoxKm;
-        private System.Windows.Forms.TextBox textBoxChassi;
-        private System.Windows.Forms.TextBox textBoxModelo;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Button btnSalvarVeiculo;
         private System.Windows.Forms.ComboBox comboBoxMarca;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxModelo;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxChassi;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxPlaca;
         private System.Windows.Forms.ComboBox comboBoxCor;
-        private System.Windows.Forms.TextBox textBoxAno;
-        private System.Windows.Forms.TextBox textBoxDiaria;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxAno;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxKm;
+        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDiaria;
+        private System.Windows.Forms.Button btnSalvarVeiculo;
     }
 }
