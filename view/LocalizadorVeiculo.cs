@@ -1,4 +1,5 @@
-﻿using LoucaLiza.utils;
+﻿using Loucaliza.model.veiculo;
+using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,13 +21,18 @@ namespace LoucaLiza.view
 
         private void btnAddVeiculo_Click(object sender, EventArgs e)
         {
-            FormUtils.OpenNewDialog(this, new CadastroVeiculo());
+            FormUtils.OpenNewDialog(this, new CadastroVeiculo(null, HandleAfterSaveVeiculo));
+        }
+
+        private void HandleAfterSaveVeiculo(Veiculo veiculo)
+        {
+            MessageBox.Show("Handler After Save on LocalizadorVeiculo");
         }
 
         private void btnSelecionarVeiculo_Click(object sender, EventArgs e)
         {
-            // TODO: onSelectVeiculo(veiculo);
             Close();
+            // TODO: onSelectVeiculo(veiculo);
         }
     }
 }

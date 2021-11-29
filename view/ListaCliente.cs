@@ -2,11 +2,8 @@
 using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace LoucaLiza.view
@@ -24,7 +21,7 @@ namespace LoucaLiza.view
 
             InitDataTableColumns();
             UpdateDataGrid();
-            ConfigurarDataTableViewClientes();
+            ConfigureDataTableViewClientes();
         }
 
         private void LoadListaClientes()
@@ -54,7 +51,7 @@ namespace LoucaLiza.view
             _dataTableCliente.Columns.Add("endereco", typeof(string));
         }
 
-        private void ConfigurarDataTableViewClientes()
+        private void ConfigureDataTableViewClientes()
         {
             dataGridCliente.DefaultCellStyle.Font = new Font("Arial", 9);
             //dataGridCliente.RowHeadersWidth = 25;

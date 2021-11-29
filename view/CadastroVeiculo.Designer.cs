@@ -33,12 +33,12 @@ namespace LoucaLiza.view
             this.textBoxKm = new System.Windows.Forms.TextBox();
             this.textBoxChassi = new System.Windows.Forms.TextBox();
             this.textBoxModelo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.btnSalvarVeiculo = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxDiaria = new System.Windows.Forms.ComboBox();
+            this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.comboBoxCor = new System.Windows.Forms.ComboBox();
             this.textBoxAno = new System.Windows.Forms.TextBox();
+            this.textBoxDiaria = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxPlaca
@@ -77,15 +77,15 @@ namespace LoucaLiza.view
             this.textBoxModelo.TabIndex = 1;
             this.textBoxModelo.Text = "Modelo";
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 24);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Editar / Novo Veículo";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(12, 28);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(187, 24);
+            this.labelTitle.TabIndex = 50;
+            this.labelTitle.Text = "Editar / Novo Veículo";
             // 
             // btnSalvarVeiculo
             // 
@@ -99,28 +99,17 @@ namespace LoucaLiza.view
             this.btnSalvarVeiculo.Text = "Salvar";
             this.btnSalvarVeiculo.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // comboBoxMarca
             // 
-            this.comboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 26;
-            this.comboBox2.Location = new System.Drawing.Point(16, 74);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(163, 32);
-            this.comboBox2.Sorted = true;
-            this.comboBox2.TabIndex = 0;
-            this.comboBox2.Text = "Marca";
-            // 
-            // comboBoxDiaria
-            // 
-            this.comboBoxDiaria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxDiaria.FormattingEnabled = true;
-            this.comboBoxDiaria.ItemHeight = 26;
-            this.comboBoxDiaria.Location = new System.Drawing.Point(16, 266);
-            this.comboBoxDiaria.Name = "comboBoxDiaria";
-            this.comboBoxDiaria.Size = new System.Drawing.Size(116, 32);
-            this.comboBoxDiaria.TabIndex = 7;
-            this.comboBoxDiaria.Text = "Diária R$";
+            this.comboBoxMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxMarca.FormattingEnabled = true;
+            this.comboBoxMarca.ItemHeight = 26;
+            this.comboBoxMarca.Location = new System.Drawing.Point(16, 74);
+            this.comboBoxMarca.Name = "comboBoxMarca";
+            this.comboBoxMarca.Size = new System.Drawing.Size(163, 32);
+            this.comboBoxMarca.Sorted = true;
+            this.comboBoxMarca.TabIndex = 0;
+            this.comboBoxMarca.Text = "Marca";
             // 
             // comboBoxCor
             // 
@@ -143,20 +132,29 @@ namespace LoucaLiza.view
             this.textBoxAno.TabIndex = 5;
             this.textBoxAno.Text = "Ano";
             // 
+            // textBoxDiaria
+            // 
+            this.textBoxDiaria.Location = new System.Drawing.Point(16, 266);
+            this.textBoxDiaria.Multiline = true;
+            this.textBoxDiaria.Name = "textBoxDiaria";
+            this.textBoxDiaria.Size = new System.Drawing.Size(83, 32);
+            this.textBoxDiaria.TabIndex = 51;
+            this.textBoxDiaria.Text = "Diária R$";
+            // 
             // CadastroVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 379);
+            this.Controls.Add(this.textBoxDiaria);
             this.Controls.Add(this.textBoxAno);
             this.Controls.Add(this.comboBoxCor);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBoxDiaria);
+            this.Controls.Add(this.comboBoxMarca);
             this.Controls.Add(this.textBoxPlaca);
             this.Controls.Add(this.textBoxKm);
             this.Controls.Add(this.textBoxChassi);
             this.Controls.Add(this.textBoxModelo);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.btnSalvarVeiculo);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -173,11 +171,11 @@ namespace LoucaLiza.view
         private System.Windows.Forms.TextBox textBoxKm;
         private System.Windows.Forms.TextBox textBoxChassi;
         private System.Windows.Forms.TextBox textBoxModelo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button btnSalvarVeiculo;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBoxDiaria;
+        private System.Windows.Forms.ComboBox comboBoxMarca;
         private System.Windows.Forms.ComboBox comboBoxCor;
         private System.Windows.Forms.TextBox textBoxAno;
+        private System.Windows.Forms.TextBox textBoxDiaria;
     }
 }
