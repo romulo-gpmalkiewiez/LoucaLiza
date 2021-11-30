@@ -1,5 +1,6 @@
 ﻿using Loucaliza.model.veiculo;
 using LoucaLiza.utils;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -47,7 +48,7 @@ namespace LoucaLiza.view
             _dataTableVeiculo.Columns.Add("ano", typeof(int));
             _dataTableVeiculo.Columns.Add("cor", typeof(string));
             _dataTableVeiculo.Columns.Add("quilometragem", typeof(int));
-            _dataTableVeiculo.Columns.Add("valorDiario", typeof(double));
+            _dataTableVeiculo.Columns.Add("valorDiario", typeof(string));
             _dataTableVeiculo.Columns.Add("chassi", typeof(string));
             _dataTableVeiculo.Columns.Add("status", typeof(string));
         }
@@ -92,7 +93,7 @@ namespace LoucaLiza.view
                     veiculo.Ano,
                     veiculo.Cor,
                     veiculo.Quilometragem,
-                    veiculo.ValorDiaria,
+                    String.Format("R$ {0:0.00}", veiculo.ValorDiaria),
                     veiculo.Chassi,
                     veiculo.Locado ? "Locado" : "Disponível",
                 });

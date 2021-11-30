@@ -88,7 +88,6 @@ namespace LoucaLiza.view
             this.btnLocalizaCliente.Name = "btnLocalizaCliente";
             this.btnLocalizaCliente.Size = new System.Drawing.Size(32, 32);
             this.btnLocalizaCliente.TabIndex = 1;
-            this.btnLocalizaCliente.TabStop = false;
             this.btnLocalizaCliente.UseVisualStyleBackColor = false;
             this.btnLocalizaCliente.Click += new System.EventHandler(this.btnLocalizaCliente_Click);
             // 
@@ -102,7 +101,6 @@ namespace LoucaLiza.view
             this.btnLocalizaVeiculo.Name = "btnLocalizaVeiculo";
             this.btnLocalizaVeiculo.Size = new System.Drawing.Size(32, 32);
             this.btnLocalizaVeiculo.TabIndex = 2;
-            this.btnLocalizaVeiculo.TabStop = false;
             this.btnLocalizaVeiculo.UseVisualStyleBackColor = false;
             this.btnLocalizaVeiculo.Click += new System.EventHandler(this.btnLocalizaVeiculo_Click);
             // 
