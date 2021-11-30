@@ -45,7 +45,7 @@ namespace LoucaLiza.utils
             locacao.Cliente = ClienteRomulo();
             locacao.Veiculo = Mustang();
             locacao.ValorDiaria = locacao.Veiculo.ValorDiaria;
-            locacao.Dias = 10;
+            locacao.Dias = 1;
 
             return locacao;
         }

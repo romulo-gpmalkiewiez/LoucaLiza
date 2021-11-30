@@ -9,6 +9,7 @@ namespace LoucaLiza.controller
 
         public Locacao Save(Locacao locacao)
         {
+            locacao.ValorDiaria = locacao.Veiculo.ValorDiaria;
             return repository.Save(locacao);
         }
     }

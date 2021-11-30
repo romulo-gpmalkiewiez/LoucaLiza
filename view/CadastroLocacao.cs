@@ -140,5 +140,31 @@ namespace LoucaLiza.view
             UpdateLabelSubtotal();
             UpdateTextBoxDataDevolucao();
         }
+
+        private Locacao ConvertScreenDataToLocacao()
+        {
+            _locacao.DataLocacao = GetDataLocacao();
+            _locacao.Dias = GetDiasLocacao();
+
+            return _locacao;
+        }
+
+        private void btnSalvarLocacao_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ConvertScreenDataToLocacao();
+                locacaoController.Save(_locacao);
+
+                MessageBox.Show("Locação realizada com sucesso!");
+                Close();
+
+                _onSaveCallback(_locacao);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Campos não preenchidos.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

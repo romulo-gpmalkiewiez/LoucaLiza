@@ -115,6 +115,7 @@ namespace LoucaLiza.view
             this.btnSalvarLocacao.TabIndex = 5;
             this.btnSalvarLocacao.Text = "Alugar Veículo";
             this.btnSalvarLocacao.UseVisualStyleBackColor = false;
+            this.btnSalvarLocacao.Click += new System.EventHandler(this.btnSalvarLocacao_Click);
             // 
             // label1
             // 
