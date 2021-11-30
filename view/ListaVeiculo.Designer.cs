@@ -104,6 +104,7 @@ namespace LoucaLiza.view
             this.dataGridVeiculo.MultiSelect = false;
             this.dataGridVeiculo.Name = "dataGridVeiculo";
             this.dataGridVeiculo.ReadOnly = true;
+            this.dataGridVeiculo.RowHeadersVisible = false;
             this.dataGridVeiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridVeiculo.Size = new System.Drawing.Size(759, 353);
             this.dataGridVeiculo.TabIndex = 22;

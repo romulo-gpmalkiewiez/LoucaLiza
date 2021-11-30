@@ -107,6 +107,7 @@ namespace LoucaLiza
         private void HandleAfterSaveLocacao(Locacao locacao)
         {
             UpdateDataGrid();
+            dataGridLocacao.Rows[dataGridLocacao.Rows.Count - 1].Selected = true;
         }
     }
 }

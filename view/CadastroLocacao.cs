@@ -156,7 +156,7 @@ namespace LoucaLiza.view
                 ConvertScreenDataToLocacao();
                 locacaoController.Save(_locacao);
 
-                MessageBox.Show("Locação realizada com sucesso!");
+                MessageBox.Show("Locação realizada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
 
                 _onSaveCallback(_locacao);

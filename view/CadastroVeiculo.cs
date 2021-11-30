@@ -63,7 +63,7 @@ namespace LoucaLiza.view
                 // ConvertScreenDataToVeiculo();
                 veiculoController.Save(_veiculo);
 
-                MessageBox.Show("Veículo salvo com sucesso!");
+                MessageBox.Show("Veículo salvo com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
 
                 _onSaveCallback(_veiculo);

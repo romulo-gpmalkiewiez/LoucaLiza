@@ -82,7 +82,7 @@ namespace LoucaLiza.view
                 // ConvertScreenDataToCliente();
                 clienteController.Save(_cliente);
 
-                MessageBox.Show("Cliente salvo com sucesso!");
+                MessageBox.Show("Cliente salvo com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
 
                 _onSaveCallback(_cliente);

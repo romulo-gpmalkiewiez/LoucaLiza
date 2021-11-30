@@ -46,6 +46,8 @@ namespace LoucaLiza.utils
             {
                 _sourceForm.Visible = true;
             }
+
+            _sourceForm.Focus();
         }
 
         public static void OpenNewWindow(Form source, Form target)

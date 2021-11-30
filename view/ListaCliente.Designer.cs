@@ -56,6 +56,7 @@ namespace LoucaLiza.view
             this.dataGridCliente.MultiSelect = false;
             this.dataGridCliente.Name = "dataGridCliente";
             this.dataGridCliente.ReadOnly = true;
+            this.dataGridCliente.RowHeadersVisible = false;
             this.dataGridCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridCliente.ShowEditingIcon = false;
             this.dataGridCliente.Size = new System.Drawing.Size(759, 353);
