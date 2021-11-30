@@ -29,7 +29,7 @@ namespace LoucaLiza.utils
             Veiculo veiculo = new Veiculo();
             veiculo.Cor = Cor.PRETA;
             veiculo.Marca = "Ford";
-            veiculo.Modelo = "5.0 V8 TI-VCT GASOLINA GT PREMIUM SELECTSHIFT";
+            veiculo.Modelo = "Mustang 5.0 V8 TI-VCT GT PREMIUM SELECTSHIFT";
             veiculo.Placa = "MUS74NG";
             veiculo.Quilometragem = 9000;
             veiculo.Ano = 2018;

@@ -31,13 +31,8 @@ namespace LoucaLiza.view
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroLocacao));
             this.labelTitle = new System.Windows.Forms.Label();
-            this.textBoxDataLocacao = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxCliente = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxVeiculo = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxDias = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxDevolucao = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelSubtotal = new System.Windows.Forms.Label();
+            this.labelSubtotalValor = new System.Windows.Forms.Label();
             this.btnLocalizaCliente = new System.Windows.Forms.Button();
             this.btnLocalizaVeiculo = new System.Windows.Forms.Button();
             this.btnSalvarLocacao = new System.Windows.Forms.Button();
@@ -46,6 +41,11 @@ namespace LoucaLiza.view
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBoxDevolucao = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxDias = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxVeiculo = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxCliente = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxDataLocacao = new LoucaLiza.View.Components.PlaceHolderTextBox();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -58,84 +58,25 @@ namespace LoucaLiza.view
             this.labelTitle.TabIndex = 27;
             this.labelTitle.Text = "Nova Locação";
             // 
-            // textBoxDataLocacao
+            // labelSubtotal
             // 
-            this.textBoxDataLocacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDataLocacao.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxDataLocacao.Location = new System.Drawing.Point(16, 73);
-            this.textBoxDataLocacao.Multiline = true;
-            this.textBoxDataLocacao.Name = "textBoxDataLocacao";
-            this.textBoxDataLocacao.PlaceHolderText = "dd/mm/yyyy HH:mm";
-            this.textBoxDataLocacao.Size = new System.Drawing.Size(120, 32);
-            this.textBoxDataLocacao.TabIndex = 0;
+            this.labelSubtotal.AutoSize = true;
+            this.labelSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubtotal.Location = new System.Drawing.Point(12, 287);
+            this.labelSubtotal.Name = "labelSubtotal";
+            this.labelSubtotal.Size = new System.Drawing.Size(82, 24);
+            this.labelSubtotal.TabIndex = 44;
+            this.labelSubtotal.Text = "Subtotal:";
             // 
-            // textBoxCliente
+            // labelSubtotalValor
             // 
-            this.textBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxCliente.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxCliente.Location = new System.Drawing.Point(16, 128);
-            this.textBoxCliente.Multiline = true;
-            this.textBoxCliente.Name = "textBoxCliente";
-            this.textBoxCliente.PlaceHolderText = "Cliente";
-            this.textBoxCliente.Size = new System.Drawing.Size(459, 32);
-            this.textBoxCliente.TabIndex = 1;
-            this.textBoxCliente.TabStop = false;
-            // 
-            // textBoxVeiculo
-            // 
-            this.textBoxVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxVeiculo.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxVeiculo.Location = new System.Drawing.Point(16, 183);
-            this.textBoxVeiculo.Multiline = true;
-            this.textBoxVeiculo.Name = "textBoxVeiculo";
-            this.textBoxVeiculo.PlaceHolderText = "Veículo";
-            this.textBoxVeiculo.Size = new System.Drawing.Size(459, 32);
-            this.textBoxVeiculo.TabIndex = 2;
-            this.textBoxVeiculo.TabStop = false;
-            // 
-            // textBoxDias
-            // 
-            this.textBoxDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDias.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxDias.Location = new System.Drawing.Point(16, 240);
-            this.textBoxDias.Multiline = true;
-            this.textBoxDias.Name = "textBoxDias";
-            this.textBoxDias.PlaceHolderText = "Dias Locação";
-            this.textBoxDias.Size = new System.Drawing.Size(120, 32);
-            this.textBoxDias.TabIndex = 3;
-            // 
-            // textBoxDevolucao
-            // 
-            this.textBoxDevolucao.Enabled = false;
-            this.textBoxDevolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDevolucao.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxDevolucao.Location = new System.Drawing.Point(157, 240);
-            this.textBoxDevolucao.Multiline = true;
-            this.textBoxDevolucao.Name = "textBoxDevolucao";
-            this.textBoxDevolucao.PlaceHolderText = "dd/mm/yyyy HH:mm";
-            this.textBoxDevolucao.Size = new System.Drawing.Size(120, 32);
-            this.textBoxDevolucao.TabIndex = 4;
-            this.textBoxDevolucao.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 287);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 24);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Subtotal:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 290);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "R$ 0.00";
+            this.labelSubtotalValor.AutoSize = true;
+            this.labelSubtotalValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubtotalValor.Location = new System.Drawing.Point(98, 290);
+            this.labelSubtotalValor.Name = "labelSubtotalValor";
+            this.labelSubtotalValor.Size = new System.Drawing.Size(65, 20);
+            this.labelSubtotalValor.TabIndex = 45;
+            this.labelSubtotalValor.Text = "R$ 0.00";
             // 
             // btnLocalizaCliente
             // 
@@ -222,6 +163,71 @@ namespace LoucaLiza.view
             this.label7.TabIndex = 50;
             this.label7.Text = "Veículo";
             // 
+            // textBoxDevolucao
+            // 
+            this.textBoxDevolucao.Enabled = false;
+            this.textBoxDevolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDevolucao.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDevolucao.Location = new System.Drawing.Point(157, 240);
+            this.textBoxDevolucao.Multiline = true;
+            this.textBoxDevolucao.Name = "textBoxDevolucao";
+            this.textBoxDevolucao.PlaceHolderText = "dd/MM/yyyy HH:mm";
+            this.textBoxDevolucao.Size = new System.Drawing.Size(120, 32);
+            this.textBoxDevolucao.TabIndex = 4;
+            this.textBoxDevolucao.TabStop = false;
+            this.textBoxDevolucao.Text = "dd/MM/yyyy HH:mm";
+            // 
+            // textBoxDias
+            // 
+            this.textBoxDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDias.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDias.Location = new System.Drawing.Point(16, 240);
+            this.textBoxDias.Multiline = true;
+            this.textBoxDias.Name = "textBoxDias";
+            this.textBoxDias.PlaceHolderText = "Dias Locação";
+            this.textBoxDias.Size = new System.Drawing.Size(120, 32);
+            this.textBoxDias.TabIndex = 3;
+            this.textBoxDias.Text = "Dias Locação";
+            this.textBoxDias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxDias_KeyUp);
+            // 
+            // textBoxVeiculo
+            // 
+            this.textBoxVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxVeiculo.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxVeiculo.Location = new System.Drawing.Point(16, 183);
+            this.textBoxVeiculo.Multiline = true;
+            this.textBoxVeiculo.Name = "textBoxVeiculo";
+            this.textBoxVeiculo.PlaceHolderText = "Veículo";
+            this.textBoxVeiculo.Size = new System.Drawing.Size(459, 32);
+            this.textBoxVeiculo.TabIndex = 2;
+            this.textBoxVeiculo.TabStop = false;
+            this.textBoxVeiculo.Text = "Veículo";
+            // 
+            // textBoxCliente
+            // 
+            this.textBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxCliente.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxCliente.Location = new System.Drawing.Point(16, 128);
+            this.textBoxCliente.Multiline = true;
+            this.textBoxCliente.Name = "textBoxCliente";
+            this.textBoxCliente.PlaceHolderText = "Cliente";
+            this.textBoxCliente.Size = new System.Drawing.Size(459, 32);
+            this.textBoxCliente.TabIndex = 1;
+            this.textBoxCliente.TabStop = false;
+            this.textBoxCliente.Text = "Cliente";
+            // 
+            // textBoxDataLocacao
+            // 
+            this.textBoxDataLocacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDataLocacao.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDataLocacao.Location = new System.Drawing.Point(16, 73);
+            this.textBoxDataLocacao.Multiline = true;
+            this.textBoxDataLocacao.Name = "textBoxDataLocacao";
+            this.textBoxDataLocacao.PlaceHolderText = "dd/MM/yyyy HH:mm";
+            this.textBoxDataLocacao.Size = new System.Drawing.Size(120, 32);
+            this.textBoxDataLocacao.TabIndex = 0;
+            this.textBoxDataLocacao.TabStop = false;
+            // 
             // CadastroLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,8 +241,8 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnSalvarLocacao);
             this.Controls.Add(this.btnLocalizaVeiculo);
             this.Controls.Add(this.btnLocalizaCliente);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelSubtotalValor);
+            this.Controls.Add(this.labelSubtotal);
             this.Controls.Add(this.textBoxDevolucao);
             this.Controls.Add(this.textBoxDias);
             this.Controls.Add(this.textBoxVeiculo);
@@ -259,8 +265,8 @@ namespace LoucaLiza.view
         private LoucaLiza.View.Components.PlaceHolderTextBox textBoxVeiculo;
         private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDias;
         private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDevolucao;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelSubtotal;
+        private System.Windows.Forms.Label labelSubtotalValor;
         private System.Windows.Forms.Button btnLocalizaCliente;
         private System.Windows.Forms.Button btnLocalizaVeiculo;
         private System.Windows.Forms.Button btnSalvarLocacao;

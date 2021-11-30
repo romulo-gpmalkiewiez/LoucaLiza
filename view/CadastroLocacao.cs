@@ -22,11 +22,17 @@ namespace LoucaLiza.view
             _onSaveCallback = onSaveCallback;
 
             InitFormTitle();
+            InitFormValues();
         }
 
         private void InitFormTitle()
         {
             labelTitle.Text = "Nova Locação";
+        }
+
+        private void InitFormValues()
+        {
+            textBoxDataLocacao.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
         }
 
         private void btnLocalizaCliente_Click(object sender, EventArgs e)
@@ -42,15 +48,18 @@ namespace LoucaLiza.view
         private void HandleClienteSelected(Cliente cliente)
         {
             _locacao.Cliente = cliente;
-            UpdateClienteTextBox();
+            UpdateTextBoxCliente();
         }
 
         private void HandleVeiculoSelected(Veiculo veiculo)
         {
             _locacao.Veiculo = veiculo;
+            UpdateTextBoxVeiculo();
+            UpdateLabelSubtotal();
+            UpdateTextBoxDataDevolucao();
         }
 
-        private void UpdateClienteTextBox()
+        private void UpdateTextBoxCliente()
         {
             if (_locacao.Cliente != null)
             {
@@ -62,6 +71,74 @@ namespace LoucaLiza.view
 
                 textBoxCliente.Text = textValue;
             }
+        }
+
+        private void UpdateTextBoxVeiculo()
+        {
+            if (_locacao.Veiculo != null)
+            {
+                var textValue = String.Format(
+                    "{0} {1} - {2}",
+                    _locacao.Veiculo.Marca,
+                    _locacao.Veiculo.Modelo,
+                    String.Format("R$ {0:0.00}", _locacao.Veiculo.ValorDiaria));
+
+                textBoxVeiculo.Text = textValue;
+            }
+        }
+
+        private void UpdateTextBoxDataDevolucao()
+        {
+            var diasLocacao = GetDiasLocacao();
+
+            if (diasLocacao > 0)
+            {
+                var devolucao = GetDataLocacao().AddDays(diasLocacao);
+                textBoxDevolucao.Text = devolucao.ToString("dd/MM/yyyy HH:mm");
+            }
+        }
+
+        private void UpdateLabelSubtotal()
+        {
+            if (_locacao.Veiculo != null)
+            {
+                double valorDIaria = _locacao.Veiculo.ValorDiaria ?? 0;
+                double diasLocacao = GetDiasLocacao();
+
+                double subtotalValue = valorDIaria * diasLocacao;
+
+                labelSubtotalValor.Text = String.Format("R$ {0:0.00}", subtotalValue);
+            }
+        }
+
+        private DateTime GetDataLocacao()
+        {
+            try
+            {
+                return DateTime.Parse(textBoxDataLocacao.Text);
+            }
+            catch (Exception)
+            {
+                return DateTime.Now;
+            } 
+        }
+
+        private int GetDiasLocacao()
+        {
+            try
+            {
+                return int.Parse(textBoxDias.Text);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        private void textBoxDias_KeyUp(object sender, KeyEventArgs e)
+        {
+            UpdateLabelSubtotal();
+            UpdateTextBoxDataDevolucao();
         }
     }
 }
