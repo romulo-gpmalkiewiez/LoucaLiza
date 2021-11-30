@@ -91,9 +91,10 @@ namespace LoucaLiza
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(12, 81);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(54, 13);
+            this.labelTitle.Size = new System.Drawing.Size(92, 24);
             this.labelTitle.TabIndex = 1;
             this.labelTitle.Text = "Locações";
             // 
@@ -158,6 +159,7 @@ namespace LoucaLiza
             this.textBoxDataInicial.PlaceHolderText = "Data Inicial";
             this.textBoxDataInicial.Size = new System.Drawing.Size(120, 32);
             this.textBoxDataInicial.TabIndex = 8;
+            this.textBoxDataInicial.Text = "Data Inicial";
             this.textBoxDataInicial.TextChanged += new System.EventHandler(this.textBoxDataInicial_TextChanged);
             // 
             // textBoxDataFinal
@@ -170,6 +172,7 @@ namespace LoucaLiza
             this.textBoxDataFinal.PlaceHolderText = "Data Final";
             this.textBoxDataFinal.Size = new System.Drawing.Size(120, 32);
             this.textBoxDataFinal.TabIndex = 9;
+            this.textBoxDataFinal.Text = "Data Final";
             // 
             // textBoxDocumento
             // 
@@ -181,6 +184,7 @@ namespace LoucaLiza
             this.textBoxDocumento.PlaceHolderText = "Documento";
             this.textBoxDocumento.Size = new System.Drawing.Size(166, 32);
             this.textBoxDocumento.TabIndex = 7;
+            this.textBoxDocumento.Text = "Documento";
             // 
             // textBoxCliente
             // 
@@ -192,6 +196,7 @@ namespace LoucaLiza
             this.textBoxCliente.PlaceHolderText = "Cliente";
             this.textBoxCliente.Size = new System.Drawing.Size(335, 32);
             this.textBoxCliente.TabIndex = 6;
+            this.textBoxCliente.Text = "Cliente";
             // 
             // textBoxModelo
             // 
@@ -203,6 +208,7 @@ namespace LoucaLiza
             this.textBoxModelo.PlaceHolderText = "Modelo";
             this.textBoxModelo.Size = new System.Drawing.Size(177, 32);
             this.textBoxModelo.TabIndex = 10;
+            this.textBoxModelo.Text = "Modelo";
             // 
             // textBoxPlaca
             // 
@@ -214,6 +220,7 @@ namespace LoucaLiza
             this.textBoxPlaca.PlaceHolderText = "Placa";
             this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
             this.textBoxPlaca.TabIndex = 11;
+            this.textBoxPlaca.Text = "Placa";
             // 
             // btnBuscaLocacao
             // 
@@ -255,12 +262,18 @@ namespace LoucaLiza
             // 
             // dataGridLocacao
             // 
+            this.dataGridLocacao.AllowUserToAddRows = false;
+            this.dataGridLocacao.AllowUserToDeleteRows = false;
             this.dataGridLocacao.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dataGridLocacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridLocacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLocacao.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridLocacao.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dataGridLocacao.Location = new System.Drawing.Point(13, 222);
+            this.dataGridLocacao.MultiSelect = false;
             this.dataGridLocacao.Name = "dataGridLocacao";
+            this.dataGridLocacao.ReadOnly = true;
+            this.dataGridLocacao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridLocacao.Size = new System.Drawing.Size(759, 292);
             this.dataGridLocacao.TabIndex = 15;
             // 

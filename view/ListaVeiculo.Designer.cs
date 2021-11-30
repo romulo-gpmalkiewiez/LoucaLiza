@@ -92,12 +92,19 @@ namespace LoucaLiza.view
             // 
             // dataGridVeiculo
             // 
+            this.dataGridVeiculo.AllowUserToAddRows = false;
+            this.dataGridVeiculo.AllowUserToDeleteRows = false;
+            this.dataGridVeiculo.AllowUserToResizeRows = false;
             this.dataGridVeiculo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dataGridVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridVeiculo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridVeiculo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dataGridVeiculo.Location = new System.Drawing.Point(12, 120);
+            this.dataGridVeiculo.MultiSelect = false;
             this.dataGridVeiculo.Name = "dataGridVeiculo";
+            this.dataGridVeiculo.ReadOnly = true;
+            this.dataGridVeiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridVeiculo.Size = new System.Drawing.Size(759, 353);
             this.dataGridVeiculo.TabIndex = 22;
             // 

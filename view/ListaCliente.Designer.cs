@@ -44,12 +44,20 @@ namespace LoucaLiza.view
             // 
             // dataGridCliente
             // 
+            this.dataGridCliente.AllowUserToAddRows = false;
+            this.dataGridCliente.AllowUserToDeleteRows = false;
+            this.dataGridCliente.AllowUserToResizeRows = false;
             this.dataGridCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dataGridCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridCliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.dataGridCliente.Location = new System.Drawing.Point(13, 124);
+            this.dataGridCliente.MultiSelect = false;
             this.dataGridCliente.Name = "dataGridCliente";
+            this.dataGridCliente.ReadOnly = true;
+            this.dataGridCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridCliente.ShowEditingIcon = false;
             this.dataGridCliente.Size = new System.Drawing.Size(759, 353);
             this.dataGridCliente.TabIndex = 32;
             // 
