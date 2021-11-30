@@ -29,16 +29,6 @@ namespace LoucaLiza.view
             _clientes = Application.Database.Clientes;
         }
 
-        private void btnAddCliente_Click(object sender, System.EventArgs e)
-        {
-            FormUtils.OpenNewDialog(this, new CadastroCliente(null, HandleAfterSaveCliente));
-        }
-
-        private void HandleAfterSaveCliente(Cliente cliente)
-        {
-            UpdateDataGrid();
-        }
-
         private void InitDataTableColumns()
         {
             _dataTableCliente.Columns.Add("id", typeof(int));
@@ -116,5 +106,16 @@ namespace LoucaLiza.view
 
             dataGridCliente.DataSource = _dataTableCliente;
         }
+
+        private void btnAddCliente_Click(object sender, System.EventArgs e)
+        {
+            FormUtils.OpenNewDialog(this, new CadastroCliente(null, HandleAfterSaveCliente));
+        }
+
+        private void HandleAfterSaveCliente(Cliente cliente)
+        {
+            UpdateDataGrid();
+        }
+
     }
 }

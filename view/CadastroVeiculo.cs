@@ -37,7 +37,7 @@ namespace LoucaLiza.view
             comboBoxCor.Text = _veiculo?.Cor.ToString();
             textBoxAno.Text = _veiculo?.Ano.ToString();
             textBoxKm.Text = _veiculo?.Quilometragem.ToString() ?? textBoxKm.Text;
-            textBoxDiaria.Text = _veiculo?.ValorDiario.ToString() ?? textBoxDiaria.Text;
+            textBoxDiaria.Text = _veiculo?.ValorDiaria.ToString() ?? textBoxDiaria.Text;
         }
 
         private Veiculo ConvertScreenDataToVeiculo()
@@ -48,7 +48,7 @@ namespace LoucaLiza.view
             _veiculo.Ano = int.Parse(textBoxAno.Text);
             _veiculo.Cor = (Cor)Enum.Parse(typeof(Cor), comboBoxMarca.Text);
             _veiculo.Quilometragem = int.Parse(textBoxKm.Text);
-            _veiculo.ValorDiario = double.Parse(textBoxDiaria.Text);
+            _veiculo.ValorDiaria = double.Parse(textBoxDiaria.Text);
             _veiculo.Chassi = textBoxChassi.Text;
 
             return _veiculo;

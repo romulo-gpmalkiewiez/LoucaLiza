@@ -33,7 +33,7 @@ namespace LoucaLiza.utils
             veiculo.Placa = "MUS74NG";
             veiculo.Quilometragem = 9000;
             veiculo.Ano = 2018;
-            veiculo.ValorDiario = 4480.5;
+            veiculo.ValorDiaria = 4480.5;
 
             return veiculo;
         }
@@ -44,6 +44,7 @@ namespace LoucaLiza.utils
             locacao.DataLocacao = DateTime.Now;
             locacao.Cliente = ClienteRomulo();
             locacao.Veiculo = Mustang();
+            locacao.ValorDiaria = locacao.Veiculo.ValorDiaria;
             locacao.Dias = 10;
 
             return locacao;

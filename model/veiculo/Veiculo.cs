@@ -12,7 +12,7 @@ namespace Loucaliza.model.veiculo
         public Cor? Cor { get; set; }
         public string Chassi { get; set; }
         public int? Quilometragem { get; set; }
-        public double? ValorDiario { get; set; }
+        public double? ValorDiaria { get; set; }
         public bool Locado { get; set; }
 
         public override string ToString()

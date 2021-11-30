@@ -160,7 +160,6 @@ namespace LoucaLiza
             this.textBoxDataInicial.Size = new System.Drawing.Size(120, 32);
             this.textBoxDataInicial.TabIndex = 8;
             this.textBoxDataInicial.Text = "Data Inicial";
-            this.textBoxDataInicial.TextChanged += new System.EventHandler(this.textBoxDataInicial_TextChanged);
             // 
             // textBoxDataFinal
             // 
