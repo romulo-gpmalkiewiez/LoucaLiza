@@ -25,7 +25,7 @@ namespace LoucaLiza.view
 
         private void InitFormTitle()
         {
-            labelTitle.Text = _veiculo != null && _veiculo.Id != null ? "Editar Cliente" : "Novo Cliente";
+            labelTitle.Text = _veiculo != null && _veiculo.Id != null ? "Editar Veículo" : "Novo Veículo";
         }
 
         private void InitScreenFields()
