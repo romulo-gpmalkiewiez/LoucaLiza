@@ -1,14 +1,18 @@
 ﻿using LoucaLiza.model.cliente;
 using LoucaLiza.utils;
+using System;
 using System.Windows.Forms;
 
 namespace LoucaLiza.view
 {
     public partial class LocalizadorCliente : Form
     {
-        public LocalizadorCliente()
+        private Action<Cliente> _onSelectClienteCallback;
+
+        public LocalizadorCliente(Action<Cliente> onSelectClienteCallback)
         {
             InitializeComponent();
+            _onSelectClienteCallback = onSelectClienteCallback;
         }
 
         private void btnAddCliente_Click(object sender, System.EventArgs e)
@@ -16,15 +20,16 @@ namespace LoucaLiza.view
             FormUtils.OpenNewDialog(this, new CadastroCliente(null, HandleAfterSaveCliente));
         }
 
-        private void btnSelecionarCliente_Click(object sender, System.EventArgs e)
+        private void btnSelecionarCliente_Click(object sender, EventArgs e)
         {
-            // onSelectCliente
             Close();
+            // _onSelectClienteCallback(getGridSelectedCliente);
         }
 
         private void HandleAfterSaveCliente(Cliente cliente)
         {
-            MessageBox.Show("CLIENTE SELECIONADO" + cliente.Nome);
+            Close();
+            _onSelectClienteCallback(cliente);
         }
     }
 }

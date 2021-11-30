@@ -1,4 +1,6 @@
-﻿using LoucaLiza.controller;
+﻿using Loucaliza.model.veiculo;
+using LoucaLiza.controller;
+using LoucaLiza.model.cliente;
 using LoucaLiza.model.locacao;
 using LoucaLiza.utils;
 using System;
@@ -27,14 +29,24 @@ namespace LoucaLiza.view
             labelTitle.Text = "Nova Locação";
         }
 
-        private void btnLocalizaCliente_Click(object sender, System.EventArgs e)
+        private void btnLocalizaCliente_Click(object sender, EventArgs e)
         {
-            FormUtils.OpenNewDialog(this, new LocalizadorCliente());
+            FormUtils.OpenNewDialog(this, new LocalizadorCliente(HandleClienteSelected));
         }
 
-        private void btnLocalizaVeiculo_Click(object sender, System.EventArgs e)
+        private void btnLocalizaVeiculo_Click(object sender, EventArgs e)
         {
-            FormUtils.OpenNewDialog(this, new LocalizadorVeiculo());
+            FormUtils.OpenNewDialog(this, new LocalizadorVeiculo(HandleVeiculoSelected));
+        }
+
+        private void HandleClienteSelected(Cliente cliente)
+        {
+            _locacao.Cliente = cliente;
+        }
+
+        private void HandleVeiculoSelected(Veiculo veiculo)
+        {
+            _locacao.Veiculo = veiculo;
         }
     }
 }
