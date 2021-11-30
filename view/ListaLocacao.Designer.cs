@@ -159,7 +159,6 @@ namespace LoucaLiza
             this.textBoxDataInicial.PlaceHolderText = "Data Inicial";
             this.textBoxDataInicial.Size = new System.Drawing.Size(120, 32);
             this.textBoxDataInicial.TabIndex = 8;
-            this.textBoxDataInicial.Text = "Data Inicial";
             // 
             // textBoxDataFinal
             // 
@@ -171,7 +170,6 @@ namespace LoucaLiza
             this.textBoxDataFinal.PlaceHolderText = "Data Final";
             this.textBoxDataFinal.Size = new System.Drawing.Size(120, 32);
             this.textBoxDataFinal.TabIndex = 9;
-            this.textBoxDataFinal.Text = "Data Final";
             // 
             // textBoxDocumento
             // 
@@ -183,7 +181,6 @@ namespace LoucaLiza
             this.textBoxDocumento.PlaceHolderText = "Documento";
             this.textBoxDocumento.Size = new System.Drawing.Size(166, 32);
             this.textBoxDocumento.TabIndex = 7;
-            this.textBoxDocumento.Text = "Documento";
             // 
             // textBoxCliente
             // 
@@ -195,7 +192,6 @@ namespace LoucaLiza
             this.textBoxCliente.PlaceHolderText = "Cliente";
             this.textBoxCliente.Size = new System.Drawing.Size(335, 32);
             this.textBoxCliente.TabIndex = 6;
-            this.textBoxCliente.Text = "Cliente";
             // 
             // textBoxModelo
             // 
@@ -207,7 +203,6 @@ namespace LoucaLiza
             this.textBoxModelo.PlaceHolderText = "Modelo";
             this.textBoxModelo.Size = new System.Drawing.Size(177, 32);
             this.textBoxModelo.TabIndex = 10;
-            this.textBoxModelo.Text = "Modelo";
             // 
             // textBoxPlaca
             // 
@@ -219,7 +214,6 @@ namespace LoucaLiza
             this.textBoxPlaca.PlaceHolderText = "Placa";
             this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
             this.textBoxPlaca.TabIndex = 11;
-            this.textBoxPlaca.Text = "Placa";
             // 
             // btnBuscaLocacao
             // 
