@@ -25,7 +25,7 @@ namespace LoucaLiza.View.Components
             set
             {
                 base.Text = value;
-                setPlaceholder();
+                // setPlaceholder();
             }
         }
 

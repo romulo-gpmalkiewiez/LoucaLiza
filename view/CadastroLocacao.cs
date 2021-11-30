@@ -42,11 +42,26 @@ namespace LoucaLiza.view
         private void HandleClienteSelected(Cliente cliente)
         {
             _locacao.Cliente = cliente;
+            UpdateClienteTextBox();
         }
 
         private void HandleVeiculoSelected(Veiculo veiculo)
         {
             _locacao.Veiculo = veiculo;
+        }
+
+        private void UpdateClienteTextBox()
+        {
+            if (_locacao.Cliente != null)
+            {
+                var textValue = String.Format(
+                    "{0}, {1} anos, CNH: {2}",
+                    _locacao.Cliente.Nome,
+                    _locacao.Cliente.Age(),
+                    _locacao.Cliente.Cnh);
+
+                textBoxCliente.Text = textValue;
+            }
         }
     }
 }
