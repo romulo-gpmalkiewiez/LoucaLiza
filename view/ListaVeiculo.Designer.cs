@@ -76,6 +76,7 @@ namespace LoucaLiza.view
             this.btnEditarVeiculo.TabIndex = 15;
             this.btnEditarVeiculo.Text = "Editar";
             this.btnEditarVeiculo.UseVisualStyleBackColor = false;
+            this.btnEditarVeiculo.Click += new System.EventHandler(this.btnEditarVeiculo_Click);
             // 
             // btnAddVeiculo
             // 

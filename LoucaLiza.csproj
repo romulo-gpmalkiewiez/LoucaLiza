@@ -57,6 +57,7 @@
     <Compile Include="repository\LocacaoRepository.cs" />
     <Compile Include="repository\VeiculoRepository.cs" />
     <Compile Include="repository\ClienteRepository.cs" />
+    <Compile Include="utils\DataGridUtils.cs" />
     <Compile Include="utils\database\InMemoryDatabase.cs" />
     <Compile Include="utils\ModelUtils.cs" />
     <Compile Include="utils\DataTableUtils.cs" />

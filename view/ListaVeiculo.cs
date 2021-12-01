@@ -101,5 +101,14 @@ namespace LoucaLiza.view
 
             dataGridVeiculo.DataSource = _dataTableVeiculo;
         }
+
+        private void btnEditarVeiculo_Click(object sender, EventArgs e)
+        {
+            var selectedVeiculo = DataGridUtils.GetSelectedEntityById(dataGridVeiculo, _veiculos);
+            if (selectedVeiculo != null)
+            {
+                FormUtils.OpenNewDialog(this, new CadastroVeiculo(selectedVeiculo, HandleAfterSaveVeiculo));
+            }
+        }
     }
 }

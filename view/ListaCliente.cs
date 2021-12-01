@@ -117,5 +117,13 @@ namespace LoucaLiza.view
             UpdateDataGrid();
         }
 
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
+            var selectedCliente = DataGridUtils.GetSelectedEntityById(dataGridCliente, _clientes);
+            if (selectedCliente != null)
+            {
+                FormUtils.OpenNewDialog(this, new CadastroCliente(selectedCliente, HandleAfterSaveCliente));
+            }
+        }
     }
 }

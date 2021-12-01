@@ -109,6 +109,7 @@ namespace LoucaLiza.view
             this.btnEditarCliente.TabIndex = 25;
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.UseVisualStyleBackColor = false;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // btnAddCliente
             // 
