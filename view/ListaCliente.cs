@@ -1,4 +1,5 @@
-﻿using LoucaLiza.model.cliente;
+﻿using LoucaLiza.controller;
+using LoucaLiza.model.cliente;
 using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace LoucaLiza.view
     {
         private List<Cliente> _clientes;
         private DataTable _dataTableCliente = new DataTable();
+        private ClienteController _controller = new ClienteController();
 
         public ListaCliente()
         {
@@ -107,7 +109,7 @@ namespace LoucaLiza.view
             dataGridCliente.DataSource = _dataTableCliente;
         }
 
-        private void btnAddCliente_Click(object sender, System.EventArgs e)
+        private void btnAddCliente_Click(object sender, EventArgs e)
         {
             FormUtils.OpenNewDialog(this, new CadastroCliente(null, HandleAfterSaveCliente));
         }
@@ -124,6 +126,21 @@ namespace LoucaLiza.view
             {
                 FormUtils.OpenNewDialog(this, new CadastroCliente(selectedCliente, HandleAfterSaveCliente));
             }
+        }
+
+        private void btnExcluirCliente_Click(object sender, EventArgs e)
+        {
+            var selectedCliente = GetSelectedCliente();
+            if (selectedCliente != null && DialogUtils.ConfirmDelete() && _controller.Delete(selectedCliente))
+            {
+                UpdateDataGrid();
+                MessageBox.Show("Cliente removido com sucesso!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private Cliente GetSelectedCliente()
+        {
+            return DataGridUtils.GetSelectedEntityById(dataGridCliente, _clientes);
         }
     }
 }

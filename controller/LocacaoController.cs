@@ -12,5 +12,10 @@ namespace LoucaLiza.controller
             locacao.ValorDiaria = locacao.Veiculo.ValorDiaria;
             return repository.Save(locacao);
         }
+
+        public bool Delete(Locacao locacao)
+        {
+            return repository.Delete(locacao);
+        }
     }
 }

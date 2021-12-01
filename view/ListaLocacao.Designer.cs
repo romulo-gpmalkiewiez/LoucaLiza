@@ -148,6 +148,7 @@ namespace LoucaLiza
             this.btnExcluirLocacao.TabIndex = 5;
             this.btnExcluirLocacao.Text = "Excluir";
             this.btnExcluirLocacao.UseVisualStyleBackColor = false;
+            this.btnExcluirLocacao.Click += new System.EventHandler(this.btnExcluirLocacao_Click);
             // 
             // textBoxDataInicial
             // 

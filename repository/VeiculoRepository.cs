@@ -6,14 +6,9 @@ namespace LoucaLiza.repository
 {
     public class VeiculoRepository : IRepository<Veiculo>
     {
-        public void Delete(Veiculo Entity)
+        public bool Delete(Veiculo veiculo)
         {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteById(int Id)
-        {
-            throw new NotImplementedException();
+            return Application.Database.Veiculos.Remove(veiculo);
         }
 
         public List<Veiculo> GetAll()

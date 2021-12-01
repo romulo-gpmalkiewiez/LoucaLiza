@@ -11,5 +11,10 @@ namespace LoucaLiza.controller
         {
             return repository.Save(cliente);    
         }
+
+        public bool Delete(Cliente entity)
+        {
+            return repository.Delete(entity);
+        }
     }
 }

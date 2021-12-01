@@ -10,8 +10,6 @@ namespace LoucaLiza.repository
 
         T Save(T Entity);
 
-        void DeleteById(int Id);
-
-        void Delete(T Entity);
+        bool Delete(T Entity);
     }
 }

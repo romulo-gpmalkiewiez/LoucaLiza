@@ -12,5 +12,10 @@ namespace LoucaLiza.controller
         {
             return repository.Save(veiculo);
         }
+
+        public bool Delete(Veiculo veiculo)
+        {
+            return repository.Delete(veiculo);
+        }
     }
 }

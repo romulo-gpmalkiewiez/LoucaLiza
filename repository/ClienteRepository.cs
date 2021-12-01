@@ -5,14 +5,9 @@ namespace LoucaLiza.repository
 {
     public class ClienteRepository : IRepository<Cliente>
     {
-        public void Delete(Cliente cliente)
+        public bool Delete(Cliente cliente)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void DeleteById(int Id)
-        {
-            throw new System.NotImplementedException();
+            return Application.Database.Clientes.Remove(cliente);
         }
 
         public List<Cliente> GetAll()

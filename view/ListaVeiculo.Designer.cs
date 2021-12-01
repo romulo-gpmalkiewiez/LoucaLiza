@@ -64,6 +64,7 @@ namespace LoucaLiza.view
             this.btnExcluirVeiculo.TabIndex = 16;
             this.btnExcluirVeiculo.Text = "Excluir";
             this.btnExcluirVeiculo.UseVisualStyleBackColor = false;
+            this.btnExcluirVeiculo.Click += new System.EventHandler(this.btnExcluirVeiculo_Click);
             // 
             // btnEditarVeiculo
             // 

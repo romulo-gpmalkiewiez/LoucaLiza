@@ -6,9 +6,9 @@ namespace LoucaLiza.repository
 {
     public class LocacaoRepository : IRepository<Locacao>
     {
-        public void Delete(Locacao Entity)
+        public bool Delete(Locacao locacao)
         {
-            throw new NotImplementedException();
+            return Application.Database.Locacoes.Remove(locacao);
         }
 
         public void DeleteById(int Id)

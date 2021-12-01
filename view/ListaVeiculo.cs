@@ -1,4 +1,5 @@
 ﻿using Loucaliza.model.veiculo;
+using LoucaLiza.controller;
 using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace LoucaLiza.view
     {
         private List<Veiculo> _veiculos;
         private DataTable _dataTableVeiculo = new DataTable();
+        private VeiculoController _controller = new VeiculoController();
 
         public ListaVeiculo()
         {
@@ -104,11 +106,26 @@ namespace LoucaLiza.view
 
         private void btnEditarVeiculo_Click(object sender, EventArgs e)
         {
-            var selectedVeiculo = DataGridUtils.GetSelectedEntityById(dataGridVeiculo, _veiculos);
+            var selectedVeiculo = GetSelectedVeiculo();
             if (selectedVeiculo != null)
             {
                 FormUtils.OpenNewDialog(this, new CadastroVeiculo(selectedVeiculo, HandleAfterSaveVeiculo));
             }
+        }
+
+        private void btnExcluirVeiculo_Click(object sender, EventArgs e)
+        {
+            var selectedVeiculo = GetSelectedVeiculo();
+            if (selectedVeiculo != null && DialogUtils.ConfirmDelete() && _controller.Delete(selectedVeiculo))
+            {
+                UpdateDataGrid();
+                MessageBox.Show("Veículo removido com sucesso!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private Veiculo GetSelectedVeiculo()
+        {
+            return DataGridUtils.GetSelectedEntityById(dataGridVeiculo, _veiculos);
         }
     }
 }

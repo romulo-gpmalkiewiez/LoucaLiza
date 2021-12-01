@@ -1,4 +1,5 @@
-﻿using LoucaLiza.model.locacao;
+﻿using LoucaLiza.controller;
+using LoucaLiza.model.locacao;
 using LoucaLiza.utils;
 using LoucaLiza.view;
 using System;
@@ -13,6 +14,7 @@ namespace LoucaLiza
     {
         private List<Locacao> _locacoes;
         private DataTable _dataTableLocacao = new DataTable();
+        private LocacaoController _controller = new LocacaoController();
 
         public ListaLocacao()
         {
@@ -108,6 +110,21 @@ namespace LoucaLiza
         {
             UpdateDataGrid();
             dataGridLocacao.Rows[dataGridLocacao.Rows.Count - 1].Selected = true;
+        }
+
+        private void btnExcluirLocacao_Click(object sender, EventArgs e)
+        {
+            var selectedCliente = GetSelectedCliente();
+            if (selectedCliente != null && DialogUtils.ConfirmDelete() && _controller.Delete(selectedCliente))
+            {
+                UpdateDataGrid();
+                MessageBox.Show("Locação removida com sucesso!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private Locacao GetSelectedCliente()
+        {
+            return DataGridUtils.GetSelectedEntityById(dataGridLocacao, _locacoes);
         }
     }
 }
