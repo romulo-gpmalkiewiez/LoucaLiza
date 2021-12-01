@@ -10,14 +10,14 @@ namespace LoucaLiza.view
     {
         private VeiculoController veiculoController = new VeiculoController();
         private Veiculo _veiculo;
-        private Action<Veiculo> _onSaveCallback;
+        private Action<Veiculo> _onAfterSaveCallback;
 
-        public CadastroVeiculo(Veiculo veiculo, Action<Veiculo> onSaveCallback)
+        public CadastroVeiculo(Veiculo veiculo, Action<Veiculo> onAfterSaveCallback)
         {
             InitializeComponent();
 
             _veiculo = veiculo ?? new Veiculo();
-            _onSaveCallback = onSaveCallback;
+            _onAfterSaveCallback = onAfterSaveCallback;
 
             InitFormTitle();
             InitScreenFields();
@@ -66,7 +66,7 @@ namespace LoucaLiza.view
                 MessageBox.Show("Veículo salvo com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
 
-                _onSaveCallback(_veiculo);
+                _onAfterSaveCallback(_veiculo);
             }
             catch (ArgumentException ex)
             {
