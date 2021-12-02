@@ -31,7 +31,7 @@ namespace LoucaLiza.view
         private void InitScreenFields()
         {
             // dados gerais
-            textBoxDataNascimento.Text = _cliente.DataNascimento == null ? textBoxDataNascimento.Text : _cliente.DataNascimento?.ToString("dd/mm/yyyy");
+            textBoxDataNascimento.Text = _cliente.DataNascimento == null ? textBoxDataNascimento.Text : _cliente.DataNascimento?.ToString("dd/MM/yyyy");
             textBoxNome.Text = _cliente?.Nome ?? "";
             textBoxCPF.Text = _cliente?.Cpf ?? textBoxCPF.Text;
             textBoxCNH.Text = _cliente?.Cnh ?? textBoxCNH.Text;
@@ -77,9 +77,7 @@ namespace LoucaLiza.view
         {
             try
             {
-                _cliente = ModelUtils.ClienteRomulo();
-
-                // ConvertScreenDataToCliente();
+                ConvertScreenDataToCliente();
                 clienteController.Save(_cliente);
 
                 MessageBox.Show("Cliente salvo com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
