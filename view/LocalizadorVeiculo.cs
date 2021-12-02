@@ -117,6 +117,11 @@ namespace LoucaLiza.view
             }
         }
 
+        private void dataGridVeiculo_DoubleClick(object sender, EventArgs e)
+        {
+            btnSelecionarVeiculo_Click(sender, e);
+        }
+
         private Veiculo GetSelectedVeiculo()
         {
             if (dataGridVeiculo.SelectedRows.Count > 0)

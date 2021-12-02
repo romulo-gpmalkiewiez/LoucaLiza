@@ -61,6 +61,7 @@ namespace LoucaLiza.view
             this.dataGridVeiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridVeiculo.Size = new System.Drawing.Size(759, 353);
             this.dataGridVeiculo.TabIndex = 32;
+            this.dataGridVeiculo.DoubleClick += new System.EventHandler(this.dataGridVeiculo_DoubleClick);
             // 
             // comboBoxMarca
             // 
@@ -102,25 +103,27 @@ namespace LoucaLiza.view
             // 
             // textBoxPlaca
             // 
-            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxPlaca.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxPlaca.ForeColor = System.Drawing.Color.Gray;
             this.textBoxPlaca.Location = new System.Drawing.Point(396, 77);
             this.textBoxPlaca.Multiline = true;
             this.textBoxPlaca.Name = "textBoxPlaca";
             this.textBoxPlaca.PlaceHolderText = "Placa";
             this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
             this.textBoxPlaca.TabIndex = 28;
+            this.textBoxPlaca.Text = "Placa";
             // 
             // textBoxModelo
             // 
-            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxModelo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxModelo.ForeColor = System.Drawing.Color.Gray;
             this.textBoxModelo.Location = new System.Drawing.Point(196, 77);
             this.textBoxModelo.Multiline = true;
             this.textBoxModelo.Name = "textBoxModelo";
             this.textBoxModelo.PlaceHolderText = "Modelo";
             this.textBoxModelo.Size = new System.Drawing.Size(194, 32);
             this.textBoxModelo.TabIndex = 27;
+            this.textBoxModelo.Text = "Modelo";
             // 
             // btnExcluirVeiculo
             // 
