@@ -30,21 +30,21 @@
         {
             this.btnSalvarCliente = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.textBoxCNH = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxCPF = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxNome = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxTelefone = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxDataNascimento = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxEmail = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxCNH = new System.Windows.Forms.TextBox();
+            this.textBoxCPF = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.textBoxDataNascimento = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxLogradouro = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxNumero = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxComplemento = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxBairro = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxCidade = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxEstado = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxCEP = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxLogradouro = new System.Windows.Forms.TextBox();
+            this.textBoxNumero = new System.Windows.Forms.TextBox();
+            this.textBoxComplemento = new System.Windows.Forms.TextBox();
+            this.textBoxBairro = new System.Windows.Forms.TextBox();
+            this.textBoxCidade = new System.Windows.Forms.TextBox();
+            this.textBoxEstado = new System.Windows.Forms.TextBox();
+            this.textBoxCEP = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSalvarCliente
@@ -72,75 +72,51 @@
             // 
             // textBoxCNH
             // 
-            this.textBoxCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxCNH.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCNH.Location = new System.Drawing.Point(491, 150);
             this.textBoxCNH.Multiline = true;
             this.textBoxCNH.Name = "textBoxCNH";
-            this.textBoxCNH.PlaceHolderText = "CNH";
             this.textBoxCNH.Size = new System.Drawing.Size(140, 32);
             this.textBoxCNH.TabIndex = 5;
-            this.textBoxCNH.Text = "CNH";
             // 
             // textBoxCPF
             // 
-            this.textBoxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxCPF.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCPF.Location = new System.Drawing.Point(491, 102);
             this.textBoxCPF.Multiline = true;
             this.textBoxCPF.Name = "textBoxCPF";
-            this.textBoxCPF.PlaceHolderText = "CPF";
             this.textBoxCPF.Size = new System.Drawing.Size(140, 32);
             this.textBoxCPF.TabIndex = 1;
-            this.textBoxCPF.Text = "CPF";
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxNome.ForeColor = System.Drawing.Color.Gray;
             this.textBoxNome.Location = new System.Drawing.Point(15, 102);
             this.textBoxNome.Multiline = true;
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.PlaceHolderText = "Nome";
             this.textBoxNome.Size = new System.Drawing.Size(459, 32);
             this.textBoxNome.TabIndex = 0;
-            this.textBoxNome.Text = "Nome";
             // 
             // textBoxTelefone
             // 
-            this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxTelefone.ForeColor = System.Drawing.Color.Gray;
             this.textBoxTelefone.Location = new System.Drawing.Point(218, 150);
             this.textBoxTelefone.Multiline = true;
             this.textBoxTelefone.Name = "textBoxTelefone";
-            this.textBoxTelefone.PlaceHolderText = "Telefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(120, 32);
             this.textBoxTelefone.TabIndex = 3;
-            this.textBoxTelefone.Text = "Telefone";
             // 
             // textBoxDataNascimento
             // 
-            this.textBoxDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDataNascimento.ForeColor = System.Drawing.Color.Gray;
             this.textBoxDataNascimento.Location = new System.Drawing.Point(354, 150);
             this.textBoxDataNascimento.Multiline = true;
             this.textBoxDataNascimento.Name = "textBoxDataNascimento";
-            this.textBoxDataNascimento.PlaceHolderText = "Data Nascimento";
             this.textBoxDataNascimento.Size = new System.Drawing.Size(120, 32);
             this.textBoxDataNascimento.TabIndex = 4;
-            this.textBoxDataNascimento.Text = "Data Nascimento";
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxEmail.ForeColor = System.Drawing.Color.Gray;
             this.textBoxEmail.Location = new System.Drawing.Point(15, 150);
             this.textBoxEmail.Multiline = true;
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.PlaceHolderText = "Email";
             this.textBoxEmail.Size = new System.Drawing.Size(187, 32);
             this.textBoxEmail.TabIndex = 2;
-            this.textBoxEmail.Text = "Email";
             // 
             // label2
             // 
@@ -162,87 +138,59 @@
             // 
             // textBoxLogradouro
             // 
-            this.textBoxLogradouro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxLogradouro.ForeColor = System.Drawing.Color.Gray;
             this.textBoxLogradouro.Location = new System.Drawing.Point(15, 246);
             this.textBoxLogradouro.Multiline = true;
             this.textBoxLogradouro.Name = "textBoxLogradouro";
-            this.textBoxLogradouro.PlaceHolderText = "Logradouro";
             this.textBoxLogradouro.Size = new System.Drawing.Size(459, 32);
             this.textBoxLogradouro.TabIndex = 6;
-            this.textBoxLogradouro.Text = "Logradouro";
             // 
             // textBoxNumero
             // 
-            this.textBoxNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxNumero.ForeColor = System.Drawing.Color.Gray;
             this.textBoxNumero.Location = new System.Drawing.Point(491, 246);
             this.textBoxNumero.Multiline = true;
             this.textBoxNumero.Name = "textBoxNumero";
-            this.textBoxNumero.PlaceHolderText = "Número";
             this.textBoxNumero.Size = new System.Drawing.Size(140, 32);
             this.textBoxNumero.TabIndex = 7;
-            this.textBoxNumero.Text = "Número";
             // 
             // textBoxComplemento
             // 
-            this.textBoxComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxComplemento.ForeColor = System.Drawing.Color.Gray;
             this.textBoxComplemento.Location = new System.Drawing.Point(15, 294);
             this.textBoxComplemento.Multiline = true;
             this.textBoxComplemento.Name = "textBoxComplemento";
-            this.textBoxComplemento.PlaceHolderText = "Complemento";
             this.textBoxComplemento.Size = new System.Drawing.Size(369, 32);
             this.textBoxComplemento.TabIndex = 8;
-            this.textBoxComplemento.Text = "Complemento";
             // 
             // textBoxBairro
             // 
-            this.textBoxBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxBairro.ForeColor = System.Drawing.Color.Gray;
             this.textBoxBairro.Location = new System.Drawing.Point(400, 294);
             this.textBoxBairro.Multiline = true;
             this.textBoxBairro.Name = "textBoxBairro";
-            this.textBoxBairro.PlaceHolderText = "Bairro";
             this.textBoxBairro.Size = new System.Drawing.Size(231, 32);
             this.textBoxBairro.TabIndex = 9;
-            this.textBoxBairro.Text = "Bairro";
             // 
             // textBoxCidade
             // 
-            this.textBoxCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxCidade.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCidade.Location = new System.Drawing.Point(15, 342);
             this.textBoxCidade.Multiline = true;
             this.textBoxCidade.Name = "textBoxCidade";
-            this.textBoxCidade.PlaceHolderText = "Cidade";
             this.textBoxCidade.Size = new System.Drawing.Size(285, 32);
             this.textBoxCidade.TabIndex = 10;
-            this.textBoxCidade.Text = "Cidade";
             // 
             // textBoxEstado
             // 
-            this.textBoxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxEstado.ForeColor = System.Drawing.Color.Gray;
             this.textBoxEstado.Location = new System.Drawing.Point(316, 342);
             this.textBoxEstado.Multiline = true;
             this.textBoxEstado.Name = "textBoxEstado";
-            this.textBoxEstado.PlaceHolderText = "Estado";
             this.textBoxEstado.Size = new System.Drawing.Size(68, 32);
             this.textBoxEstado.TabIndex = 11;
-            this.textBoxEstado.Text = "Estado";
             // 
             // textBoxCEP
             // 
-            this.textBoxCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxCEP.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCEP.Location = new System.Drawing.Point(400, 342);
             this.textBoxCEP.Multiline = true;
             this.textBoxCEP.Name = "textBoxCEP";
-            this.textBoxCEP.PlaceHolderText = "CEP";
             this.textBoxCEP.Size = new System.Drawing.Size(124, 32);
             this.textBoxCEP.TabIndex = 12;
-            this.textBoxCEP.Text = "CEP";
             // 
             // CadastroCliente
             // 
@@ -278,20 +226,20 @@
 
         private System.Windows.Forms.Button btnSalvarCliente;
         private System.Windows.Forms.Label labelTitle;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxCNH;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxCPF;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxTelefone;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDataNascimento;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxCNH;
+        private System.Windows.Forms.TextBox textBoxCPF;
+        private System.Windows.Forms.TextBox textBoxTelefone;
+        private System.Windows.Forms.TextBox textBoxDataNascimento;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxLogradouro;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxNumero;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxComplemento;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxBairro;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxCidade;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxEstado;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxCEP;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxNome;
+        private System.Windows.Forms.TextBox textBoxLogradouro;
+        private System.Windows.Forms.TextBox textBoxNumero;
+        private System.Windows.Forms.TextBox textBoxComplemento;
+        private System.Windows.Forms.TextBox textBoxBairro;
+        private System.Windows.Forms.TextBox textBoxCidade;
+        private System.Windows.Forms.TextBox textBoxEstado;
+        private System.Windows.Forms.TextBox textBoxCEP;
+        private System.Windows.Forms.TextBox textBoxNome;
     }
 }

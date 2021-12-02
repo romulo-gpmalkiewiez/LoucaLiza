@@ -121,6 +121,7 @@ namespace LoucaLiza.view
             this.comboBoxMarca.Size = new System.Drawing.Size(194, 32);
             this.comboBoxMarca.Sorted = true;
             this.comboBoxMarca.TabIndex = 21;
+            this.comboBoxMarca.Text = "Marca";
             // 
             // comboBoxStatus
             // 

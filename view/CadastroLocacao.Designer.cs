@@ -41,11 +41,11 @@ namespace LoucaLiza.view
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxDevolucao = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxDias = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxVeiculo = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxCliente = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxDataLocacao = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxDevolucao = new System.Windows.Forms.TextBox();
+            this.textBoxDias = new System.Windows.Forms.TextBox();
+            this.textBoxVeiculo = new System.Windows.Forms.TextBox();
+            this.textBoxCliente = new System.Windows.Forms.TextBox();
+            this.textBoxDataLocacao = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -165,64 +165,49 @@ namespace LoucaLiza.view
             // textBoxDevolucao
             // 
             this.textBoxDevolucao.Enabled = false;
-            this.textBoxDevolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDevolucao.ForeColor = System.Drawing.Color.Gray;
             this.textBoxDevolucao.Location = new System.Drawing.Point(157, 240);
             this.textBoxDevolucao.Multiline = true;
             this.textBoxDevolucao.Name = "textBoxDevolucao";
-            this.textBoxDevolucao.PlaceHolderText = "dd/MM/yyyy HH:mm";
             this.textBoxDevolucao.Size = new System.Drawing.Size(120, 32);
             this.textBoxDevolucao.TabIndex = 4;
             this.textBoxDevolucao.TabStop = false;
-            this.textBoxDevolucao.Text = "dd/MM/yyyy HH:mm";
             // 
             // textBoxDias
             // 
-            this.textBoxDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDias.ForeColor = System.Drawing.Color.Gray;
             this.textBoxDias.Location = new System.Drawing.Point(16, 240);
             this.textBoxDias.Multiline = true;
             this.textBoxDias.Name = "textBoxDias";
-            this.textBoxDias.PlaceHolderText = "Dias Locação";
             this.textBoxDias.Size = new System.Drawing.Size(120, 32);
             this.textBoxDias.TabIndex = 3;
-            this.textBoxDias.Text = "Dias Locação";
             this.textBoxDias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxDias_KeyUp);
             // 
             // textBoxVeiculo
             // 
-            this.textBoxVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxVeiculo.ForeColor = System.Drawing.Color.Gray;
             this.textBoxVeiculo.Location = new System.Drawing.Point(16, 183);
             this.textBoxVeiculo.Multiline = true;
             this.textBoxVeiculo.Name = "textBoxVeiculo";
-            this.textBoxVeiculo.PlaceHolderText = "Veículo";
             this.textBoxVeiculo.Size = new System.Drawing.Size(459, 32);
             this.textBoxVeiculo.TabIndex = 2;
             this.textBoxVeiculo.TabStop = false;
-            this.textBoxVeiculo.Text = "Veículo";
+            this.textBoxVeiculo.DoubleClick += new System.EventHandler(this.textBoxVeiculo_DoubleClick);
+            this.textBoxVeiculo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxVeiculo_KeyPress);
             // 
             // textBoxCliente
             // 
-            this.textBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxCliente.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCliente.Location = new System.Drawing.Point(16, 128);
             this.textBoxCliente.Multiline = true;
             this.textBoxCliente.Name = "textBoxCliente";
-            this.textBoxCliente.PlaceHolderText = "Cliente";
             this.textBoxCliente.Size = new System.Drawing.Size(459, 32);
             this.textBoxCliente.TabIndex = 1;
             this.textBoxCliente.TabStop = false;
-            this.textBoxCliente.Text = "Cliente";
+            this.textBoxCliente.DoubleClick += new System.EventHandler(this.textBoxCliente_DoubleClick);
+            this.textBoxCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCliente_KeyPress);
             // 
             // textBoxDataLocacao
             // 
-            this.textBoxDataLocacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDataLocacao.ForeColor = System.Drawing.Color.Gray;
             this.textBoxDataLocacao.Location = new System.Drawing.Point(16, 73);
             this.textBoxDataLocacao.Multiline = true;
             this.textBoxDataLocacao.Name = "textBoxDataLocacao";
-            this.textBoxDataLocacao.PlaceHolderText = "dd/MM/yyyy HH:mm";
             this.textBoxDataLocacao.Size = new System.Drawing.Size(120, 32);
             this.textBoxDataLocacao.TabIndex = 0;
             this.textBoxDataLocacao.TabStop = false;
@@ -259,11 +244,11 @@ namespace LoucaLiza.view
         #endregion
 
         private System.Windows.Forms.Label labelTitle;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDataLocacao;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxCliente;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxVeiculo;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDias;
-        private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDevolucao;
+        private System.Windows.Forms.TextBox textBoxDataLocacao;
+        private System.Windows.Forms.TextBox textBoxCliente;
+        private System.Windows.Forms.TextBox textBoxVeiculo;
+        private System.Windows.Forms.TextBox textBoxDias;
+        private System.Windows.Forms.TextBox textBoxDevolucao;
         private System.Windows.Forms.Label labelSubtotal;
         private System.Windows.Forms.Label labelSubtotalValor;
         private System.Windows.Forms.Button btnLocalizaCliente;

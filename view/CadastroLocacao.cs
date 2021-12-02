@@ -35,16 +35,6 @@ namespace LoucaLiza.view
             textBoxDataLocacao.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
         }
 
-        private void btnLocalizaCliente_Click(object sender, EventArgs e)
-        {
-            FormUtils.OpenNewDialog(this, new LocalizadorCliente(HandleClienteSelected));
-        }
-
-        private void btnLocalizaVeiculo_Click(object sender, EventArgs e)
-        {
-            FormUtils.OpenNewDialog(this, new LocalizadorVeiculo(HandleVeiculoSelected));
-        }
-
         private void HandleClienteSelected(Cliente cliente)
         {
             _locacao.Cliente = cliente;
@@ -165,6 +155,36 @@ namespace LoucaLiza.view
             {
                 MessageBox.Show(ex.Message, "Campos não preenchidos.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnLocalizaVeiculo_Click(object sender, EventArgs e)
+        {
+            FormUtils.OpenNewDialog(this, new LocalizadorVeiculo(HandleVeiculoSelected));
+        }
+
+        private void textBoxVeiculo_DoubleClick(object sender, EventArgs e)
+        {
+            FormUtils.OpenNewDialog(this, new LocalizadorVeiculo(HandleVeiculoSelected));
+        }
+
+        private void textBoxVeiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void btnLocalizaCliente_Click(object sender, EventArgs e)
+        {
+            FormUtils.OpenNewDialog(this, new LocalizadorCliente(HandleClienteSelected));
+        }
+
+        private void textBoxCliente_DoubleClick(object sender, EventArgs e)
+        {
+            FormUtils.OpenNewDialog(this, new LocalizadorCliente(HandleClienteSelected));
+        }
+
+        private void textBoxCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
