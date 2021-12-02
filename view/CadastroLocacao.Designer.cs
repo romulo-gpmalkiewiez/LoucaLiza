@@ -120,7 +120,7 @@ namespace LoucaLiza.view
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 224);
+            this.label1.Location = new System.Drawing.Point(142, 224);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 13);
             this.label1.TabIndex = 46;
@@ -165,7 +165,7 @@ namespace LoucaLiza.view
             // textBoxDevolucao
             // 
             this.textBoxDevolucao.Enabled = false;
-            this.textBoxDevolucao.Location = new System.Drawing.Point(157, 240);
+            this.textBoxDevolucao.Location = new System.Drawing.Point(142, 240);
             this.textBoxDevolucao.Multiline = true;
             this.textBoxDevolucao.Name = "textBoxDevolucao";
             this.textBoxDevolucao.Size = new System.Drawing.Size(120, 32);
