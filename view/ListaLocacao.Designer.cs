@@ -38,18 +38,18 @@ namespace LoucaLiza
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnAddLocacao = new System.Windows.Forms.Button();
             this.btnExcluirLocacao = new System.Windows.Forms.Button();
-            this.textBoxDataInicial = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxDataFinal = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxDocumento = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxCliente = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxModelo = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.textBoxPlaca = new LoucaLiza.View.Components.PlaceHolderTextBox();
             this.btnBuscaLocacao = new System.Windows.Forms.Button();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.dataGridLocacao = new System.Windows.Forms.DataGridView();
             this.panelFooter = new System.Windows.Forms.Panel();
             this.labelFooter = new System.Windows.Forms.Label();
+            this.textBoxPlaca = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxModelo = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxDataFinal = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxDataInicial = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxDocumento = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxCliente = new LoucaLiza.View.Components.PlaceHolderTextBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocacao)).BeginInit();
             this.panelFooter.SuspendLayout();
@@ -150,78 +150,6 @@ namespace LoucaLiza
             this.btnExcluirLocacao.UseVisualStyleBackColor = false;
             this.btnExcluirLocacao.Click += new System.EventHandler(this.btnExcluirLocacao_Click);
             // 
-            // textBoxDataInicial
-            // 
-            this.textBoxDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDataInicial.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxDataInicial.Location = new System.Drawing.Point(526, 135);
-            this.textBoxDataInicial.Multiline = true;
-            this.textBoxDataInicial.Name = "textBoxDataInicial";
-            this.textBoxDataInicial.PlaceHolderText = "Data Inicial";
-            this.textBoxDataInicial.Size = new System.Drawing.Size(120, 32);
-            this.textBoxDataInicial.TabIndex = 8;
-            this.textBoxDataInicial.Text = "Data Inicial";
-            // 
-            // textBoxDataFinal
-            // 
-            this.textBoxDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDataFinal.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxDataFinal.Location = new System.Drawing.Point(652, 135);
-            this.textBoxDataFinal.Multiline = true;
-            this.textBoxDataFinal.Name = "textBoxDataFinal";
-            this.textBoxDataFinal.PlaceHolderText = "Data Final";
-            this.textBoxDataFinal.Size = new System.Drawing.Size(120, 32);
-            this.textBoxDataFinal.TabIndex = 9;
-            this.textBoxDataFinal.Text = "Data Final";
-            // 
-            // textBoxDocumento
-            // 
-            this.textBoxDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxDocumento.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxDocumento.Location = new System.Drawing.Point(354, 135);
-            this.textBoxDocumento.Multiline = true;
-            this.textBoxDocumento.Name = "textBoxDocumento";
-            this.textBoxDocumento.PlaceHolderText = "Documento";
-            this.textBoxDocumento.Size = new System.Drawing.Size(166, 32);
-            this.textBoxDocumento.TabIndex = 7;
-            this.textBoxDocumento.Text = "Documento";
-            // 
-            // textBoxCliente
-            // 
-            this.textBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxCliente.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxCliente.Location = new System.Drawing.Point(14, 136);
-            this.textBoxCliente.Multiline = true;
-            this.textBoxCliente.Name = "textBoxCliente";
-            this.textBoxCliente.PlaceHolderText = "Cliente";
-            this.textBoxCliente.Size = new System.Drawing.Size(335, 32);
-            this.textBoxCliente.TabIndex = 6;
-            this.textBoxCliente.Text = "Cliente";
-            // 
-            // textBoxModelo
-            // 
-            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxModelo.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxModelo.Location = new System.Drawing.Point(13, 180);
-            this.textBoxModelo.Multiline = true;
-            this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.PlaceHolderText = "Modelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(177, 32);
-            this.textBoxModelo.TabIndex = 10;
-            this.textBoxModelo.Text = "Modelo";
-            // 
-            // textBoxPlaca
-            // 
-            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxPlaca.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxPlaca.Location = new System.Drawing.Point(396, 180);
-            this.textBoxPlaca.Multiline = true;
-            this.textBoxPlaca.Name = "textBoxPlaca";
-            this.textBoxPlaca.PlaceHolderText = "Placa";
-            this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
-            this.textBoxPlaca.TabIndex = 11;
-            this.textBoxPlaca.Text = "Placa";
-            // 
             // btnBuscaLocacao
             // 
             this.btnBuscaLocacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
@@ -253,9 +181,9 @@ namespace LoucaLiza
             this.comboBoxMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMarca.FormattingEnabled = true;
             this.comboBoxMarca.ItemHeight = 26;
-            this.comboBoxMarca.Location = new System.Drawing.Point(196, 180);
+            this.comboBoxMarca.Location = new System.Drawing.Point(13, 180);
             this.comboBoxMarca.Name = "comboBoxMarca";
-            this.comboBoxMarca.Size = new System.Drawing.Size(194, 32);
+            this.comboBoxMarca.Size = new System.Drawing.Size(177, 32);
             this.comboBoxMarca.Sorted = true;
             this.comboBoxMarca.TabIndex = 14;
             this.comboBoxMarca.Text = "Marca";
@@ -297,6 +225,78 @@ namespace LoucaLiza
             this.labelFooter.Size = new System.Drawing.Size(203, 13);
             this.labelFooter.TabIndex = 17;
             this.labelFooter.Text = "LoucaLiza - Mais louca que você imagina";
+            // 
+            // textBoxPlaca
+            // 
+            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxPlaca.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxPlaca.Location = new System.Drawing.Point(396, 180);
+            this.textBoxPlaca.Multiline = true;
+            this.textBoxPlaca.Name = "textBoxPlaca";
+            this.textBoxPlaca.PlaceHolderText = "Placa";
+            this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
+            this.textBoxPlaca.TabIndex = 11;
+            this.textBoxPlaca.Text = "Placa";
+            // 
+            // textBoxModelo
+            // 
+            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxModelo.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxModelo.Location = new System.Drawing.Point(196, 180);
+            this.textBoxModelo.Multiline = true;
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.PlaceHolderText = "Modelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(194, 32);
+            this.textBoxModelo.TabIndex = 10;
+            this.textBoxModelo.Text = "Modelo";
+            // 
+            // textBoxDataFinal
+            // 
+            this.textBoxDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDataFinal.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDataFinal.Location = new System.Drawing.Point(652, 135);
+            this.textBoxDataFinal.Multiline = true;
+            this.textBoxDataFinal.Name = "textBoxDataFinal";
+            this.textBoxDataFinal.PlaceHolderText = "Data Final";
+            this.textBoxDataFinal.Size = new System.Drawing.Size(120, 32);
+            this.textBoxDataFinal.TabIndex = 9;
+            this.textBoxDataFinal.Text = "Data Final";
+            // 
+            // textBoxDataInicial
+            // 
+            this.textBoxDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDataInicial.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDataInicial.Location = new System.Drawing.Point(526, 135);
+            this.textBoxDataInicial.Multiline = true;
+            this.textBoxDataInicial.Name = "textBoxDataInicial";
+            this.textBoxDataInicial.PlaceHolderText = "Data Inicial";
+            this.textBoxDataInicial.Size = new System.Drawing.Size(120, 32);
+            this.textBoxDataInicial.TabIndex = 8;
+            this.textBoxDataInicial.Text = "Data Inicial";
+            // 
+            // textBoxDocumento
+            // 
+            this.textBoxDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxDocumento.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxDocumento.Location = new System.Drawing.Point(354, 135);
+            this.textBoxDocumento.Multiline = true;
+            this.textBoxDocumento.Name = "textBoxDocumento";
+            this.textBoxDocumento.PlaceHolderText = "Documento";
+            this.textBoxDocumento.Size = new System.Drawing.Size(166, 32);
+            this.textBoxDocumento.TabIndex = 7;
+            this.textBoxDocumento.Text = "Documento";
+            // 
+            // textBoxCliente
+            // 
+            this.textBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxCliente.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxCliente.Location = new System.Drawing.Point(14, 136);
+            this.textBoxCliente.Multiline = true;
+            this.textBoxCliente.Name = "textBoxCliente";
+            this.textBoxCliente.PlaceHolderText = "Cliente";
+            this.textBoxCliente.Size = new System.Drawing.Size(335, 32);
+            this.textBoxCliente.TabIndex = 6;
+            this.textBoxCliente.Text = "Cliente";
             // 
             // ListaLocacao
             // 

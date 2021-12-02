@@ -1,4 +1,5 @@
 ﻿using Loucaliza.model.veiculo;
+using LoucaLiza.model.veiculo;
 using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,6 @@ namespace LoucaLiza.view
         private List<Veiculo> _veiculos;
         private DataTable _dataTableVeiculo = new DataTable();
         private Action<Veiculo> _onSelectCallback;
-
         public LocalizadorVeiculo(Action<Veiculo> onSelectVeiculoCallback)
         {
             InitializeComponent();
@@ -22,6 +22,7 @@ namespace LoucaLiza.view
 
             LoadListaVeiculos();
 
+            InitComboBoxes();
             InitDataTableColumns();
             UpdateDataGrid();
             ConfigureDataTableViewVeiculos();
@@ -30,6 +31,12 @@ namespace LoucaLiza.view
         private void LoadListaVeiculos()
         {
             _veiculos = Application.Database.Veiculos;
+        }
+
+        private void InitComboBoxes()
+        {
+            ComboBoxUtils.ConfigureComboBoxItems(comboBoxMarca, Marca.GetAvailable());
+            ComboBoxUtils.ConfigureComboBoxItems(comboBoxStatus, Status.GetAvailable());
         }
 
         private void InitDataTableColumns()

@@ -1,5 +1,6 @@
 ﻿using LoucaLiza.controller;
 using LoucaLiza.model.locacao;
+using LoucaLiza.model.veiculo;
 using LoucaLiza.utils;
 using LoucaLiza.view;
 using System;
@@ -22,6 +23,7 @@ namespace LoucaLiza
 
             LoadListaLocacoes();
 
+            InitComboBoxes();
             InitDataTableColumns();
             UpdateDataGrid();
             ConfigureDataTableViewLocacoes();
@@ -30,6 +32,11 @@ namespace LoucaLiza
         private void LoadListaLocacoes()
         {
             _locacoes = Application.Database.Locacoes;
+        }
+        private void InitComboBoxes()
+        {
+            ComboBoxUtils.ConfigureComboBoxItems(comboBoxMarca, Marca.GetAvailable());
+            ComboBoxUtils.ConfigureComboBoxItems(comboBoxStatus, Status.GetAvailable());
         }
 
         private void InitDataTableColumns()
