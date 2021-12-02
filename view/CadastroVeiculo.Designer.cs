@@ -47,6 +47,8 @@ namespace LoucaLiza.view
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxRenavam = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -144,7 +146,7 @@ namespace LoucaLiza.view
             this.textBoxModelo.MaxLength = 255;
             this.textBoxModelo.Multiline = true;
             this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(452, 32);
+            this.textBoxModelo.Size = new System.Drawing.Size(307, 32);
             this.textBoxModelo.TabIndex = 1;
             // 
             // label1
@@ -219,11 +221,31 @@ namespace LoucaLiza.view
             this.label8.TabIndex = 58;
             this.label8.Text = "Diária (R$)";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(329, 112);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 13);
+            this.label9.TabIndex = 60;
+            this.label9.Text = "Renavam";
+            // 
+            // textBoxRenavam
+            // 
+            this.textBoxRenavam.Location = new System.Drawing.Point(329, 128);
+            this.textBoxRenavam.MaxLength = 11;
+            this.textBoxRenavam.Multiline = true;
+            this.textBoxRenavam.Name = "textBoxRenavam";
+            this.textBoxRenavam.Size = new System.Drawing.Size(139, 32);
+            this.textBoxRenavam.TabIndex = 59;
+            // 
             // CadastroVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 399);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBoxRenavam);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -271,5 +293,7 @@ namespace LoucaLiza.view
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxRenavam;
     }
 }

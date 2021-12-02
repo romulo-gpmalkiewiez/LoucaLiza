@@ -41,6 +41,7 @@ namespace LoucaLiza.view
             comboBoxMarca.Text = _veiculo?.Marca;
             textBoxModelo.Text = _veiculo?.Modelo;
             textBoxChassi.Text = _veiculo?.Chassi;
+            textBoxRenavam.Text = _veiculo?.Renavam;
             textBoxPlaca.Text = _veiculo?.Placa;
             comboBoxCor.Text = _veiculo?.Cor;
             textBoxAno.Text = _veiculo?.Ano.ToString();
@@ -52,12 +53,13 @@ namespace LoucaLiza.view
         {
             _veiculo.Marca = comboBoxMarca.Text;
             _veiculo.Modelo = textBoxModelo.Text;
+            _veiculo.Chassi = textBoxChassi.Text;
+            _veiculo.Renavam = textBoxRenavam.Text;
             _veiculo.Placa = textBoxPlaca.Text;
             _veiculo.Ano = int.Parse(textBoxAno.Text);
             _veiculo.Cor = comboBoxCor.Text;
             _veiculo.Quilometragem = int.Parse(textBoxKm.Text);
             _veiculo.ValorDiaria = double.Parse(textBoxDiaria.Text);
-            _veiculo.Chassi = textBoxChassi.Text;
 
             return _veiculo;
         }

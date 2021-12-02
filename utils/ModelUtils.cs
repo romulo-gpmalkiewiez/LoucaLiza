@@ -31,6 +31,7 @@ namespace LoucaLiza.utils
             veiculo.Marca = "Ford";
             veiculo.Modelo = "Mustang 5.0 V8 TI-VCT GT PREMIUM SELECTSHIFT";
             veiculo.Placa = "MUS74NG";
+            veiculo.Renavam = "12664593490";
             veiculo.Quilometragem = 9000;
             veiculo.Ano = 2018;
             veiculo.ValorDiaria = 4480.5;

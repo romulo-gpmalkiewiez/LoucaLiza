@@ -48,6 +48,7 @@ namespace LoucaLiza.view
             _dataTableVeiculo.Columns.Add("id", typeof(int));
             _dataTableVeiculo.Columns.Add("marca", typeof(string));
             _dataTableVeiculo.Columns.Add("modelo", typeof(string));
+            _dataTableVeiculo.Columns.Add("renavam", typeof(string));
             _dataTableVeiculo.Columns.Add("placa", typeof(string));
             _dataTableVeiculo.Columns.Add("ano", typeof(int));
             _dataTableVeiculo.Columns.Add("cor", typeof(string));
@@ -67,6 +68,8 @@ namespace LoucaLiza.view
             dataGridVeiculo.Columns["marca"].HeaderText = "Marca";
 
             dataGridVeiculo.Columns["modelo"].HeaderText = "Modelo";
+
+            dataGridVeiculo.Columns["renavam"].HeaderText = "Renavam";
 
             dataGridVeiculo.Columns["placa"].HeaderText = "Placa";
 
@@ -93,6 +96,7 @@ namespace LoucaLiza.view
                     veiculo.Id,
                     veiculo.Marca,
                     veiculo.Modelo,
+                    veiculo.Renavam,
                     veiculo.Placa,
                     veiculo.Ano,
                     veiculo.Cor,
