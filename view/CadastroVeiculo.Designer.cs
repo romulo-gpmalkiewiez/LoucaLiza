@@ -81,7 +81,7 @@ namespace LoucaLiza.view
             this.comboBoxCor.Name = "comboBoxCor";
             this.comboBoxCor.Size = new System.Drawing.Size(220, 32);
             this.comboBoxCor.Sorted = true;
-            this.comboBoxCor.TabIndex = 4;
+            this.comboBoxCor.TabIndex = 5;
             // 
             // btnSalvarVeiculo
             // 
@@ -91,7 +91,7 @@ namespace LoucaLiza.view
             this.btnSalvarVeiculo.Location = new System.Drawing.Point(368, 352);
             this.btnSalvarVeiculo.Name = "btnSalvarVeiculo";
             this.btnSalvarVeiculo.Size = new System.Drawing.Size(100, 32);
-            this.btnSalvarVeiculo.TabIndex = 8;
+            this.btnSalvarVeiculo.TabIndex = 9;
             this.btnSalvarVeiculo.Text = "Salvar";
             this.btnSalvarVeiculo.UseVisualStyleBackColor = false;
             this.btnSalvarVeiculo.Click += new System.EventHandler(this.btnSalvarVeiculo_Click);
@@ -103,7 +103,7 @@ namespace LoucaLiza.view
             this.textBoxDiaria.Multiline = true;
             this.textBoxDiaria.Name = "textBoxDiaria";
             this.textBoxDiaria.Size = new System.Drawing.Size(111, 32);
-            this.textBoxDiaria.TabIndex = 7;
+            this.textBoxDiaria.TabIndex = 8;
             // 
             // textBoxAno
             // 
@@ -112,7 +112,7 @@ namespace LoucaLiza.view
             this.textBoxAno.Multiline = true;
             this.textBoxAno.Name = "textBoxAno";
             this.textBoxAno.Size = new System.Drawing.Size(111, 32);
-            this.textBoxAno.TabIndex = 5;
+            this.textBoxAno.TabIndex = 6;
             // 
             // textBoxPlaca
             // 
@@ -121,7 +121,7 @@ namespace LoucaLiza.view
             this.textBoxPlaca.Multiline = true;
             this.textBoxPlaca.Name = "textBoxPlaca";
             this.textBoxPlaca.Size = new System.Drawing.Size(139, 32);
-            this.textBoxPlaca.TabIndex = 3;
+            this.textBoxPlaca.TabIndex = 4;
             // 
             // textBoxKm
             // 
@@ -129,7 +129,7 @@ namespace LoucaLiza.view
             this.textBoxKm.Multiline = true;
             this.textBoxKm.Name = "textBoxKm";
             this.textBoxKm.Size = new System.Drawing.Size(109, 32);
-            this.textBoxKm.TabIndex = 6;
+            this.textBoxKm.TabIndex = 7;
             // 
             // textBoxChassi
             // 
@@ -138,7 +138,7 @@ namespace LoucaLiza.view
             this.textBoxChassi.Multiline = true;
             this.textBoxChassi.Name = "textBoxChassi";
             this.textBoxChassi.Size = new System.Drawing.Size(307, 32);
-            this.textBoxChassi.TabIndex = 2;
+            this.textBoxChassi.TabIndex = 3;
             // 
             // textBoxModelo
             // 
@@ -237,7 +237,7 @@ namespace LoucaLiza.view
             this.textBoxRenavam.Multiline = true;
             this.textBoxRenavam.Name = "textBoxRenavam";
             this.textBoxRenavam.Size = new System.Drawing.Size(139, 32);
-            this.textBoxRenavam.TabIndex = 59;
+            this.textBoxRenavam.TabIndex = 2;
             // 
             // CadastroVeiculo
             // 

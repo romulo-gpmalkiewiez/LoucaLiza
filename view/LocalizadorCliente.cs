@@ -87,7 +87,7 @@ namespace LoucaLiza.view
             dataGridCliente.DataSource = _dataTableCliente;
         }
 
-        private void btnAddCliente_Click(object sender, System.EventArgs e)
+        private void btnAddCliente_Click(object sender, EventArgs e)
         {
             FormUtils.OpenNewDialog(this, new CadastroCliente(null, HandleAfterSaveCliente));
         }
@@ -100,6 +100,11 @@ namespace LoucaLiza.view
                 Close();
                 _onSelectCallback(selectedCliente);
             }
+        }
+
+        private void dataGridCliente_DoubleClick(object sender, EventArgs e)
+        {
+            btnSelecionarCliente_Click(sender, e);
         }
 
         private Cliente GetSelectedCliente()

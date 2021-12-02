@@ -34,8 +34,8 @@ namespace LoucaLiza.view
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.btnBuscarVeiculo = new System.Windows.Forms.Button();
-            this.textBoxPlaca = new System.Windows.Forms.TextBox();
-            this.textBoxModelo = new System.Windows.Forms.TextBox();
+            this.textBoxPlaca = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxModelo = new LoucaLiza.View.Components.PlaceHolderTextBox();
             this.btnExcluirVeiculo = new System.Windows.Forms.Button();
             this.btnEditarVeiculo = new System.Windows.Forms.Button();
             this.btnAddVeiculo = new System.Windows.Forms.Button();
@@ -67,9 +67,9 @@ namespace LoucaLiza.view
             this.comboBoxMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMarca.FormattingEnabled = true;
             this.comboBoxMarca.ItemHeight = 26;
-            this.comboBoxMarca.Location = new System.Drawing.Point(196, 77);
+            this.comboBoxMarca.Location = new System.Drawing.Point(13, 77);
             this.comboBoxMarca.Name = "comboBoxMarca";
-            this.comboBoxMarca.Size = new System.Drawing.Size(194, 32);
+            this.comboBoxMarca.Size = new System.Drawing.Size(177, 32);
             this.comboBoxMarca.Sorted = true;
             this.comboBoxMarca.TabIndex = 31;
             this.comboBoxMarca.Text = "Marca";
@@ -102,21 +102,25 @@ namespace LoucaLiza.view
             // 
             // textBoxPlaca
             // 
+            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxPlaca.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBoxPlaca.Location = new System.Drawing.Point(396, 77);
             this.textBoxPlaca.Multiline = true;
             this.textBoxPlaca.Name = "textBoxPlaca";
+            this.textBoxPlaca.PlaceHolderText = "Placa";
             this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
             this.textBoxPlaca.TabIndex = 28;
-            this.textBoxPlaca.Text = "Placa";
             // 
             // textBoxModelo
             // 
-            this.textBoxModelo.Location = new System.Drawing.Point(13, 77);
+            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxModelo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxModelo.Location = new System.Drawing.Point(196, 77);
             this.textBoxModelo.Multiline = true;
             this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(177, 32);
+            this.textBoxModelo.PlaceHolderText = "Modelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(194, 32);
             this.textBoxModelo.TabIndex = 27;
-            this.textBoxModelo.Text = "Modelo";
             // 
             // btnExcluirVeiculo
             // 
@@ -209,12 +213,12 @@ namespace LoucaLiza.view
         private System.Windows.Forms.ComboBox comboBoxMarca;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Button btnBuscarVeiculo;
-        private System.Windows.Forms.TextBox textBoxPlaca;
-        private System.Windows.Forms.TextBox textBoxModelo;
         private System.Windows.Forms.Button btnExcluirVeiculo;
         private System.Windows.Forms.Button btnEditarVeiculo;
         private System.Windows.Forms.Button btnAddVeiculo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSelecionarVeiculo;
+        private View.Components.PlaceHolderTextBox textBoxPlaca;
+        private View.Components.PlaceHolderTextBox textBoxModelo;
     }
 }
