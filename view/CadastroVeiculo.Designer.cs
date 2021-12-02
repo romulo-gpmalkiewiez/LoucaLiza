@@ -132,7 +132,7 @@ namespace LoucaLiza.view
             // textBoxChassi
             // 
             this.textBoxChassi.Location = new System.Drawing.Point(16, 184);
-            this.textBoxChassi.MaxLength = 17;
+            this.textBoxChassi.MaxLength = 20;
             this.textBoxChassi.Multiline = true;
             this.textBoxChassi.Name = "textBoxChassi";
             this.textBoxChassi.Size = new System.Drawing.Size(307, 32);
