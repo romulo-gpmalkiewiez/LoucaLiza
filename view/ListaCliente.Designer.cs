@@ -32,13 +32,13 @@ namespace LoucaLiza.view
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaCliente));
             this.dataGridCliente = new System.Windows.Forms.DataGridView();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
             this.btnExcluirCliente = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
             this.btnAddCliente = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.textBoxCPF = new System.Windows.Forms.TextBox();
-            this.textBoxCNH = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxCPF = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.textBoxCNH = new LoucaLiza.View.Components.PlaceHolderTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,15 +76,6 @@ namespace LoucaLiza.view
             this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            // 
-            // textBoxNome
-            // 
-            this.textBoxNome.Location = new System.Drawing.Point(13, 82);
-            this.textBoxNome.Multiline = true;
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(362, 32);
-            this.textBoxNome.TabIndex = 27;
-            this.textBoxNome.Text = "Nome";
             // 
             // btnExcluirCliente
             // 
@@ -135,23 +126,38 @@ namespace LoucaLiza.view
             this.labelTitle.TabIndex = 23;
             this.labelTitle.Text = "Clientes";
             // 
+            // textBoxNome
+            // 
+            this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxNome.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxNome.Location = new System.Drawing.Point(13, 82);
+            this.textBoxNome.Multiline = true;
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.PlaceHolderText = "Nome";
+            this.textBoxNome.Size = new System.Drawing.Size(362, 32);
+            this.textBoxNome.TabIndex = 27;
+            // 
             // textBoxCPF
             // 
+            this.textBoxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxCPF.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBoxCPF.Location = new System.Drawing.Point(381, 82);
             this.textBoxCPF.Multiline = true;
             this.textBoxCPF.Name = "textBoxCPF";
+            this.textBoxCPF.PlaceHolderText = "CPF";
             this.textBoxCPF.Size = new System.Drawing.Size(140, 32);
             this.textBoxCPF.TabIndex = 28;
-            this.textBoxCPF.Text = "CPF";
             // 
             // textBoxCNH
             // 
+            this.textBoxCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxCNH.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBoxCNH.Location = new System.Drawing.Point(527, 82);
             this.textBoxCNH.Multiline = true;
             this.textBoxCNH.Name = "textBoxCNH";
+            this.textBoxCNH.PlaceHolderText = "CNH";
             this.textBoxCNH.Size = new System.Drawing.Size(140, 32);
             this.textBoxCNH.TabIndex = 33;
-            this.textBoxCNH.Text = "CNH";
             // 
             // ListaCliente
             // 
@@ -180,12 +186,12 @@ namespace LoucaLiza.view
 
         private System.Windows.Forms.DataGridView dataGridCliente;
         private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Button btnExcluirCliente;
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button btnAddCliente;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.TextBox textBoxCPF;
-        private System.Windows.Forms.TextBox textBoxCNH;
+        private View.Components.PlaceHolderTextBox textBoxNome;
+        private View.Components.PlaceHolderTextBox textBoxCPF;
+        private View.Components.PlaceHolderTextBox textBoxCNH;
     }
 }
