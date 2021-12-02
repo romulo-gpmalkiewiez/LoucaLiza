@@ -27,7 +27,7 @@ namespace LoucaLiza.utils
         public static Veiculo Mustang()
         {
             Veiculo veiculo = new Veiculo();
-            veiculo.Cor = Cor.PRETA;
+            veiculo.Cor = "Preta";
             veiculo.Marca = "Ford";
             veiculo.Modelo = "Mustang 5.0 V8 TI-VCT GT PREMIUM SELECTSHIFT";
             veiculo.Placa = "MUS74NG";

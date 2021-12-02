@@ -9,7 +9,7 @@ namespace Loucaliza.model.veiculo
         public string Modelo { get; set; }
         public string Placa { get; set; }
         public int? Ano { get; set; }
-        public Cor? Cor { get; set; }
+        public string Cor { get; set; }
         public string Chassi { get; set; }
         public int? Quilometragem { get; set; }
         public double? ValorDiaria { get; set; }

@@ -1,22 +1,28 @@
 ﻿namespace Loucaliza.model.veiculo
 {
-    public enum Cor
+    public class Cor
     {
-        AMARELO,
-        AZUL,
-        BEGE,
-        BRANCA,
-        CINZA,
-        DOURADA,
-        GRENA,
-        LARANJA,
-        MARROM,
-        PRATA,
-        PRETA,
-        ROSA,
-        ROXA,
-        VERDE,
-        VERMELHA,
-        FANTASIA
+        public static string[] GetAvailable()
+        {
+            return new string[]
+            {
+                "Amarelo",
+                "Azul",
+                "Bege",
+                "Branca",
+                "Cinza",
+                "Dourada",
+                "Grena",
+                "Laranja",
+                "Marrom",
+                "Prata",
+                "Preta",
+                "Rosa",
+                "Roxa",
+                "Verde",
+                "Vermelha",
+                "Fantasia",
+            };
+        }
     }
 }

@@ -54,9 +54,11 @@
     <Compile Include="model\cliente\Endereco.cs" />
     <Compile Include="model\cliente\Telefone.cs" />
     <Compile Include="model\cliente\Cliente.cs" />
+    <Compile Include="model\veiculo\Status.cs" />
     <Compile Include="repository\LocacaoRepository.cs" />
     <Compile Include="repository\VeiculoRepository.cs" />
     <Compile Include="repository\ClienteRepository.cs" />
+    <Compile Include="utils\ComboBoxUtils.cs" />
     <Compile Include="utils\DialogUtils.cs" />
     <Compile Include="utils\DataGridUtils.cs" />
     <Compile Include="utils\database\InMemoryDatabase.cs" />

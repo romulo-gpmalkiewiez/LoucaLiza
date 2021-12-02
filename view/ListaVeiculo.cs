@@ -1,5 +1,6 @@
 ﻿using Loucaliza.model.veiculo;
 using LoucaLiza.controller;
+using LoucaLiza.model.veiculo;
 using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,13 @@ namespace LoucaLiza.view
         private List<Veiculo> _veiculos;
         private DataTable _dataTableVeiculo = new DataTable();
         private VeiculoController _controller = new VeiculoController();
-
         public ListaVeiculo()
         {
             InitializeComponent();
 
             LoadListaVeiculos();
 
+            InitComboBoxes();
             InitDataTableColumns();
             UpdateDataGrid();
             ConfigureDataTableViewVeiculos();
@@ -31,9 +32,10 @@ namespace LoucaLiza.view
             _veiculos = Application.Database.Veiculos;
         }
 
-        private void btnAddVeiculo_Click(object sender, System.EventArgs e)
+        private void InitComboBoxes()
         {
-            FormUtils.OpenNewDialog(this, new CadastroVeiculo(null, HandleAfterSaveVeiculo));
+            ComboBoxUtils.ConfigureComboBoxItems(comboBoxMarca, Marca.GetAvailable());
+            ComboBoxUtils.ConfigureComboBoxItems(comboBoxStatus, Status.GetAvailable());
         }
 
         private void HandleAfterSaveVeiculo(Veiculo veiculo)
@@ -102,6 +104,11 @@ namespace LoucaLiza.view
             }
 
             dataGridVeiculo.DataSource = _dataTableVeiculo;
+        }
+
+        private void btnAddVeiculo_Click(object sender, EventArgs e)
+        {
+            FormUtils.OpenNewDialog(this, new CadastroVeiculo(null, HandleAfterSaveVeiculo));
         }
 
         private void btnEditarVeiculo_Click(object sender, EventArgs e)
