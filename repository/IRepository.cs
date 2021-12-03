@@ -2,11 +2,9 @@
 
 namespace LoucaLiza.repository
 {
-    public interface IRepository<T>
+    public interface IRepository<T, F> where F : IFilter<T>
     {
-        List<T> GetAll();
-
-        T GetById(int Id);
+        List<T> GetAll(F filter);
 
         T Save(T Entity);
 

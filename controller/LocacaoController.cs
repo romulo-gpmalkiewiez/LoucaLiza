@@ -1,5 +1,6 @@
 ﻿using LoucaLiza.model.locacao;
 using LoucaLiza.repository;
+using System.Collections.Generic;
 
 namespace LoucaLiza.controller
 {
@@ -16,6 +17,11 @@ namespace LoucaLiza.controller
         public bool Delete(Locacao locacao)
         {
             return repository.Delete(locacao);
+        }
+
+        public List<Locacao> GetByFilter(IFilter<Locacao> filter)
+        {
+            return repository.GetAll((LocacaoFilter) filter);
         }
     }
 }

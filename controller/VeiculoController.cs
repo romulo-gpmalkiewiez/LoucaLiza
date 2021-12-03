@@ -17,5 +17,10 @@ namespace LoucaLiza.controller
         {
             return repository.Delete(veiculo);
         }
+
+        public List<Veiculo> GetByFilter(IFilter<Veiculo> filter)
+        {
+            return repository.GetAll((VeiculoFilter) filter);
+        }
     }
 }

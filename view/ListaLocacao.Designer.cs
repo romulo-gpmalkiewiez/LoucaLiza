@@ -164,6 +164,7 @@ namespace LoucaLiza
             this.btnBuscaLocacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscaLocacao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscaLocacao.UseVisualStyleBackColor = false;
+            this.btnBuscaLocacao.Click += new System.EventHandler(this.btnBuscaLocacao_Click);
             // 
             // comboBoxStatus
             // 

@@ -1,6 +1,7 @@
 ﻿using LoucaLiza.controller;
 using LoucaLiza.model.locacao;
 using LoucaLiza.model.veiculo;
+using LoucaLiza.repository;
 using LoucaLiza.utils;
 using LoucaLiza.view;
 using System;
@@ -14,6 +15,7 @@ namespace LoucaLiza
     public partial class ListaLocacao : Form
     {
         private List<Locacao> _locacoes;
+        private LocacaoFilter _filter = new LocacaoFilter();
         private DataTable _dataTableLocacao = new DataTable();
         private LocacaoController _controller = new LocacaoController();
 
@@ -132,6 +134,32 @@ namespace LoucaLiza
         private Locacao GetSelectedCliente()
         {
             return DataGridUtils.GetSelectedEntityById(dataGridLocacao, _locacoes);
+        }
+
+        private void ConvertScreenDataToFilter()
+        {
+            _filter.Cliente = textBoxCliente.Text;
+            _filter.Documento = textBoxDocumento.Text;
+            _filter.Marca = comboBoxMarca.Text;
+            _filter.Modelo = textBoxModelo.Text;
+            _filter.Placa = textBoxPlaca.Text;
+            _filter.Status = Status.Parse(textBoxPlaca.Text);
+
+            if (!string.IsNullOrEmpty(textBoxDataInicial.Text) && textBoxDataInicial.Text != textBoxDataInicial.PlaceHolderText)
+            {
+                _filter.DataDe = DateTime.Parse(textBoxDataInicial.Text);
+            }
+            if (!string.IsNullOrEmpty(textBoxDataFinal.Text) && textBoxDataFinal.Text != textBoxDataFinal.PlaceHolderText)
+            {
+                _filter.DataAte = DateTime.Parse(textBoxDataFinal.Text);
+            }
+        }
+
+        private void btnBuscaLocacao_Click(object sender, EventArgs e)
+        {
+            ConvertScreenDataToFilter();
+            _locacoes = _controller.GetByFilter(_filter);
+            UpdateDataGrid();
         }
     }
 }

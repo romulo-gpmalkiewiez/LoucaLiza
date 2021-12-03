@@ -3,21 +3,16 @@ using System.Collections.Generic;
 
 namespace LoucaLiza.repository
 {
-    public class ClienteRepository : IRepository<Cliente>
+    public class ClienteRepository : IRepository<Cliente, ClienteFilter>
     {
+        public List<Cliente> GetAll(ClienteFilter filter)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool Delete(Cliente cliente)
         {
             return Application.Database.Clientes.Remove(cliente);
-        }
-
-        public List<Cliente> GetAll()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Cliente GetById(int Id)
-        {
-            throw new System.NotImplementedException();
         }
 
         public Cliente Save(Cliente cliente)

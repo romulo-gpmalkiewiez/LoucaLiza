@@ -103,7 +103,7 @@ namespace LoucaLiza.view
                     veiculo.Quilometragem,
                     String.Format("R$ {0:0.00}", veiculo.ValorDiaria),
                     veiculo.Chassi,
-                    veiculo.Locado ? "Locado" : "Disponível",
+                    veiculo.Locado ? Status.LOCADO : Status.DISPONIVEL,
                 });
             }
 

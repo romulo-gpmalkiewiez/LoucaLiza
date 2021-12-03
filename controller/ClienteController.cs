@@ -1,5 +1,6 @@
 ﻿using LoucaLiza.model.cliente;
 using LoucaLiza.repository;
+using System.Collections.Generic;
 
 namespace LoucaLiza.controller
 {
@@ -15,6 +16,11 @@ namespace LoucaLiza.controller
         public bool Delete(Cliente entity)
         {
             return repository.Delete(entity);
+        }
+
+        public List<Cliente> GetByFilter(IFilter<Cliente> filter)
+        {
+            return repository.GetAll((ClienteFilter) filter);
         }
     }
 }

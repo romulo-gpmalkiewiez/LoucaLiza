@@ -70,9 +70,14 @@
     <Compile Include="model\cliente\Telefone.cs" />
     <Compile Include="model\cliente\Cliente.cs" />
     <Compile Include="model\veiculo\Status.cs" />
+    <Compile Include="repository\IFilter.cs" />
+    <Compile Include="repository\ClienteFilter.cs" />
+    <Compile Include="repository\VeiculoFilter.cs" />
+    <Compile Include="repository\LocacaoFilter.cs" />
     <Compile Include="repository\LocacaoRepository.cs" />
     <Compile Include="repository\VeiculoRepository.cs" />
     <Compile Include="repository\ClienteRepository.cs" />
+    <Compile Include="utils\PlaceHolderTextBoxUtils.cs" />
     <Compile Include="utils\ComboBoxUtils.cs" />
     <Compile Include="utils\DialogUtils.cs" />
     <Compile Include="utils\DataGridUtils.cs" />
@@ -81,6 +86,7 @@
     <Compile Include="utils\DataTableUtils.cs" />
     <Compile Include="utils\FormUtils.cs" />
     <Compile Include="utils\database\Connection.cs" />
+    <Compile Include="utils\TextBoxPlaceHolder.cs" />
     <Compile Include="view\CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>

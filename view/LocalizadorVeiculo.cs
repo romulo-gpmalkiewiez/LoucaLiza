@@ -95,7 +95,7 @@ namespace LoucaLiza.view
                     veiculo.Quilometragem,
                     veiculo.ValorDiaria,
                     veiculo.Chassi,
-                    veiculo.Locado ? "Locado" : "Disponível",
+                    veiculo.Locado ? Status.LOCADO : Status.DISPONIVEL,
                 });
             }
 
