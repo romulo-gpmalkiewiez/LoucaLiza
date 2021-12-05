@@ -75,12 +75,12 @@
     <Compile Include="model\veiculo\Status.cs" />
     <Compile Include="repository\AbstractRepository.cs" />
     <Compile Include="repository\IFilter.cs" />
-    <Compile Include="repository\ClienteFilter.cs" />
-    <Compile Include="repository\VeiculoFilter.cs" />
-    <Compile Include="repository\LocacaoFilter.cs" />
-    <Compile Include="repository\LocacaoRepository.cs" />
-    <Compile Include="repository\VeiculoRepository.cs" />
-    <Compile Include="repository\ClienteRepository.cs" />
+    <Compile Include="repository\cliente\ClienteFilter.cs" />
+    <Compile Include="repository\veiculo\VeiculoFilter.cs" />
+    <Compile Include="repository\locacao\LocacaoFilter.cs" />
+    <Compile Include="repository\locacao\LocacaoRepository.cs" />
+    <Compile Include="repository\veiculo\VeiculoRepository.cs" />
+    <Compile Include="repository\cliente\ClienteRepository.cs" />
     <Compile Include="utils\StringUtils.cs" />
     <Compile Include="utils\DateTimeUtils.cs" />
     <Compile Include="utils\ComboBoxUtils.cs" />
@@ -92,55 +92,55 @@
     <Compile Include="utils\FormUtils.cs" />
     <Compile Include="utils\database\Connection.cs" />
     <Compile Include="utils\TextBoxPlaceHolder.cs" />
-    <Compile Include="view\CadastroCliente.cs">
+    <Compile Include="view\cliente\CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\CadastroCliente.Designer.cs">
+    <Compile Include="view\cliente\CadastroCliente.Designer.cs">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\CadastroVeiculo.cs">
+    <Compile Include="view\veiculo\CadastroVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\CadastroVeiculo.Designer.cs">
+    <Compile Include="view\veiculo\CadastroVeiculo.Designer.cs">
       <DependentUpon>CadastroVeiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\CadastroLocacao.cs">
+    <Compile Include="view\locacao\CadastroLocacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\CadastroLocacao.Designer.cs">
+    <Compile Include="view\locacao\CadastroLocacao.Designer.cs">
       <DependentUpon>CadastroLocacao.cs</DependentUpon>
     </Compile>
     <Compile Include="components\PlaceHolderTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="view\LocalizadorVeiculo.cs">
+    <Compile Include="view\veiculo\LocalizadorVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\LocalizadorVeiculo.Designer.cs">
+    <Compile Include="view\veiculo\LocalizadorVeiculo.Designer.cs">
       <DependentUpon>LocalizadorVeiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\LocalizadorCliente.cs">
+    <Compile Include="view\cliente\LocalizadorCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\LocalizadorCliente.Designer.cs">
+    <Compile Include="view\cliente\LocalizadorCliente.Designer.cs">
       <DependentUpon>LocalizadorCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\ListaCliente.cs">
+    <Compile Include="view\cliente\ListaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\ListaCliente.Designer.cs">
+    <Compile Include="view\cliente\ListaCliente.Designer.cs">
       <DependentUpon>ListaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\ListaVeiculo.cs">
+    <Compile Include="view\veiculo\ListaVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\ListaVeiculo.Designer.cs">
+    <Compile Include="view\veiculo\ListaVeiculo.Designer.cs">
       <DependentUpon>ListaVeiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\ListaLocacao.cs">
+    <Compile Include="view\locacao\ListaLocacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\ListaLocacao.Designer.cs">
+    <Compile Include="view\locacao\ListaLocacao.Designer.cs">
       <DependentUpon>ListaLocacao.cs</DependentUpon>
     </Compile>
     <Compile Include="model\locacao\Locacao.cs" />
@@ -162,28 +162,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\CadastroLocacao.resx">
+    <EmbeddedResource Include="view\locacao\CadastroLocacao.resx">
       <DependentUpon>CadastroLocacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\CadastroVeiculo.resx">
+    <EmbeddedResource Include="view\veiculo\CadastroVeiculo.resx">
       <DependentUpon>CadastroVeiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\ListaCliente.resx">
+    <EmbeddedResource Include="view\cliente\ListaCliente.resx">
       <DependentUpon>ListaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\ListaLocacao.resx">
+    <EmbeddedResource Include="view\locacao\ListaLocacao.resx">
       <DependentUpon>ListaLocacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\ListaVeiculo.resx">
+    <EmbeddedResource Include="view\veiculo\ListaVeiculo.resx">
       <DependentUpon>ListaVeiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\CadastroCliente.resx">
+    <EmbeddedResource Include="view\cliente\CadastroCliente.resx">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\LocalizadorCliente.resx">
+    <EmbeddedResource Include="view\cliente\LocalizadorCliente.resx">
       <DependentUpon>LocalizadorCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\LocalizadorVeiculo.resx">
+    <EmbeddedResource Include="view\veiculo\LocalizadorVeiculo.resx">
       <DependentUpon>LocalizadorVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
