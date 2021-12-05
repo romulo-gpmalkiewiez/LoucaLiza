@@ -39,12 +39,12 @@ namespace LoucaLiza.utils
             return veiculo;
         }
 
-        public static Locacao RomuloAlugaMustang()
+        public static Locacao Alugar(Cliente cliente, Veiculo veiculo)
         {
             Locacao locacao = new Locacao();
             locacao.DataLocacao = DateTime.Now;
-            locacao.Cliente = ClienteRomulo();
-            locacao.Veiculo = Mustang();
+            locacao.Cliente = cliente;
+            locacao.Veiculo = veiculo;
             locacao.ValorDiaria = locacao.Veiculo.ValorDiaria;
             locacao.Dias = 1;
 

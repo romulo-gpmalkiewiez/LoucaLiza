@@ -20,7 +20,14 @@ namespace LoucaLiza.controller
 
         public Locacao Save(Locacao locacao)
         {
+            if (locacao.Veiculo.Locado)
+            {
+                throw new BusinessException("Este veículo foi alugado por outro cliente!");
+            }
+
+            locacao.Veiculo.Locado = true;
             locacao.ValorDiaria = locacao.Veiculo.ValorDiaria;
+
             return _repository.Save(locacao);
         }
 

@@ -139,11 +139,28 @@ namespace LoucaLiza.view
             return _locacao;
         }
 
+        private void ValidateFields()
+        {
+            if (_locacao.Cliente == null)
+            {
+                throw new ArgumentException("Por favor, selecione um cliente.");
+            }
+            if (_locacao.Veiculo == null)
+            {
+                throw new ArgumentException("Por favor, selecione um veículo.");
+            }
+            if (_locacao.Dias == null || _locacao.Dias <= 0)
+            {
+                throw new ArgumentException("Por favor, informe a quantidade de dias para esta locação.");
+            }
+        }
+
         private void btnSalvarLocacao_Click(object sender, EventArgs e)
         {
             try
             {
                 ConvertScreenDataToLocacao();
+                ValidateFields();
                 locacaoController.Save(_locacao);
 
                 MessageBox.Show("Locação realizada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -154,6 +171,10 @@ namespace LoucaLiza.view
             catch (ArgumentException ex)
             {
                 MessageBox.Show(ex.Message, "Campos não preenchidos.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (BusinessException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

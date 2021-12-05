@@ -1,4 +1,5 @@
-﻿using LoucaLiza.repository;
+﻿using LoucaLiza.controller;
+using LoucaLiza.repository;
 using LoucaLiza.utils;
 using LoucaLiza.utils.database;
 using System;
@@ -21,9 +22,10 @@ namespace LoucaLiza
 
         static void InitDefaultModels()
         {
-            new ClienteRepository().Save(ModelUtils.ClienteRomulo());
-            new VeiculoRepository().Save(ModelUtils.Mustang());
-            new LocacaoRepository().Save(ModelUtils.RomuloAlugaMustang());
+            var romulo = new ClienteController().Save(ModelUtils.ClienteRomulo());
+            var mustang = new VeiculoController().Save(ModelUtils.Mustang());
+
+            new LocacaoController().Save(ModelUtils.Alugar(romulo, mustang));
         }
     }
 }
