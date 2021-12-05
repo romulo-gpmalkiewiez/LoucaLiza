@@ -5,10 +5,12 @@ namespace LoucaLiza.controller
 {
     public interface IController<T>
     {
+        List<T> GetAll();
+
+        List<T> GetAll(IFilter<T> filter);
+
         T Save(T entity);
 
         bool Delete(T entity);
-
-        List<T> GetByFilter(IFilter<T> filter);
     }
 }

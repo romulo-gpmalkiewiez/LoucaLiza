@@ -151,7 +151,7 @@ namespace LoucaLiza
         private void btnBuscaLocacao_Click(object sender, EventArgs e)
         {
             ConvertScreenDataToFilter();
-            _locacoes = _controller.GetByFilter(_filter);
+            _locacoes = _controller.GetAll(_filter);
             UpdateDataGrid();
         }
     }

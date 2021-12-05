@@ -138,7 +138,7 @@ namespace LoucaLiza.view
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             ConvertScreenDataToClienteFilter();
-            _clientes = _controller.GetByFilter(_filter);
+            _clientes = _controller.GetAll(_filter);
             UpdateDataGrid();
         }
     }

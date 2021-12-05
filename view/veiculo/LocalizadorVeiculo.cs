@@ -155,7 +155,7 @@ namespace LoucaLiza.view
         private void btnBuscarVeiculo_Click(object sender, EventArgs e)
         {
             ConvertScreenDataToVeiculoFilter();
-            _veiculos = _controller.GetByFilter(_filter);
+            _veiculos = _controller.GetAll(_filter);
             UpdateDataGrid();
         }
     }

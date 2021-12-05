@@ -8,6 +8,16 @@ namespace LoucaLiza.controller
     {
         private ClienteRepository repository = new ClienteRepository();
 
+        public List<Cliente> GetAll()
+        {
+            return repository.FindAll();
+        }
+
+        public List<Cliente> GetAll(IFilter<Cliente> filter)
+        {
+            return repository.FindAll((ClienteFilter)filter);
+        }
+
         public Cliente Save(Cliente cliente)
         {
             return repository.Save(cliente);    
@@ -16,11 +26,6 @@ namespace LoucaLiza.controller
         public bool Delete(Cliente entity)
         {
             return repository.Delete(entity);
-        }
-
-        public List<Cliente> GetByFilter(IFilter<Cliente> filter)
-        {
-            return repository.FindAll((ClienteFilter) filter);
         }
     }
 }

@@ -8,6 +8,16 @@ namespace LoucaLiza.controller
     {
         private LocacaoRepository repository = new LocacaoRepository();
 
+        public List<Locacao> GetAll()
+        {
+            return repository.FindAll();
+        }
+
+        public List<Locacao> GetAll(IFilter<Locacao> filter)
+        {
+            return repository.FindAll((LocacaoFilter)filter);
+        }
+
         public Locacao Save(Locacao locacao)
         {
             locacao.ValorDiaria = locacao.Veiculo.ValorDiaria;
@@ -17,11 +27,6 @@ namespace LoucaLiza.controller
         public bool Delete(Locacao locacao)
         {
             return repository.Delete(locacao);
-        }
-
-        public List<Locacao> GetByFilter(IFilter<Locacao> filter)
-        {
-            return repository.FindAll((LocacaoFilter) filter);
         }
     }
 }

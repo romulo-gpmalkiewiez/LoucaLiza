@@ -8,6 +8,16 @@ namespace LoucaLiza.controller
     {
         private VeiculoRepository repository = new VeiculoRepository();
 
+        public List<Veiculo> GetAll()
+        {
+            return repository.FindAll();
+        }
+
+        public List<Veiculo> GetAll(IFilter<Veiculo> filter)
+        {
+            return repository.FindAll((VeiculoFilter)filter);
+        }
+
         public Veiculo Save(Veiculo veiculo)
         {
             return repository.Save(veiculo);
@@ -16,11 +26,6 @@ namespace LoucaLiza.controller
         public bool Delete(Veiculo veiculo)
         {
             return repository.Delete(veiculo);
-        }
-
-        public List<Veiculo> GetByFilter(IFilter<Veiculo> filter)
-        {
-            return repository.FindAll((VeiculoFilter) filter);
         }
     }
 }
