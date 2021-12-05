@@ -9,7 +9,7 @@ namespace LoucaLiza.repository
     {
         public override List<Cliente> FindAll()
         {
-            return Application.Database.Clientes;
+            return Application.Database.Clientes.ToList();
         }
 
         public override List<Cliente> FindAll(ClienteFilter filter)

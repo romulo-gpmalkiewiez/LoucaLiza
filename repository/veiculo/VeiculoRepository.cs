@@ -10,7 +10,7 @@ namespace LoucaLiza.repository
     {
         public override List<Veiculo> FindAll()
         {
-            return Application.Database.Veiculos;
+            return Application.Database.Veiculos.ToList();
         }
 
         public override List<Veiculo> FindAll(VeiculoFilter filter)

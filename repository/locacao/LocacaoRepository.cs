@@ -10,7 +10,7 @@ namespace LoucaLiza.repository
     {
         public override List<Locacao> FindAll()
         {
-            return Application.Database.Locacoes;
+            return Application.Database.Locacoes.ToList();
         }
 
         public override List<Locacao> FindAll(LocacaoFilter filter)

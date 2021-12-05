@@ -21,16 +21,16 @@ namespace LoucaLiza.view
         {
             InitializeComponent();
 
-            LoadListaClientes();
+            LoadListaClientesByFilter();
 
             InitDataTableColumns();
             UpdateDataGrid();
             ConfigureDataTableViewClientes();
         }
 
-        private void LoadListaClientes()
+        private void LoadListaClientesByFilter()
         {
-            _clientes = Application.Database.Clientes;
+            _clientes = _controller.GetAll(_filter);
         }
 
         private void InitDataTableColumns()
@@ -97,6 +97,7 @@ namespace LoucaLiza.view
 
         private void HandleAfterSaveCliente(Cliente cliente)
         {
+            LoadListaClientesByFilter();
             UpdateDataGrid();
         }
 

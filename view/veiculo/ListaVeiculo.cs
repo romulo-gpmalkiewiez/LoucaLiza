@@ -22,7 +22,7 @@ namespace LoucaLiza.view
         {
             InitializeComponent();
 
-            LoadListaVeiculos();
+            LoadListaVeiculosByFilter();
 
             InitComboBoxes();
             InitDataTableColumns();
@@ -30,9 +30,9 @@ namespace LoucaLiza.view
             ConfigureDataTableViewVeiculos();
         }
 
-        private void LoadListaVeiculos()
+        private void LoadListaVeiculosByFilter()
         {
-            _veiculos = Application.Database.Veiculos;
+            _veiculos = _controller.GetAll(_filter);
         }
 
         private void InitComboBoxes()
@@ -115,6 +115,7 @@ namespace LoucaLiza.view
 
         private void HandleAfterSaveVeiculo(Veiculo veiculo)
         {
+            LoadListaVeiculosByFilter();
             UpdateDataGrid();
         }
 

@@ -23,7 +23,7 @@ namespace LoucaLiza
         {
             InitializeComponent();
 
-            LoadListaLocacoes();
+            LoadListaLocacoesByFilter();
 
             InitComboBoxes();
             InitDataTableColumns();
@@ -31,9 +31,9 @@ namespace LoucaLiza
             ConfigureDataTableViewLocacoes();
         }
 
-        private void LoadListaLocacoes()
+        private void LoadListaLocacoesByFilter()
         {
-            _locacoes = Application.Database.Locacoes;
+            _locacoes = _controller.GetAll(_filter);
         }
         private void InitComboBoxes()
         {
