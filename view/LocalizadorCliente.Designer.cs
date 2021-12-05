@@ -76,6 +76,7 @@ namespace LoucaLiza.view
             this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // btnExcluirCliente
             // 
@@ -139,8 +140,8 @@ namespace LoucaLiza.view
             // 
             // textBoxCNH
             // 
-            this.textBoxCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxCNH.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxCNH.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCNH.Location = new System.Drawing.Point(527, 79);
             this.textBoxCNH.Multiline = true;
             this.textBoxCNH.Name = "textBoxCNH";
@@ -150,8 +151,8 @@ namespace LoucaLiza.view
             // 
             // textBoxCPF
             // 
-            this.textBoxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxCPF.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxCPF.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCPF.Location = new System.Drawing.Point(381, 79);
             this.textBoxCPF.Multiline = true;
             this.textBoxCPF.Name = "textBoxCPF";
@@ -161,8 +162,8 @@ namespace LoucaLiza.view
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxNome.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxNome.ForeColor = System.Drawing.Color.Gray;
             this.textBoxNome.Location = new System.Drawing.Point(13, 79);
             this.textBoxNome.Multiline = true;
             this.textBoxNome.Name = "textBoxNome";
