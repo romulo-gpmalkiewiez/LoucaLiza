@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using LoucaLiza.utils;
 
 namespace LoucaLiza.repository
 {
@@ -26,13 +27,13 @@ namespace LoucaLiza.repository
         {
             IEnumerable<Locacao> locacoes = Application.Database.Locacoes.AsEnumerable();
 
-            locacoes = AddRestriction(locacoes, filter.Cliente, loc => loc.Cliente.Nome.Contains(filter.Cliente));
-            locacoes = AddRestriction(locacoes, filter.Documento, loc => loc.Cliente.Cpf.Contains(filter.Documento) || loc.Cliente.Cnh.Contains(filter.Documento));
-            locacoes = AddRestriction(locacoes, filter.DataDe, loc => loc.DataLocacao >= filter.DataDe);
-            locacoes = AddRestriction(locacoes, filter.DataAte, loc => loc.DataLocacao <= filter.DataAte);
-            locacoes = AddRestriction(locacoes, filter.Marca, loc => loc.Veiculo.Marca.Contains(filter.Marca));
-            locacoes = AddRestriction(locacoes, filter.Modelo, loc => loc.Veiculo.Modelo.Contains(filter.Modelo));
-            locacoes = AddRestriction(locacoes, filter.Placa, loc => loc.Veiculo.Placa.Contains(filter.Placa));
+            locacoes = AddRestriction(locacoes, filter.Cliente, loc => StringUtils.ContainIgnoreCase(loc.Cliente.Nome, filter.Cliente));
+            locacoes = AddRestriction(locacoes, filter.Documento, loc => StringUtils.ContainIgnoreCase(loc.Cliente.Cpf, filter.Documento) || StringUtils.ContainIgnoreCase(loc.Cliente.Cnh, filter.Documento));
+            locacoes = AddRestriction(locacoes, filter.DataDe, loc => loc.DataLocacao?.Date >= filter.DataDe?.Date);
+            locacoes = AddRestriction(locacoes, filter.DataAte, loc => loc.DataLocacao?.Date <= filter.DataAte?.Date);
+            locacoes = AddRestriction(locacoes, filter.Marca, loc => StringUtils.ContainIgnoreCase(loc.Veiculo.Marca, filter.Marca));
+            locacoes = AddRestriction(locacoes, filter.Modelo, loc => StringUtils.ContainIgnoreCase(loc.Veiculo.Modelo, filter.Modelo));
+            locacoes = AddRestriction(locacoes, filter.Placa, loc => StringUtils.ContainIgnoreCase(loc.Veiculo.Placa, filter.Placa));
             locacoes = AddRestriction(locacoes, filter.Status, loc => loc.Veiculo.Locado == filter.Status);
 
             return locacoes.ToList();

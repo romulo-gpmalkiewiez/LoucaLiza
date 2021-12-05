@@ -80,6 +80,8 @@
     <Compile Include="repository\LocacaoRepository.cs" />
     <Compile Include="repository\VeiculoRepository.cs" />
     <Compile Include="repository\ClienteRepository.cs" />
+    <Compile Include="utils\StringUtils.cs" />
+    <Compile Include="utils\DateTimeUtils.cs" />
     <Compile Include="utils\ComboBoxUtils.cs" />
     <Compile Include="utils\DialogUtils.cs" />
     <Compile Include="utils\DataGridUtils.cs" />

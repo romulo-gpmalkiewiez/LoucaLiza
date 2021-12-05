@@ -144,15 +144,8 @@ namespace LoucaLiza
             _filter.Modelo = textBoxModelo.Text;
             _filter.Placa = textBoxPlaca.Text;
             _filter.Status = Status.Parse(textBoxPlaca.Text);
-
-            if (!string.IsNullOrEmpty(textBoxDataInicial.Text) && textBoxDataInicial.Text != textBoxDataInicial.PlaceHolderText)
-            {
-                _filter.DataDe = DateTime.Parse(textBoxDataInicial.Text);
-            }
-            if (!string.IsNullOrEmpty(textBoxDataFinal.Text) && textBoxDataFinal.Text != textBoxDataFinal.PlaceHolderText)
-            {
-                _filter.DataAte = DateTime.Parse(textBoxDataFinal.Text);
-            }
+            _filter.DataDe = DateTimeUtils.TryParse(textBoxDataInicial.Text);
+            _filter.DataAte = DateTimeUtils.TryParse(textBoxDataFinal.Text);
         }
 
         private void btnBuscaLocacao_Click(object sender, EventArgs e)
