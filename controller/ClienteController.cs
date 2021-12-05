@@ -6,26 +6,26 @@ namespace LoucaLiza.controller
 {
     class ClienteController : IController<Cliente>
     {
-        private ClienteRepository repository = new ClienteRepository();
+        private readonly ClienteRepository _repository = new ClienteRepository();
 
         public List<Cliente> GetAll()
         {
-            return repository.FindAll();
+            return _repository.FindAll();
         }
 
         public List<Cliente> GetAll(IFilter<Cliente> filter)
         {
-            return repository.FindAll((ClienteFilter)filter);
+            return _repository.FindAll((ClienteFilter) filter);
         }
 
         public Cliente Save(Cliente cliente)
         {
-            return repository.Save(cliente);    
+            return _repository.Save(cliente);    
         }
 
         public bool Delete(Cliente entity)
         {
-            return repository.Delete(entity);
+            return _repository.Delete(entity);
         }
     }
 }

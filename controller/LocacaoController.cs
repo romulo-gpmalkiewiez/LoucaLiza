@@ -6,27 +6,27 @@ namespace LoucaLiza.controller
 {
     public class LocacaoController : IController<Locacao>
     {
-        private LocacaoRepository repository = new LocacaoRepository();
+        private readonly LocacaoRepository _repository = new LocacaoRepository();
 
         public List<Locacao> GetAll()
         {
-            return repository.FindAll();
+            return _repository.FindAll();
         }
 
         public List<Locacao> GetAll(IFilter<Locacao> filter)
         {
-            return repository.FindAll((LocacaoFilter)filter);
+            return _repository.FindAll((LocacaoFilter) filter);
         }
 
         public Locacao Save(Locacao locacao)
         {
             locacao.ValorDiaria = locacao.Veiculo.ValorDiaria;
-            return repository.Save(locacao);
+            return _repository.Save(locacao);
         }
 
         public bool Delete(Locacao locacao)
         {
-            return repository.Delete(locacao);
+            return _repository.Delete(locacao);
         }
     }
 }
