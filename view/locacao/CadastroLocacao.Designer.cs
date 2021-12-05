@@ -131,9 +131,9 @@ namespace LoucaLiza.view
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 47;
-            this.label4.Text = "Dias Locação";
+            this.label4.Text = "Qtd. Diárias";
             // 
             // label5
             // 

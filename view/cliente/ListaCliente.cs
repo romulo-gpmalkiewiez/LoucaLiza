@@ -54,40 +54,19 @@ namespace LoucaLiza.view
             dataGridCliente.Columns["id"].Visible = false;
 
             dataGridCliente.Columns["nome"].HeaderText = "Nome";
-            //dataGridCliente.Columns["nome"].Width = 120;
 
             dataGridCliente.Columns["cpf"].HeaderText = "CPF";
-            //dataGridCliente.Columns["cpf"].Width = 60;
 
             dataGridCliente.Columns["cnh"].HeaderText = "CNH";
-            //dataGridCliente.Columns["cnh"].Width = 60;
 
             dataGridCliente.Columns["email"].HeaderText = "Email";
-            //dataGridCliente.Columns["email"].Width = 80;
 
             dataGridCliente.Columns["dt_nascimento"].HeaderText = "Data Nascimento";
-            //dataGridCliente.Columns["dt_nascimento"].Width = 80;
 
             dataGridCliente.Columns["telefone"].HeaderText = "Telefone";
-            //dataGridCliente.Columns["telefone"].Width = 60;
 
             dataGridCliente.Columns["endereco"].HeaderText = "Endereço";
-            //dataGridCliente.Columns["endereco"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-
-            //dataGridViewLancamentos.Columns["nome_categoria"].HeaderText = "Categoria";
-            //dataGridViewLancamentos.Columns["nome_categoria"].Width = 130;
-
-            //dataGridViewLancamentos.Columns["valor"].HeaderText = "Valor (R$)";
-            //dataGridViewLancamentos.Columns["valor"].Width = 150;
-            //dataGridViewLancamentos.Columns["valor"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            //dataGridViewLancamentos.Columns["valor"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            //dataGridViewLancamentos.Columns["descricao"].HeaderText = "Descrição";
-            //dataGridViewLancamentos.Columns["descricao"].Width = 200;
-
-            //dataGridViewLancamentos.Columns["observacao"].HeaderText = "Observação";
-            //dataGridViewLancamentos.Columns["observacao"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridCliente.Columns["endereco"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void UpdateDataGrid()

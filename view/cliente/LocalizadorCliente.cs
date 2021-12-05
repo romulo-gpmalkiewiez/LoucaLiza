@@ -68,6 +68,7 @@ namespace LoucaLiza.view
             dataGridCliente.Columns["telefone"].HeaderText = "Telefone";
 
             dataGridCliente.Columns["endereco"].HeaderText = "Endereço";
+            dataGridCliente.Columns["endereco"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void UpdateDataGrid()
