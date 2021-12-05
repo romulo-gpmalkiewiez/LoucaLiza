@@ -39,8 +39,8 @@ namespace LoucaLiza
             this.btnAddLocacao = new System.Windows.Forms.Button();
             this.btnExcluirLocacao = new System.Windows.Forms.Button();
             this.btnBuscaLocacao = new System.Windows.Forms.Button();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
-            this.comboBoxMarca = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatus = new LoucaLiza.View.Components.PlaceHolderComboBox();
+            this.comboBoxMarca = new LoucaLiza.View.Components.PlaceHolderComboBox();
             this.dataGridLocacao = new System.Windows.Forms.DataGridView();
             this.panelFooter = new System.Windows.Forms.Panel();
             this.labelFooter = new System.Windows.Forms.Label();
@@ -169,25 +169,29 @@ namespace LoucaLiza
             // comboBoxStatus
             // 
             this.comboBoxStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.comboBoxStatus.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.ItemHeight = 26;
             this.comboBoxStatus.Location = new System.Drawing.Point(526, 180);
             this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.PlaceHolderText = "Status";
             this.comboBoxStatus.Size = new System.Drawing.Size(140, 32);
             this.comboBoxStatus.TabIndex = 13;
-            this.comboBoxStatus.Text = "Status";
             // 
             // comboBoxMarca
             // 
             this.comboBoxMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.comboBoxMarca.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBoxMarca.FormattingEnabled = true;
             this.comboBoxMarca.ItemHeight = 26;
             this.comboBoxMarca.Location = new System.Drawing.Point(13, 180);
             this.comboBoxMarca.Name = "comboBoxMarca";
+            this.comboBoxMarca.PlaceHolderText = "Marca";
             this.comboBoxMarca.Size = new System.Drawing.Size(177, 32);
             this.comboBoxMarca.Sorted = true;
             this.comboBoxMarca.TabIndex = 14;
-            this.comboBoxMarca.Text = "Marca";
             // 
             // dataGridLocacao
             // 
@@ -353,8 +357,8 @@ namespace LoucaLiza
         private LoucaLiza.View.Components.PlaceHolderTextBox textBoxDocumento;
         private LoucaLiza.View.Components.PlaceHolderTextBox textBoxModelo;
         private LoucaLiza.View.Components.PlaceHolderTextBox textBoxPlaca;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
-        private System.Windows.Forms.ComboBox comboBoxMarca;
+        private LoucaLiza.View.Components.PlaceHolderComboBox comboBoxStatus;
+        private LoucaLiza.View.Components.PlaceHolderComboBox comboBoxMarca;
         private System.Windows.Forms.Button btnBuscaLocacao;
         private System.Windows.Forms.DataGridView dataGridLocacao;
     }

@@ -62,6 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="components\PlaceHolderComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="controller\IController.cs" />
     <Compile Include="controller\LocacaoController.cs" />
     <Compile Include="controller\VeiculoController.cs" />

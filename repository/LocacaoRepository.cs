@@ -26,14 +26,14 @@ namespace LoucaLiza.repository
         {
             IEnumerable<Locacao> locacoes = Application.Database.Locacoes.AsEnumerable();
 
-            locacoes = AddRestriction(locacoes, filter.Cliente, l => l.Cliente.Nome.Contains(filter.Cliente));
-            locacoes = AddRestriction(locacoes, filter.Documento, l => l.Cliente.Cpf.Contains(filter.Documento) || l.Cliente.Cnh.Contains(filter.Documento));
-            locacoes = AddRestriction(locacoes, filter.DataDe, l => l.DataLocacao > filter.DataDe);
-            locacoes = AddRestriction(locacoes, filter.DataAte, l => l.DataLocacao < filter.DataAte);
-            locacoes = AddRestriction(locacoes, filter.Marca, l => l.Veiculo.Marca.Contains(filter.Marca));
-            locacoes = AddRestriction(locacoes, filter.Modelo, l => l.Veiculo.Modelo.Contains(filter.Modelo));
-            locacoes = AddRestriction(locacoes, filter.Placa, l => l.Veiculo.Placa.Contains(filter.Placa));
-            locacoes = AddRestriction(locacoes, filter.Status, l => l.Veiculo.Locado == filter.Status);
+            locacoes = AddRestriction(locacoes, filter.Cliente, loc => loc.Cliente.Nome.Contains(filter.Cliente));
+            locacoes = AddRestriction(locacoes, filter.Documento, loc => loc.Cliente.Cpf.Contains(filter.Documento) || loc.Cliente.Cnh.Contains(filter.Documento));
+            locacoes = AddRestriction(locacoes, filter.DataDe, loc => loc.DataLocacao >= filter.DataDe);
+            locacoes = AddRestriction(locacoes, filter.DataAte, loc => loc.DataLocacao <= filter.DataAte);
+            locacoes = AddRestriction(locacoes, filter.Marca, loc => loc.Veiculo.Marca.Contains(filter.Marca));
+            locacoes = AddRestriction(locacoes, filter.Modelo, loc => loc.Veiculo.Modelo.Contains(filter.Modelo));
+            locacoes = AddRestriction(locacoes, filter.Placa, loc => loc.Veiculo.Placa.Contains(filter.Placa));
+            locacoes = AddRestriction(locacoes, filter.Status, loc => loc.Veiculo.Locado == filter.Status);
 
             return locacoes.ToList();
         }

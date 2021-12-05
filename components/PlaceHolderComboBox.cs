@@ -4,9 +4,8 @@ using System.Windows.Forms;
 
 namespace LoucaLiza.View.Components
 {
-    public class PlaceHolderTextBox : TextBox
+    class PlaceHolderComboBox : ComboBox
     {
-
         bool isPlaceHolder = true;
         bool userHasTypedInitialPlaceHolder = false;
         string _placeHolderText;
@@ -38,7 +37,7 @@ namespace LoucaLiza.View.Components
             }
         }
 
-        public PlaceHolderTextBox()
+        public PlaceHolderComboBox()
         {
             setPlaceholder();
             GotFocus += removePlaceHolder;
@@ -48,7 +47,7 @@ namespace LoucaLiza.View.Components
 
         private void customKeyPress(object sender, EventArgs e)
         {
-            KeyPressEventArgs ev = (KeyPressEventArgs)e;
+            KeyPressEventArgs ev = (KeyPressEventArgs) e;
             userHasTypedInitialPlaceHolder = base.Text + ev.KeyChar == PlaceHolderText;
         }
 
