@@ -6,24 +6,9 @@ using LoucaLiza.utils;
 
 namespace LoucaLiza.repository
 {
-    public class LocacaoRepository : IRepository<Locacao, LocacaoFilter>
+    public class LocacaoRepository : AbstractRepository<Locacao, LocacaoFilter>
     {
-        private IEnumerable<Locacao> AddRestriction<T>(IEnumerable<Locacao> list, T obj, Func<Locacao, bool> predicate)
-        {
-            if (obj == null)
-            {
-                return list;
-            }
-
-            if (obj is string && string.IsNullOrEmpty(obj.ToString()))
-            {
-                return list;
-            }
-
-            return list.Where(predicate);
-        }
-
-        public List<Locacao> GetAll(LocacaoFilter filter)
+        public override List<Locacao> GetAll(LocacaoFilter filter)
         {
             IEnumerable<Locacao> locacoes = Application.Database.Locacoes.AsEnumerable();
 
@@ -39,12 +24,12 @@ namespace LoucaLiza.repository
             return locacoes.ToList();
         }
 
-        public bool Delete(Locacao locacao)
+        public override bool Delete(Locacao locacao)
         {
             return Application.Database.Locacoes.Remove(locacao);
         }
 
-        public Locacao Save(Locacao locacao)
+        public override Locacao Save(Locacao locacao)
         {
             if (locacao == null)
             {
