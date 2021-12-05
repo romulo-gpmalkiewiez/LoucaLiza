@@ -76,6 +76,7 @@ namespace LoucaLiza.view
             this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // btnExcluirCliente
             // 
@@ -128,36 +129,39 @@ namespace LoucaLiza.view
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxNome.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxNome.ForeColor = System.Drawing.Color.Gray;
             this.textBoxNome.Location = new System.Drawing.Point(13, 82);
             this.textBoxNome.Multiline = true;
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.PlaceHolderText = "Nome";
             this.textBoxNome.Size = new System.Drawing.Size(362, 32);
             this.textBoxNome.TabIndex = 27;
+            this.textBoxNome.Text = "Nome";
             // 
             // textBoxCPF
             // 
-            this.textBoxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxCPF.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxCPF.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCPF.Location = new System.Drawing.Point(381, 82);
             this.textBoxCPF.Multiline = true;
             this.textBoxCPF.Name = "textBoxCPF";
             this.textBoxCPF.PlaceHolderText = "CPF";
             this.textBoxCPF.Size = new System.Drawing.Size(140, 32);
             this.textBoxCPF.TabIndex = 28;
+            this.textBoxCPF.Text = "CPF";
             // 
             // textBoxCNH
             // 
-            this.textBoxCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxCNH.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxCNH.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCNH.Location = new System.Drawing.Point(527, 82);
             this.textBoxCNH.Multiline = true;
             this.textBoxCNH.Name = "textBoxCNH";
             this.textBoxCNH.PlaceHolderText = "CNH";
             this.textBoxCNH.Size = new System.Drawing.Size(140, 32);
             this.textBoxCNH.TabIndex = 33;
+            this.textBoxCNH.Text = "CNH";
             // 
             // ListaCliente
             // 

@@ -4,7 +4,9 @@ namespace LoucaLiza.repository
 {
     public interface IRepository<T, F> where F : IFilter<T>
     {
-        List<T> GetAll(F filter);
+        List<T> FindAll();
+
+        List<T> FindAll(F filter);
 
         T Save(T Entity);
 

@@ -1,5 +1,6 @@
 ﻿using LoucaLiza.controller;
 using LoucaLiza.model.cliente;
+using LoucaLiza.repository;
 using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace LoucaLiza.view
     public partial class ListaCliente : Form
     {
         private List<Cliente> _clientes;
+        private ClienteFilter _filter = new ClienteFilter();
         private DataTable _dataTableCliente = new DataTable();
         private ClienteController _controller = new ClienteController();
 
@@ -141,6 +143,20 @@ namespace LoucaLiza.view
         private Cliente GetSelectedCliente()
         {
             return DataGridUtils.GetSelectedEntityById(dataGridCliente, _clientes);
+        }
+
+        private void ConvertScreenDataToClienteFilter()
+        {
+            _filter.Nome = textBoxNome.Text;
+            _filter.Cpf = textBoxCPF.Text;
+            _filter.Cnh = textBoxCNH.Text;
+        }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            ConvertScreenDataToClienteFilter();
+            _clientes = _controller.GetByFilter(_filter);
+            UpdateDataGrid();
         }
     }
 }

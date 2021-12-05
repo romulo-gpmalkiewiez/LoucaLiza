@@ -20,7 +20,7 @@ namespace LoucaLiza.controller
 
         public List<Cliente> GetByFilter(IFilter<Cliente> filter)
         {
-            return repository.GetAll((ClienteFilter) filter);
+            return repository.FindAll((ClienteFilter) filter);
         }
     }
 }

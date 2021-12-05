@@ -21,7 +21,7 @@ namespace LoucaLiza.controller
 
         public List<Locacao> GetByFilter(IFilter<Locacao> filter)
         {
-            return repository.GetAll((LocacaoFilter) filter);
+            return repository.FindAll((LocacaoFilter) filter);
         }
     }
 }

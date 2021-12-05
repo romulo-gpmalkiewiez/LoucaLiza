@@ -20,7 +20,7 @@ namespace LoucaLiza.controller
 
         public List<Veiculo> GetByFilter(IFilter<Veiculo> filter)
         {
-            return repository.GetAll((VeiculoFilter) filter);
+            return repository.FindAll((VeiculoFilter) filter);
         }
     }
 }

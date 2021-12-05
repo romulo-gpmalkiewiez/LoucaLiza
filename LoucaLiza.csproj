@@ -73,6 +73,7 @@
     <Compile Include="model\cliente\Telefone.cs" />
     <Compile Include="model\cliente\Cliente.cs" />
     <Compile Include="model\veiculo\Status.cs" />
+    <Compile Include="repository\AbstractRepository.cs" />
     <Compile Include="repository\IFilter.cs" />
     <Compile Include="repository\ClienteFilter.cs" />
     <Compile Include="repository\VeiculoFilter.cs" />

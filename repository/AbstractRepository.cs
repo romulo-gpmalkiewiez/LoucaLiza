@@ -6,11 +6,13 @@ namespace LoucaLiza.repository
 {
     public abstract class AbstractRepository<T, F> : IRepository<T, F> where F : IFilter<T>
     {
-        public abstract bool Delete(T Entity);
+        public abstract List<T> FindAll();
 
-        public abstract List<T> GetAll(F filter);
+        public abstract List<T> FindAll(F filter);
 
         public abstract T Save(T Entity);
+
+        public abstract bool Delete(T Entity);
 
         protected IEnumerable<T> AddRestriction<FilteringObject>(IEnumerable<T> list, FilteringObject obj, Func<T, bool> predicate)
         {

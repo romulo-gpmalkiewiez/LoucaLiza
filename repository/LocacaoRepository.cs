@@ -8,7 +8,12 @@ namespace LoucaLiza.repository
 {
     public class LocacaoRepository : AbstractRepository<Locacao, LocacaoFilter>
     {
-        public override List<Locacao> GetAll(LocacaoFilter filter)
+        public override List<Locacao> FindAll()
+        {
+            return Application.Database.Locacoes;
+        }
+
+        public override List<Locacao> FindAll(LocacaoFilter filter)
         {
             IEnumerable<Locacao> locacoes = Application.Database.Locacoes.AsEnumerable();
 

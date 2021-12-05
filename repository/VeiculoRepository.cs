@@ -6,7 +6,12 @@ namespace LoucaLiza.repository
 {
     public class VeiculoRepository : AbstractRepository<Veiculo, VeiculoFilter>
     {
-        public override List<Veiculo> GetAll(VeiculoFilter filter)
+        public override List<Veiculo> FindAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<Veiculo> FindAll(VeiculoFilter filter)
         {
             throw new NotImplementedException();
         }
