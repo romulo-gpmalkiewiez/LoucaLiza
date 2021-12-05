@@ -30,28 +30,28 @@ namespace LoucaLiza.view
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaVeiculo));
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.btnExcluirVeiculo = new System.Windows.Forms.Button();
             this.btnEditarVeiculo = new System.Windows.Forms.Button();
             this.btnAddVeiculo = new System.Windows.Forms.Button();
             this.dataGridVeiculo = new System.Windows.Forms.DataGridView();
-            this.comboBoxMarca = new System.Windows.Forms.ComboBox();
-            this.textBoxModelo = new LoucaLiza.View.Components.PlaceHolderTextBox();
             this.textBoxPlaca = new LoucaLiza.View.Components.PlaceHolderTextBox();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.textBoxModelo = new LoucaLiza.View.Components.PlaceHolderTextBox();
+            this.comboBoxMarca = new LoucaLiza.View.Components.PlaceHolderComboBox();
+            this.comboBoxStatus = new LoucaLiza.View.Components.PlaceHolderComboBox();
             this.btnBuscarVeiculo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Veículos";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(12, 26);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(83, 24);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Veículos";
             // 
             // btnExcluirVeiculo
             // 
@@ -111,17 +111,17 @@ namespace LoucaLiza.view
             this.dataGridVeiculo.Size = new System.Drawing.Size(759, 353);
             this.dataGridVeiculo.TabIndex = 22;
             // 
-            // comboBoxMarca
+            // textBoxPlaca
             // 
-            this.comboBoxMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxMarca.FormattingEnabled = true;
-            this.comboBoxMarca.ItemHeight = 26;
-            this.comboBoxMarca.Location = new System.Drawing.Point(12, 78);
-            this.comboBoxMarca.Name = "comboBoxMarca";
-            this.comboBoxMarca.Size = new System.Drawing.Size(177, 32);
-            this.comboBoxMarca.Sorted = true;
-            this.comboBoxMarca.TabIndex = 21;
-            this.comboBoxMarca.Text = "Marca";
+            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.textBoxPlaca.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxPlaca.Location = new System.Drawing.Point(395, 78);
+            this.textBoxPlaca.Multiline = true;
+            this.textBoxPlaca.Name = "textBoxPlaca";
+            this.textBoxPlaca.PlaceHolderText = "Placa";
+            this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
+            this.textBoxPlaca.TabIndex = 18;
+            this.textBoxPlaca.Text = "Placa";
             // 
             // textBoxModelo
             // 
@@ -130,33 +130,37 @@ namespace LoucaLiza.view
             this.textBoxModelo.Location = new System.Drawing.Point(195, 78);
             this.textBoxModelo.Multiline = true;
             this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.PlaceHolderText = null;
+            this.textBoxModelo.PlaceHolderText = "Modelo";
             this.textBoxModelo.Size = new System.Drawing.Size(194, 32);
             this.textBoxModelo.TabIndex = 17;
             this.textBoxModelo.Text = "Modelo";
             // 
-            // textBoxPlaca
+            // comboBoxMarca
             // 
-            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.textBoxPlaca.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxPlaca.Location = new System.Drawing.Point(395, 78);
-            this.textBoxPlaca.Multiline = true;
-            this.textBoxPlaca.Name = "textBoxPlaca";
-            this.textBoxPlaca.PlaceHolderText = null;
-            this.textBoxPlaca.Size = new System.Drawing.Size(124, 32);
-            this.textBoxPlaca.TabIndex = 18;
-            this.textBoxPlaca.Text = "Placa";
+            this.comboBoxMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.comboBoxMarca.ForeColor = System.Drawing.Color.Gray;
+            this.comboBoxMarca.FormattingEnabled = true;
+            this.comboBoxMarca.ItemHeight = 26;
+            this.comboBoxMarca.Location = new System.Drawing.Point(12, 78);
+            this.comboBoxMarca.Name = "comboBoxMarca";
+            this.comboBoxMarca.PlaceHolderText = "Marca";
+            this.comboBoxMarca.Size = new System.Drawing.Size(177, 32);
+            this.comboBoxMarca.Sorted = true;
+            this.comboBoxMarca.TabIndex = 21;
             // 
             // comboBoxStatus
             // 
             this.comboBoxStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.comboBoxStatus.ForeColor = System.Drawing.Color.Gray;
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.ItemHeight = 26;
             this.comboBoxStatus.Location = new System.Drawing.Point(525, 78);
             this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.PlaceHolderText = "Status";
             this.comboBoxStatus.Size = new System.Drawing.Size(140, 32);
             this.comboBoxStatus.TabIndex = 20;
-            this.comboBoxStatus.Text = "Disponível";
             // 
             // btnBuscarVeiculo
             // 
@@ -172,6 +176,7 @@ namespace LoucaLiza.view
             this.btnBuscarVeiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarVeiculo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarVeiculo.UseVisualStyleBackColor = false;
+            this.btnBuscarVeiculo.Click += new System.EventHandler(this.btnBuscarVeiculo_Click);
             // 
             // ListaVeiculo
             // 
@@ -187,7 +192,7 @@ namespace LoucaLiza.view
             this.Controls.Add(this.btnExcluirVeiculo);
             this.Controls.Add(this.btnEditarVeiculo);
             this.Controls.Add(this.btnAddVeiculo);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitle);
             this.Name = "ListaVeiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoucaLiza - Lista de Veículos";
@@ -199,15 +204,15 @@ namespace LoucaLiza.view
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button btnExcluirVeiculo;
         private System.Windows.Forms.Button btnEditarVeiculo;
         private System.Windows.Forms.Button btnAddVeiculo;
         private System.Windows.Forms.DataGridView dataGridVeiculo;
-        private System.Windows.Forms.ComboBox comboBoxMarca;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
-        private System.Windows.Forms.Button btnBuscarVeiculo;
         private View.Components.PlaceHolderTextBox textBoxPlaca;
         private View.Components.PlaceHolderTextBox textBoxModelo;
+        private View.Components.PlaceHolderComboBox comboBoxMarca;
+        private View.Components.PlaceHolderComboBox comboBoxStatus;
+        private System.Windows.Forms.Button btnBuscarVeiculo;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Loucaliza.model.veiculo;
 using LoucaLiza.controller;
 using LoucaLiza.model.veiculo;
+using LoucaLiza.repository;
 using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,10 @@ namespace LoucaLiza.view
     public partial class ListaVeiculo : Form
     {
         private List<Veiculo> _veiculos;
+        private VeiculoFilter _filter = new VeiculoFilter();
         private DataTable _dataTableVeiculo = new DataTable();
         private VeiculoController _controller = new VeiculoController();
+
         public ListaVeiculo()
         {
             InitializeComponent();
@@ -36,11 +39,6 @@ namespace LoucaLiza.view
         {
             ComboBoxUtils.ConfigureComboBoxItems(comboBoxMarca, Marca.GetAvailable());
             ComboBoxUtils.ConfigureComboBoxItems(comboBoxStatus, Status.GetAvailable());
-        }
-
-        private void HandleAfterSaveVeiculo(Veiculo veiculo)
-        {
-            UpdateDataGrid();
         }
 
         private void InitDataTableColumns()
@@ -115,6 +113,11 @@ namespace LoucaLiza.view
             FormUtils.OpenNewDialog(this, new CadastroVeiculo(null, HandleAfterSaveVeiculo));
         }
 
+        private void HandleAfterSaveVeiculo(Veiculo veiculo)
+        {
+            UpdateDataGrid();
+        }
+
         private void btnEditarVeiculo_Click(object sender, EventArgs e)
         {
             var selectedVeiculo = GetSelectedVeiculo();
@@ -137,6 +140,21 @@ namespace LoucaLiza.view
         private Veiculo GetSelectedVeiculo()
         {
             return DataGridUtils.GetSelectedEntityById(dataGridVeiculo, _veiculos);
+        }
+
+        private void ConvertScreenDataToVeiculoFilter()
+        {
+            _filter.Marca = comboBoxMarca.Text;
+            _filter.Modelo = textBoxModelo.Text;
+            _filter.Placa = textBoxPlaca.Text;
+            _filter.Status = Status.Parse(textBoxPlaca.Text);
+        }
+
+        private void btnBuscarVeiculo_Click(object sender, EventArgs e)
+        {
+            ConvertScreenDataToVeiculoFilter();
+            _veiculos = _controller.GetByFilter(_filter);
+            UpdateDataGrid();
         }
     }
 }

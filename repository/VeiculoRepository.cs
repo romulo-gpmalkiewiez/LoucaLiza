@@ -1,6 +1,8 @@
 ﻿using Loucaliza.model.veiculo;
+using LoucaLiza.utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LoucaLiza.repository
 {
@@ -8,12 +10,19 @@ namespace LoucaLiza.repository
     {
         public override List<Veiculo> FindAll()
         {
-            throw new NotImplementedException();
+            return Application.Database.Veiculos;
         }
 
         public override List<Veiculo> FindAll(VeiculoFilter filter)
         {
-            throw new NotImplementedException();
+            var veiculos = Application.Database.Veiculos.AsEnumerable();
+
+            veiculos = AddRestriction(veiculos, filter.Marca, v => StringUtils.ContainIgnoreCase(v.Marca, filter.Marca));
+            veiculos = AddRestriction(veiculos, filter.Modelo, v => StringUtils.ContainIgnoreCase(v.Modelo, filter.Modelo));
+            veiculos = AddRestriction(veiculos, filter.Placa, v => StringUtils.ContainIgnoreCase(v.Placa, filter.Placa));
+            veiculos = AddRestriction(veiculos, filter.Status, v => v.Locado == filter.Status);
+
+            return veiculos.ToList(); ;
         }
 
         public override bool Delete(Veiculo veiculo)

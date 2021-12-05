@@ -14,7 +14,7 @@ namespace LoucaLiza.repository
 
         public abstract bool Delete(T Entity);
 
-        protected IEnumerable<T> AddRestriction<FilteringObject>(IEnumerable<T> list, FilteringObject obj, Func<T, bool> predicate)
+        protected IEnumerable<T> AddRestriction<FilterObject>(IEnumerable<T> list, FilterObject obj, Func<T, bool> predicate)
         {
             if (obj == null)
             {
